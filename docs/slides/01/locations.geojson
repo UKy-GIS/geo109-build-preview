@@ -1,0 +1,24 @@
+{
+"type": "FeatureCollection",
+"name": "locations",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lat": "38.027715", "lon": "-84.5038447", "words": "deaf.critic.post" }, "geometry": { "type": "Point", "coordinates": [ -84.503845, 38.027715 ] } },
+{ "type": "Feature", "properties": { "lat": "37.1837", "lon": " -86.3705", "words": "footsteps, remember, celebration" }, "geometry": { "type": "Point", "coordinates": [ -86.3705, 37.1837 ] } },
+{ "type": "Feature", "properties": { "lat": "38.0487661", "lon": "-84.5004785", "words": "Skin.Bind.Beats" }, "geometry": { "type": "Point", "coordinates": [ -84.500478, 38.048766 ] } },
+{ "type": "Feature", "properties": { "lat": "37.89474016", "lon": "-84.31193404", "words": "tasted.turntable.freezing" }, "geometry": { "type": "Point", "coordinates": [ -84.311934, 37.89474 ] } },
+{ "type": "Feature", "properties": { "lat": "37.8948392", "lon": " -85.9707611", "words": "Pets.Deputy.Civil" }, "geometry": { "type": "Point", "coordinates": [ -85.970761, 37.894839 ] } },
+{ "type": "Feature", "properties": { "lat": "38.2203966", "lon": "-85.7617613", "words": "spice.stop.supper" }, "geometry": { "type": "Point", "coordinates": [ -85.761761, 38.220397 ] } },
+{ "type": "Feature", "properties": { "lat": "38.0366816", "lon": " -84.5159107", "words": "gained.type.waving" }, "geometry": { "type": "Point", "coordinates": [ -84.515911, 38.036682 ] } },
+{ "type": "Feature", "properties": { "lat": "39.3446274", "lon": "-84.268364", "words": "sulk.forklift.translates" }, "geometry": { "type": "Point", "coordinates": [ -84.268364, 39.344627 ] } },
+{ "type": "Feature", "properties": { "lat": "37.5356", "lon": " -84.3352", "words": "Chill.Bossy.Nearly" }, "geometry": { "type": "Point", "coordinates": [ -84.3352, 37.5356 ] } },
+{ "type": "Feature", "properties": { "lat": "37.6851747", "lon": "-85.2242826", "words": "dreams.sums.crust" }, "geometry": { "type": "Point", "coordinates": [ -85.224283, 37.685175 ] } },
+{ "type": "Feature", "properties": { "lat": "39.0134506", "lon": "-84.4518086", "words": "exchanges.risky.plan" }, "geometry": { "type": "Point", "coordinates": [ -84.451809, 39.013451 ] } },
+{ "type": "Feature", "properties": { "lat": "37.0714261", "lon": " -84.6877756", "words": "belief.springing.renovating" }, "geometry": { "type": "Point", "coordinates": [ -84.687776, 37.071426 ] } },
+{ "type": "Feature", "properties": { "lat": "36.9460581", "lon": " -86.4240745", "words": "icicle.grooves.capable" }, "geometry": { "type": "Point", "coordinates": [ -86.424075, 36.946058 ] } },
+{ "type": "Feature", "properties": { "lat": "38.0219013", "lon": " -84.4214046", "words": "bottom.echo.pages" }, "geometry": { "type": "Point", "coordinates": [ -84.421405, 38.021901 ] } },
+{ "type": "Feature", "properties": { "lat": "38.66419644", "lon": "-84.53140958", "words": "typical.graduating.carriage" }, "geometry": { "type": "Point", "coordinates": [ -84.53141, 38.664196 ] } },
+{ "type": "Feature", "properties": { "lat": "37.83901787", "lon": "-83.63512062", "words": "typist.projectors.reporting" }, "geometry": { "type": "Point", "coordinates": [ -83.635121, 37.839018 ] } },
+{ "type": "Feature", "properties": { "lat": "38.66254246", "lon": "-84.52819747", "words": "bless.investor.tumbled" }, "geometry": { "type": "Point", "coordinates": [ -84.528197, 38.662542 ] } }
+]
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html><head>
+  <title>GEO 109: 04 Locate</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Website meta description for google search results go here" />
+  <meta name="dc.relation" content="https://uky-gis.github.io/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#1A94D2" />
+  
+
+   
+  <link rel="stylesheet" href="../../css/main.min.css" media="screen" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head><body><nav class="navbar navbar-light uk-liter-bg" id='nav'>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../../">
+      <img src="https://uky-gis.github.io/graphics/logo-75th-01.svg" alt="" height="45px"
+        class="d-inline-block ">
+     <h5 class="d-inline-block font-weight-700">GEO 109</h5> 
+    </a>
+
+    <ul class="nav justify-content-start">
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Modules
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/00-intro/">  Introduction</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/01-data/">  01 Data</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/02-persuade/">  02 Persuade</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/03-analysis/">  03 Analysis</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/04-locate/">  04 Locate</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/05-code/">  05 Code</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/06-final/">  06 Final</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Maps
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/hill/">  Kentucky</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+    <li class="nav-item">
+      <a class='nav-link' href="../../syllabus">
+         Syllabus</a>
+      </a>
+    </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid uk-lite-bg py-2" id="singleTitle">
+  <row>
+    <h3 class="font-weight-700 align-middle text-dark mt-1">
+      04 Locate 
+    </h3>
+  </row>
+</div>
+
+<main>
+<section class="py-3 container">
+<h1 id="presentation">Presentation</h1>
+<iframe src='../../slides/04' width='100%' height='800'></iframe>
+<h2 id="days">Days</h2>
+<ul>
+<li><a href="https://uky-gis.github.io/geo109/slides/04">13: How to read a topographic map</a></li>
+<li><a href="https://uky-gis.github.io/geo109/slides/04/#/42">14: GPS and your phone</a></li>
+<li><a href="https://uky-gis.github.io/geo109/slides/04/#/77">15: Intro to custom mapping</a></li>
+<li><a href="https://uky-gis.github.io/geo109/slides/04/#/84">16: A love letter to campus</a></li>
+</ul>
+<h2 id="tasks">Tasks</h2>
+<ul>
+<li><a href="https://uk.instructure.com/courses/2016829/assignments/10885863">10: Locate on a paper map</a></li>
+<li><a href="https://uk.instructure.com/courses/2016829/assignments/10885865">11: Your childhood neighborhood an a historic topographic map</a></li>
+<li><a href="https://uk.instructure.com/courses/2016829/assignments/10886732">12: The old wise one geocache</a></li>
+<li><a href="https://uk.instructure.com/courses/2016829/assignments/10887897">13: Phone mapping Geocache II</a></li>
+</ul>
+<h2 id="lab">Lab</h2>
+<ul>
+<li><a href="https://uk.instructure.com/courses/2016829/assignments/10889513">Reference Mapping</a></li>
+</ul>
+<p>.</p>
+</section>
+</main>
+ <footer class="footer fixed-bottom uk-liter-bg" id="footer">
+  <div class="row footer-text">
+    <div class="col-12 col-md text-center text-md-left nav-link text-dark">
+      © UKy Geography | 1944–2023
+    </div>
+  </div>
+
+  
+
+  
+  
+
+  <script src="../../js/bundle.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+    charset="utf-8"></script>
+  <script src="../../js/utilities.js"></script>
+</footer></body>
+</html>

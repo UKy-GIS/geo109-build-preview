@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html><head>
+  <title>GEO 109: 03 GIS</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Website meta description for google search results go here" />
+  <meta name="dc.relation" content="https://uky-gis.github.io/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#1A94D2" />
+  
+
+   
+  <link rel="stylesheet" href="../../css/main.min.css" media="screen" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head><body><nav class="navbar navbar-light uk-liter-bg" id='nav'>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../../">
+      <img src="https://uky-gis.github.io/graphics/logo-75th-01.svg" alt="" height="45px"
+        class="d-inline-block ">
+     <h5 class="d-inline-block font-weight-700">GEO 109</h5> 
+    </a>
+
+    <ul class="nav justify-content-start">
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Modules
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/00-intro/">  Introduction</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/01-data/">  01 Data</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/02-locate/">  02 GPS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Maps
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/hill/">  Kentucky</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/additional/">  Additional Maps</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+    <li class="nav-item">
+      <a class='nav-link' href="../../syllabus">
+         Syllabus</a>
+      </a>
+    </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid uk-lite-bg py-2" id="singleTitle">
+  <row>
+    <h3 class="font-weight-700 align-middle text-dark mt-1">
+      03 GIS 
+    </h3>
+  </row>
+</div>
+
+<main>
+<section class="py-3 container col-lg-8 col-xxl-6" id="documentation">
+<div class="d-flex justify-content-between  align-items-end">
+<h3>Presentation</h3>   
+<a href='../../slides/03' target='_blank'>Open in new tab</a>
+</div>
+<iframe src='../../slides/03' width='100%' class='slide-presentation'></iframe>
+<h2>Week</h2>
+<ul>
+<li><a href="../../slides/03">06: Introduction to GIS</a></li>
+</ul>
+<div id='lab-content'>
+<h2>Task</h2>
+<p>Maps are literally everywhere. From outdoor wayfinding to decoration, they are so common that we often don&rsquo;t even notice them. In your first task for credit, you will explore the ubiquity of maps in our built environment and describe one. This is a popular past time amoung map nerds – just do a search on your favorite social media for the hashtag <strong>#mapsinthewild</strong>.</p>
+<p>You&rsquo;ll need to explore your favorite places to find these maps. They <em>are not</em> maps on computer screens or those printed ones that you buy for traveling (they still make those?) or pick up from tourism hosts. These maps are found on signs, walls, floors, etc.</p>
+<div class="doc-instructions">
+<ol>
+<li>Find a map in the wild and photograph it. Make sure to include the entire map and that the photo is well-lit and clear.</li>
+<li>Write one paragraph for each of the following prompts:</li>
+</ol>
+<div style="padding-left: 2em;padding-right: 2em;">
+<ul>
+<li>
+<p>Describe the map and it&rsquo;s context. What is its purpose and audience? Why is it there?</p>
+</li>
+<li>
+<p>How would you characterize it&rsquo;s style?</p>
+</li>
+<li>
+<p>Is the map effective in its context? What works and doesn&rsquo;t work well?</p>
+</div>
+  </div>
+</li>
+</ul>
+<h3>Submitting the task</h3>
+<p>Upload your photo and text to the Module 3 <a href="#">discussion board</a> on Canvas by the published due date. (2 points for the photograph and 1 point for each response.)</p>
+<h2>Lab</h2>
+<p>This lab introduces GIS, geographic information systems. Our goals are to get familiar with organizing and visualizing various spatial layers in QGIS, and begin formulating questions about our surroundings. You will not be making a finished map in this lab, but you will be creating a map that you can use in the field similar to our last module.</p>
+<h3>Table of Contents</h3>
+<!-- TOC -->
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#accessing-the-project-and-data">Accessing the project and data</a></li>
+<li><a href="#viewing-layers-in-qgis">Viewing layers in QGIS</a></li>
+<li><a href="#exporting-a-map">Exporting a map</a></li>
+</ul>
+</li>
+<li><a href="#assignment">Assignment</a>
+<ul>
+<li><a href="#deliverables">Deliverables</a></li>
+<li><a href="#submitting-the-assignment">Submitting the assignment</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="introduction">Introduction</h2>
+<p>One of the fundamental questions asked in a GIS is: how much of <em>x</em> is in, or near, <em>y</em>? For example, how many people are within walking distance of a grocery store? What percentage of the city area is covered by impervious surfaces, e.g., roads, parking lots, etc? Which watersheds in eastern Kentucky have the most surface mining impact?</p>
+<p>Answers to these questions are often used to make important decisions in public and environmental policy. While we will not endeavor to answer such questions in this lab, we will begin to explore the data and tools needed to do so. The approach is simple to understand: we overlay two or more layers of data in a GIS and then observe (and then measure) where features overlap, or are nearby.</p>
+<p>In our lab example, we will focus on Kentucky and use layers for state parks, county population, and elevation. As we explore these layers in QGIS, we&rsquo;ll wear our GIS hats and ask questions about spatial patterns in the state. In the next module, we&rsquo;ll don our cartographer hats to best visualize the data.</p>
+<h3 id="accessing-the-project-and-data">Accessing the project and data</h3>
+<p>Begin by downloading the prebuilt QGIS project file and data, both stored in a zipped folder.</p>
+<div class="doc-instructions">
+<ol>
+<li>Create a new folder called <code>lab-03</code> in the course folder you created in the first lab.</li>
+<li>Download the <a href="https://nyc3.digitaloceanspaces.com/astoria/geo109/Kentucky_explorer.zip">Kentucky_explorer.zip</a> file and move the file to this newly created folder.</li>
+<li>Unzip the file. On macOS, you can double-click the file to unzip it. On Windows, right-click the file and select <strong>Extract All&hellip;</strong>.</li>
+</ol>
+</div>
+<p>You should now have a folder called <em>Kentucky_explorer</em> with a QGIS project file and several data files. You should see the following files:</p>
+<p><img src="../../images/03/l-01.jpg" alt="Kentucky_explorer folder"><br>
+<em>Contents of the Kentucky_explorer folder</em></p>
+<p>Let&rsquo;s take a moment to explore the contents of this folder. The QGIS project file is called <em>Kentucky_explorer.qgz</em>. This file contains the map layers, their symbology, and the map extent. However, the project file does not embed the other map layers. Instead, it references them by their file path. This is a common approach in GIS because it allows us to share the project file without having to share the data, which can be very large. So, we think of a map project as a <strong>collection of files in a folder</strong>.</p>
+<p>The other files in the folder are spatial layers that you&rsquo;ll add to the map. They are:</p>
+<ul>
+<li><em>CensusCounties_2020.geojson</em> – Kentucky county polgons with population data from the 2020 Census. The format is GeoJSON, a popular format for sharing spatial data on the web.</li>
+<li><em>Kentucky_State_Park_Boundaries.zip</em> – Kentucky state park polygons. The format is a zipped Shapefile. This format can be added directly to QGIS.</li>
+<li><em>Kentucky_State_Park_Trails_shp.zip</em> – Kentucky state park trails. The format is a zipped Shapefile. (Note: A folder with the same name shows the contents of the zipped file.)</li>
+<li><em>ky-250.tif</em> – Kentucky elevation raster showing elevation in feet above sea level. The format is a TIFF file, a popular raster format. The <em>ky-250.tfw</em> is a called a <em>worldfile</em> and allows QGIS to properly register the layer.</li>
+</ul>
+<p>OK! If you see these files in your folder, you are ready to begin – and the hardest part is behind you. If you delete or lose this folder or its files, try redownloading the zip file and follow the first lab&rsquo;s instructions for setting up your course folder.</p>
+<h3 id="viewing-layers-in-qgis">Viewing layers in QGIS</h3>
+<p>Let&rsquo;s open the QGIS project file and explore the layers. The elevation has already been added for you, but you might not see it at first.</p>
+<div class="doc-instructions">
+<ol start="4">
+<li>Double-click the <em>Kentucky_explorer.qgz</em> file to open it in QGIS.</li>
+<li>Right-click the <em>ky-250</em> layer and select <strong>Zoom to Layer</strong>.</li>
+</ol>
+</div>
+<p>You should see the following:</p>
+<p><img src="../../images/03/l-02.jpg" alt="Open QGIS and zoom to elevation layer"><br>
+<em>Open QGIS and zoom to elevation layer</em></p>
+<p>As you can see, QGIS fits the entire state in the map canvas window. The elevation layer is a raster, which is a grid of cells, or pixels, that each have a value. In this case, the value is the elevation in feet above sea level.</p>
+<p>Use the mouse wheel or the zoom tools to zoom in and out. You can also pan the map by clicking and dragging. See if you can find Lexington – there is only elevation to help you. One landmark to look for is the Kentucky River, which forms tall cliffs on our counties southern border.</p>
+<p>The below images shows Lexington, the Palisades, and the Appalachian Foothills. We can determine that Lexington is higher than the river, but lower than the foothills. Can you find the highest location in the state, at 4,124 feet above sea level?</p>
+<p><img src="../../images/03/l-03.jpg" alt="Darker or lightness of color shows elevation"><br>
+<em>Darker or lightness of color shows elevation</em></p>
+<p>Now lets add our first layer, the state park boundaries. We&rsquo;ll use the drag-and-drop method.</p>
+<div class="doc-instructions">
+<ol start="6">
+<li>From the Windows File Explorer or macOS Finder, drag and drop the <em>Kentucky_State_Park_Boundaries.zip</em> file onto QGIS&rsquo;s map canvas.</li>
+</ol>
+</div>
+<p>You should see the following:</p>
+<p><img src="../../images/03/l-04.jpg" alt="Drag and drop park boundaries layer to map canvas"><br>
+<em>Drag and drop park boundaries layer to map canvas</em></p>
+<p>Let&rsquo;s find Lexington again and discover a few parks. While we can&rsquo;t see through the polygons (yet), we have a good idea which parks are relatively higher and lower in elevation. This might seem like a trivial observation, but it is a fundamental concept in GIS: we can combine spatial layers to make observations about our surroundings.</p>
+<p>Imagine this scenario. A threatened plant species is found only at high elevations in the state. Parks are often tasked with preserving biodiversity, so we might ask: where in the state are parks <strong>and</strong> do those parks have high elevations?</p>
+<p><img src="../../images/03/l-05.jpg" alt="How would you determine which park is higher in elevation?"><br>
+<em>How would you determine which park is higher in elevation?</em></p>
+<p>With a GIS, we could quickly find those locations in the state.</p>
+<p>OK, let&rsquo;s turn to our county polygon layer. The Shapefile format is a vector geometry format, but it can also store attributes for each feature. In this case, the attributes are demographic data from the 2020 US Census. We can use these attributes to change how the polygons look on the map. We&rsquo;ll use the population attribute to change the color of each county polygon to show the number of people living in each county.</p>
+<p>First, let&rsquo;s add the county layer to the map and make sure the park layer is above the county layer.</p>
+<div class="doc-instructions">
+<ol start="7">
+<li>Drag and drop the <em>CensusCounties_2020.geojson</em> file onto QGIS&rsquo;s map canvas.</li>
+<li>Sort the layers in the Layers panel so that the park layer is above the county layer.</li>
+</ol>
+</div>
+<p><img src="../../images/03/l-06.jpg" alt="Add counties layer and sort layer drawing order"><br>
+<em>Add counties layer and sort layer drawing order</em></p>
+<p>The county polygons should be colored in a single color. This is the default symbology for vector layers in QGIS. Let&rsquo;s change the symbology to show the population attribute. We&rsquo;ll talk more abore symbology method in the next module. For now, we&rsquo;ll use a method called <em>Graduated</em> to color counties such that darker colors represent higher populations.</p>
+<div class="doc-instructions">
+<ol start="9">
+<li>Click on the <strong>Layer Styling</strong> to open the panel.</li>
+<li>Make sure that <strong>CensusCounties_2020</strong> is selected in the styling panel.</li>
+<li>Change the <strong>Symbology</strong> dropdown to <strong>Graduated</strong>.</li>
+<li>Change the <strong>Value</strong> dropdown to <strong>Pop2020</strong>.</li>
+<li>Click <strong>Classify</strong>.</li>
+</ol>
+</div>
+<p>You might first see a red color scheme; however, that can be changed via the <strong>Color ramp</strong> dropdown. You can change it to a blue color scheme.</p>
+<p>The following image shows the steps:</p>
+<p><img src="../../images/03/l-07.jpg" alt="Change how the county polygons look based on value for each county"><br>
+<em>Change how the county polygons look based on value for each county</em></p>
+<p>We should now see the population of each county. The darker the color, the higher the population. For example, the darkest color represents those counties that have a population between 44,547 and 782,969. There is at least one county that has a population of 2,193 – can you find it?</p>
+<p>The park layer is a bit lost on this map. We can change its appearance to make it stand out more.</p>
+<div class="doc-instructions">
+<ol start="14">
+<li>Change the Layer Styling dropdown to <strong>Kentucky_State_park_Boundaries</strong>.</li>
+<li>Select <strong>Simple Fill</strong>.</li>
+<li>Change the <strong>Fill Color</strong> and <strong>Stroke Color</strong> to a color that contrasts well over the county layer – use your eye for design!</li>
+<li>Increase the <strong>Stroke width</strong> to make the parks &lsquo;grow&rsquo; in size on the map.</li>
+</ol>
+</div>
+<p>The following image shows the steps:</p>
+<p><img src="../../images/03/l-08.jpg" alt="Change how the park polygons look based on common property"><br>
+<em>Change how the park polygons look based on common property</em></p>
+<p>We&rsquo;ll ask another GIS question in a moment. First, let&rsquo;s prepare the map for export.</p>
+<h3 id="exporting-a-map">Exporting a map</h3>
+<p>We should have a map that shows county population and parks. We are not making a finished map; only showing the steps to do so. The QGIS project has a prebuilt layout with the map added to an 11 x 17 inch page. Let&rsquo;s open the page.</p>
+<div class="doc-instructions">
+<ol start="18">
+<li>Click on the menu items <strong>Projects &gt; Layouts &gt; Kentucky</strong> to open the page.</li>
+</ol>
+</div>
+<p><img src="../../images/03/l-09.jpg" alt="Open the QGIS Layout panel for exporting a layout"><br>
+<em>Open the QGIS Layout panel for exporting a layout</em></p>
+<p>Most maps have a title, legend, scale, etc. We&rsquo;ll only a text box that contains a question we might ask about our data.</p>
+<div class="doc-instructions">
+<ol start="19">
+<li>Click on the <strong>Text Tool</strong> and draw large box on the page.</li>
+<li>Add text in the <strong>Main Properties</strong>.</li>
+<li>Click the <strong>Font</strong> drowdown to customize the text appearance.</li>
+</ol>
+</div>
+<p>The following two images shows the steps:</p>
+<p><img src="../../images/03/l-10.jpg" alt="Add a text box to the layout"><br>
+<em>Add a text box to the layout</em></p>
+<p><img src="../../images/03/l-11.jpg" alt="Change the text properties"><br>
+<em>Change the text properties</em></p>
+<p>When you are finished adding and customizing the text you should see the something similiar to the following:</p>
+<p><img src="../../images/03/l-11.1.jpg" alt="How would you determine how many people have good access?"><br>
+<em>How many people have good access?</em></p>
+<p>With these layers, we can start analyzing and formulating questions about their spatial relationship. In this example, we ask how many people have good access to a park? An interpretation of <em>good access</em> could be: where there are more people there should be more parks. Another way to express this is that for every county, there should be an equal number of park acres per person. More the better, IMHO.</p>
+<p>We have the data to start this analysis, but we&rsquo;ll leave it for another course, e.g., GEO 309. But, you should now understand the basic concept of overlaying data and analyzing the results.</p>
+<p>Now you are ready to export the map. Export the map as a PDF file and enable the GeoPDF option. This option will allow you to easily share the map and use it in Avenza Maps on our mobile devices.</p>
+<div class="doc-instructions">
+<ol start="22">
+<li>Click on the <strong>Export to PDF</strong> button.</li>
+<li>Add your linkble username to the output file name.</li>
+<li>Enable <strong>Creat Geospatial PDF</strong> option and click <strong>Save</strong>.</li>
+</ol>
+</div>
+<p>The following images shows the steps:</p>
+<p><img src="../../images/03/l-12.jpg" alt="Export layout as PDF file format"><br>
+<em>Export layout as PDF file format</em></p>
+<p><img src="../../images/03/l-13.jpg" alt="Enable GeoPDF option in export menu"><br>
+<em>Enable GeoPDF option in export menu</em></p>
+<p>Ok, you now have a PDF file that you can share with others. You can also open the PDF in Avenza Maps on your mobile device.</p>
+<h2 id="assignment">Assignment</h2>
+<p>Kentucky&rsquo;s <em>Creative GIS Club</em> has a yearly competition where they invite mappers to ask interesting questions about the spatial relationship of two overlapping map layers. They have asked you to create a PDF that shows a map with two layers and one question. The question can be anything you want, but it must be answerable by the two layers you choose.</p>
+<p>Note: You can use the map layers from this lab or find your own. If you use this lab&rsquo;s layers, you should ask a different question than the one we asked in this lab.</p>
+<p>Save your QGIS project often via the menu item <strong>Project &gt; Save</strong>. If you want to move the project to a different computer, copy the <strong>entire folder</strong>, e.g., <em>Kentucky_explorer</em>.</p>
+<h3 id="deliverables">Deliverables</h3>
+<p>Please follow these requirements for the assignment:</p>
+<ol>
+<li>Add two layers to the map, making sure that both are visible. (4 points)</li>
+<li>Experiment with styling of each layer to create enough contrast between the layers. (2 points)</li>
+<li>Add a text box to the layout and write a question that could be answered by the two layers. (1 point)</li>
+<li>Export the layout as a GeoPDF file. (1 point)</li>
+<li>Name the file <code>cgc-{linkblue}.pdf</code> and replace <code>{linkblue}</code> with your linkblue name. For example, <code>cgc-elmus0X.pdf</code>. (1 point)</li>
+<li>Your lab TA will add one additional requirement. (1 point)</li>
+</ol>
+<h3 id="submitting-the-assignment">Submitting the assignment</h3>
+<p>Upload your PDF file to the Module 3 assignment on Canvas by the published due date. After the submission deadline, we&rsquo;ll try to answer some of the questions y&rsquo;all ask during lecture.</p>
+<p>Happy overlaying!</p>
+<p>.</p>
+</div>
+</section>
+</main>
+ <footer class="footer fixed-bottom uk-liter-bg" id="footer">
+  <div class="row footer-text">
+    <div class="col-12 col-md text-center text-md-left nav-link text-dark">
+      © UKy Geography | 1944–2023
+    </div>
+  </div>
+
+  
+
+  
+  
+
+  <script src="../../js/bundle.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+    charset="utf-8"></script>
+  <script src="../../js/utilities.js"></script>
+</footer></body>
+</html>

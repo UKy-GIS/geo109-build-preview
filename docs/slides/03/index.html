@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>GEO109: 03-Analysis</title>
+
+  <link rel="stylesheet" href="../dist/reset.css" />
+  <link rel="stylesheet" href="../dist/reveal.css" />
+  <link rel="stylesheet" href="../dist/theme/league-109.css" id="theme" />
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="../plugin/highlight/tom-night-80.css" id="highlight-theme" />
+  <style>
+    /* UK Colors: 
+                #c7c9c8 light gray 
+                #63666a dark gray
+                #15397f dark blue
+                #009bda light blue
+                #0033a0 official blue
+            */
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+      <section data-pre-load
+        data-background-image="https://www.outragegis.com/weather/img/animation/yesterday/LookRock.gif"
+        data-background-opacity="0.4">
+        <h1 class="r-fit-text">03: Analysis</h1>
+        <!-- <h2>Welcome</h2> -->
+        <div class="ll">
+          Yesterday in the Great Smokies<br />Webcam
+          <a href="https://www.outragegis.com/weather/img/animation" target="_blank">archive</a>
+        </div>
+        <div class='lr'><a target='_blank' href="https://uky-gis.github.io/geo109">GEO 109: Digital Mapping</a> </div>
+      </section>
+      <section data-pre-load
+        data-background-image="https://www.outragegis.com/weather/img/animation/yesterday/LookRock.gif"
+        data-background-opacity="0.4">
+        <img width="100%" src="../images/logo-uk-geo.png" />
+
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Field Trips</h3>
+        <ul>
+          <li class="fragment">
+            Map library on Wednesday. Starts here.
+          </li>
+          <li class="fragment">
+            Internet infrastructure tour next Tuesday.
+          </li>
+          <li class="fragment">
+            Art Museum following week.
+          </li>
+          </ul>
+      </section>
+
+      <section data-background-image="images/vax-map.jpg"
+        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Good maps?</h3>
+        <ul>
+          <li class="fragment">
+            have good data
+          </li>
+          <li class="fragment">
+            and tell a persuasive story.
+          </li>
+          </ul>
+      </section>
+
+      <section class="left" data-background-iframe="https://pudding.cool/2021/04/music-bubble"
+        data-background-opacity="1" data-background-interactive="true">
+
+      </section>
+
+      <section class="left" data-background-iframe="https://developer.spotify.com/documentation/web-api/"
+        data-background-opacity="1" data-background-interactive="true">
+
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Analysis?</h3>
+        <ul>
+          <li class="fragment">
+            Why do people live where they live?
+          </li>
+          <li class="fragment">
+            Maps reveal and obscure these patterns.
+          </li>
+          </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3 class='r-fit-text' >What makes a region?</h3>
+        <h5 class='r-fit-text fragment'> <a href="https://www.google.com/maps/@38.8675361,-83.1421684,6.16z/data=!5m1!1e4" target='_blank'>Appalachia?</a></h5>
+      </section>
+
+      
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h1 class='r-fit-text'>Mountains?</h1>
+      </section>
+
+
+      <section data-background-image="images/app-mountains.jpeg"
+        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h1 class='r-fit-text'>Coal?</h1>
+      </section>
+
+      <section data-background-image="images/app-coal.jpg"
+        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h1 class='r-fit-text'>Forests?</h1>
+      </section>
+
+      <section data-background-image="images/app-forests.jpg"
+        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h1 class='r-fit-text'>Ecology?</h1>
+      </section>
+
+      <section data-background-image="images/app-eco.jpg"
+        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h1 class='r-fit-text'>Recreation?</h1>
+      </section>
+
+      <section data-background-image="images/app-trail.jpg"
+        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h1 class='r-fit-text'>Shifting definitions</h1>
+      </section>
+
+      <section data-background-image="images/app.gif"
+        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+        <a target="_blank" href="https://www.arc.gov/county-economic-status-and-distressed-areas-by-state-fy-2021/">current</a>
+      </section>
+
+      <section class="left" data-background-iframe="https://www.youtube.com/embed/A_eSUBotF64"
+        data-background-opacity="1" data-background-interactive="true">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Stereotypes?</h3>
+        <ul>
+          <li class="fragment">
+            <a href="https://youtu.be/ND2J4G1Kx4U" target="_blank">Hillbilly movie</a>
+          </li>
+          <li class="fragment">
+            <a href="https://libraryguides.berea.edu/hillbillyvideos" target="_blank">more videos</a>
+          </li>
+        </ul>
+      </section>
+
+
+      <section class="left" data-background-iframe="https://www.youtube.com/embed/IlZ9qXZDi4E"
+        data-background-opacity="1" data-background-interactive="true">
+      </section>
+
+      <section class="left" data-background-iframe="https://www.youtube.com/embed/DCanT3QcDS4"
+        data-background-opacity="1" data-background-interactive="true">
+      </section>
+
+      
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Finish video</h3>
+        <ul>
+          <li class="fragment">
+            Why did so many foreign-born and African Americans live in Eastern Kentucky?
+          </li>
+          <li class="fragment">
+            <a href="https://demographics.coopercenter.org/racial-dot-map/" target="_blank">The Racial Dot Map</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Critical mapping</h3>
+        <ul>
+          <li class="fragment">
+            Examine assumptions (<a target="_blank" href="https://communitycrimemap.com/?address=Lexington,KY">crime map</a>)
+          </li>
+          <li class="fragment">
+            Expose counter-narratives (<a target="_blank" href="https://openstreetmap.org">OpenStreetMap</a>)
+          </li>
+          <li class="fragment">
+            Question or resist power (<a target="_blank" href="https://data.dictatoralert.org/">Dictator Alert</a>)
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Gentrification</h3>
+        <ul>
+          <li class="fragment">
+            "The process whereby the character of a poor urban area is changed by wealthier people moving in, improving housing, and attracting new businesses, typically displacing current inhabitants in the process."
+          </li>
+          <li class="fragment">
+            <a target='_blank' href="https://www.google.com/maps/@38.0538195,-84.4865085,3a,75y,327.6h,74.26t/data=!3m7!1e1!3m5!1sjnIVEvTN7fpiu-Y-aPMqKg!2e0!5s20070901T000000!7i3328!8i1664">Epicenter of Lexington gentrification</a>
+          </li>
+
+        </ul>
+      </section>
+
+      <section data-background-image="https://planning-org-uploaded-media.s3.amazonaws.com/image/Planning-2018-12-image17.jpg"
+      data-background-opacity="1" data-background-color="white">
+    </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Critical Mapping</h3>
+        <ul>
+          <li class="fragment">
+            <a href="http://newmaps.uky.edu/sites/default/files/GEO_Atlas_0.pdf" target="_blank">Mapshop Community Atlas</a>
+          </li>
+          <li class="fragment">
+            <a href="https://dsl.richmond.edu/panorama/redlining/#loc=14/38.049/-84.511&city=lexington-ky" target="_blank">Mapping Inequality</a>
+          </li>
+          <li class="fragment">
+            <a href="https://antievictionmap.com/" target="_blank">Anti-Eviction Mapping Project</a>
+          </li>
+          <li class="fragment">
+            <a href="https://www.urbandisplacement.org/" target="_blank">Urban Displacement Project</a>
+          </li>
+        </ul>
+      </section>
+
+      <section  data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class='r-fit-text'>Task 7</h5>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Map where people live</h3>
+        <ul>
+          <li class="fragment">
+            Download <a href="https://outragegis.com/download/a/census.gpkg">data</a>
+          </li>
+          <li class="fragment">
+            Put it in your workspace/downloads folder
+          </li>
+          <li class="fragment">
+            Open QGIS and add the 'world_countries' layer to your map
+          </li>
+          <li class="fragment">
+            Inspect attributes
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/t/t-01.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-02.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-03.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-04.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-05.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-06.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-07.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-08.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-09.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Map where people live</h3>
+        <ul>
+          <li class="fragment">
+            What's wrong with this map?
+          </li>
+          <li class="fragment">
+            Screen capture QGIS (with this map and Browser and Layers panels) and submit for credit
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Map rates, not totals</h3>
+        <ul>
+          <li class="fragment">
+            Larger countries can have more people.
+          </li>
+          <li class="fragment">
+            We normalize by the area of each country.
+            <ul>
+              <li class="fragment">
+                We create a population density map
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+    
+
+      <section data-background-image="images/t/t-11.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h2 class='r-fit-text'>$area / 1000000</h2>
+        Calculates area in square kilometers
+      </section>
+
+      <section data-background-image="images/t/t-12.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/t/t-13.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h2 class='r-fit-text'>"POP_EST" / ($area / 1000000)</h2>
+        Calculates people per square kilometer
+      </section>
+
+      <section data-background-image="images/t/t-14.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Demographic mapping</h3>
+        <ul>
+          <li class="fragment">
+            Show population patterns by geographic unit
+          </li>
+          <li class="fragment">
+            Where do people live, how old are they, and how money do they make?
+                    </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Data sources</h3>
+        <ul>
+          <li class="fragment">
+            U.S. Census Bureau <a href="https://data.census.gov/cedsci/">data</a>
+          </li>
+          <li class="fragment">
+            Social Explorer  <a href="https://www.socialexplorer.com/explore-maps">data</a> with UK account
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Design recommendations</h3>
+        <ul>
+          <li class="fragment">
+            Use a sequential color scheme
+          </li>
+          <li class="fragment">
+            Classify your data with either an Equal Count or Natural Breaks method
+          </li>
+          <li class="fragment">
+            Use an appropriate map projection (ask me!)
+          </li>
+          <li class="fragment">
+            <a href="https://www.axismaps.com/guide/choropleth">Guide</a>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/color.jpg"
+        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      </section>
+
+      <section data-background-image="https://uploads-ssl.webflow.com/5f6a4786fa53db61032919f9/5fa44acd9fd5f0dd50b07af2_histogram_examples.png"
+        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      </section>
+
+      <section  data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class='r-fit-text'>Task 8</h5>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>US Population density map</h3>
+        <ul>
+          <li class="fragment">
+            Open QGIS and add the 'us_census_counties' layer to your map
+          </li>
+          <li class="fragment">
+            Inspect attributes
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/t/t-15.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/t/t-16.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/t/t-17.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h2 class='r-fit-text'>"SE_A00001_001" / (  "ALAND"  / 1000000)</h2>
+        Calculates people per square kilometer
+      </section>
+
+      <section data-background-image="images/t/t-18.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/t/t-19.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/t/t-20.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Submit</h3>
+        <ul>
+
+          <li class="fragment">
+            Screen capture QGIS (with this map and Browser and Layers panels) and submit for credit
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Mapping other variables</h3>
+        <ul>
+          <li class="fragment">
+            Inspect <a target='_blank' href="https://outrageGIS.com/download/a/us_census_counties_metadata.txt">us_census_counties_metadata.txt</a>
+            <ul>
+              <li class="fragment">They tell us column names</li>
+            </ul>
+          </li>
+          <li class="fragment">
+            For example, if you wanted to map the median age of the population, you could use the following value:
+            <ul>
+              <li class="fragment"><code>SE_A01004_001</code></li>
+              <li class="fragment">Note that the column starts with "SE_"</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Saving styles</h3>
+        <ul>
+          <li class="fragment">
+            Before moving to the next task, save your styles so you can reuse them.
+          </li>
+          <li class="fragment">
+            Right click the county layer and select Styles > Add...
+          </li>
+          <li class="fragment">
+            Call it "Pop density"
+          </li>
+          <li class="fragment">
+            Repeat for the "Median age" 
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/t/t-21.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/t/t-22.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Median age</h3>
+        <ul>
+          <li class="fragment">
+            Graduate the color by the <code>SE_A01004_001</code> value
+          </li>
+          <li class="fragment">
+            Right click the county layer and select Styles > Add...
+          </li>
+          <li class="fragment">
+            Call it "Income"
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/t/t-23.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Median Household Income</h3>
+        <ul>
+          <li class="fragment">
+            Graduate the color by the <code>SE_A14006_001</code> value
+          </li>
+          <li class="fragment">
+            Right click the county layer and select Styles > Add...
+          </li>
+          <li class="fragment">
+            Call it "Not married"
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/t/t-24.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Never Married</h3>
+        <ul>
+          <li class="fragment">
+            Graduate the color by the value:<br> 
+            <code>SE_A11001_002 / SE_A11001_001</code>
+          </li>
+          <li class="fragment">
+            The calculates the ratio of the population 15 and older that has never been married.
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/t/t-25.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Question</h3>
+        <ul>
+          <li class="fragment">
+            What if you wanted find areas with
+            <ul>
+              <li class="fragment">high pop density</li>
+              <li class="fragment">low marriage rates</li>
+              <li class="fragment">young age</li>
+              <li class="fragment">high income?</li>
+              
+            </ul>
+          </li>
+          <li class="fragment">
+            That's spatial analysis!
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+      data-background-opacity="0.3">
+      <h3>See if you can find a county</h3>
+      <ul>
+        <li class="fragment">
+          Switch between styles and see if you visually identify any patterns...
+        </li>
+      </ul>
+    </section>
+
+    <section data-background-image="images/t/t-26.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+      data-background-opacity="0.3">
+      <h3>Need more detail?</h3>
+      <ul>
+        <li class="fragment">
+          Save your QGIS project and close the application.
+        </li>
+        <li class="fragment">
+          Open QGIS and start a new project called "Kentucky blocks"
+        </li>
+        <li class="fragment">
+          Change map projection to "3089"
+        </li>
+      </ul>
+    </section>
+
+    <section data-background-image="images/t/t-27.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+    <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+      data-background-opacity="0.3">
+      <h3>US Census Block Groups</h3>
+      <ul>
+        <li class="fragment">
+          Smallest unit of geography where demographic data is collected.
+        </li>
+        <li class="fragment">
+          Typically contains 600–3,000 people.
+        </li>
+        <li class="fragment">
+          Add "ky_census_blocks" layer to new project
+        </li>
+        <li class="fragment">
+          Inspect <a target='_blank' href="https://outrageGIS.com/download/a/ky_census_blocks-metadata.txt">ky_census_blocks-metadata.txt</a>
+        </li>
+      </ul>
+    </section>
+
+    
+
+      
+      <section data-background-image="images/t/t-28.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-29.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-30.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-31.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-32.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-33.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-34.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-35.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-36.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+      <section data-background-image="images/t/t-37.jpg"
+        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      </section>
+
+      <section  data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class='r-fit-text'>Lab 3</h5>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Demographic mapping</h3>
+        <ul>
+          <li class="fragment">
+            Create a QGIS Print Layout showing a demographic pattern for Kentucky or the US.
+          </li>
+          <li class="fragment">
+            Export the layout to a JPG format.
+          </li>
+          <li class="fragment">
+            Details and submission in  <a href="https://uk.instructure.com/courses/2016829/assignments/10883402">Canvas</a>
+          </li>
+        </ul>
+      </section>
+
+      
+
+
+      
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <script src="../dist/reveal.js"></script>
+  <script src="../plugin/notes/notes.js"></script>
+  <script src="../plugin/markdown/markdown.js"></script>
+  <script src="../plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      backgroundTransition: "fade",
+      // Transition style
+      transition: "fade", // none/fade/slide/convex/concave/zoom
+
+      // Transition speed
+      transitionSpeed: "fast", // default/fast/slow
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+    });
+  </script>
+</body>
+
+</html>

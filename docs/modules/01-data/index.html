@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html><head>
+  <title>GEO 109: 01 Data</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Website meta description for google search results go here" />
+  <meta name="dc.relation" content="https://uky-gis.github.io/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#1A94D2" />
+  
+
+   
+  <link rel="stylesheet" href="../../css/main.min.css" media="screen" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head><body><nav class="navbar navbar-light uk-liter-bg" id='nav'>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../../">
+      <img src="https://uky-gis.github.io/graphics/logo-75th-01.svg" alt="" height="45px"
+        class="d-inline-block ">
+     <h5 class="d-inline-block font-weight-700">GEO 109</h5> 
+    </a>
+
+    <ul class="nav justify-content-start">
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Modules
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/00-intro/">  Introduction</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/01-data/">  01 Data</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/02-locate/">  02 GPS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Maps
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/hill/">  Kentucky</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/additional/">  Additional Maps</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+    <li class="nav-item">
+      <a class='nav-link' href="../../syllabus">
+         Syllabus</a>
+      </a>
+    </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid uk-lite-bg py-2" id="singleTitle">
+  <row>
+    <h3 class="font-weight-700 align-middle text-dark mt-1">
+      01 Data 
+    </h3>
+  </row>
+</div>
+
+<main>
+<section class="py-3 container col-lg-8 col-xxl-6" id="documentation">
+<div class="d-flex justify-content-between  align-items-end">
+<h3>Presentation</h3>   
+<a href='../../slides/01' target='_blank'>Open in new tab</a>
+</div>
+<iframe src='../../slides/01' width='100%' class='slide-presentation'></iframe>
+<h2>Week</h2>
+<ul>
+<li><a href="../../slides/01">02: Data</a></li>
+<li><a href="../../slides/01/#/35">03: Creating your own</a></li>
+</ul>
+<div id='lab-content'>
+<h2>Lab</h2>
+<p>In this lab we will explore how to take observations and encode them into a data format that can be stored, shared, and mapped. We will discover that we can locate any place on the planet with two numbers – an elagant and powerful concept. We will then visualize this data in our primary mapping application, QGIS.</p>
+<h3>Table of Contents</h3>
+<!-- TOC -->
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#owning-your-data">Owning your data</a>
+<ul>
+<li><a href="#creating-your-local-workspace">Creating your local workspace</a></li>
+</ul>
+</li>
+<li><a href="#downloading-remote-files">Downloading remote files</a></li>
+<li><a href="#viewing-and-editing-spatial-data">Viewing and editing spatial data</a>
+<ul>
+<li><a href="#creating-new-features">Creating new features</a></li>
+</ul>
+</li>
+<li><a href="#making-a-quick-visualization-in-qgis">Making a quick visualization in QGIS</a>
+<ul>
+<li><a href="#adding-a-csv-layer-in-qgis">Adding a CSV layer in QGIS</a></li>
+</ul>
+</li>
+<li><a href="#assignment">Assignment</a>
+<ul>
+<li><a href="#deliverables">Deliverables</a></li>
+<li><a href="#submitting-the-assignment">Submitting the assignment</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="introduction">Introduction</h2>
+<p>Without data, we wouldn&rsquo;t have much to show on a map. Let&rsquo;s first loosely define data as <strong>observations encoded into a format that can be stored and shared</strong>. An observation might be made from a satellite above Earth taking photographs or a surveyor on the ground measuring the location of a property boundary. The format might be a photograph or a database and the it might be shared in a report or in a map.</p>
+<p>Let&rsquo;s think about the observations of our surroundings that reside in our memory. We can make a map of these memories and perhaps you have scribbled an impromtu map for a lost tourist. Geographers call it a <em>mental map</em> and it can show our perceptions of place. Here are two hand-drawn examples from UKy students.</p>
+<p><img src="../../images/01/mm-01.jpg" alt="mental map"><br>
+<em>Jessica&rsquo;s Recreational Space</em></p>
+<p><img src="../../images/01/mm-02.jpg" alt="mental map"><br>
+<em>The Arboretum in Lexington, Kentucky</em></p>
+<p>Both images show the hallmarks of a classic map; a depiction of where things (the observations) are related to one another, a title that describes the theme, a legend that explains the symbols, and a scale that shows the relationship between the map and the real world.</p>
+<p>However, we see notable differents in how the mapmakers see their world. Jessica shows a dangerous area to northwest and the scale is applied only to driving distances, her primary mode of transportation. The Arboretum map uses a grid to more precisely locate and measure things – indeed, a goal of many maps – and the color shading attempts to show relative elevations.</p>
+<p>Let&rsquo;s examine Angelique&rsquo;s &lsquo;map&rsquo; of campus. First, can we accept this as a map without a scale or legend?</p>
+<p><img src="../../slides/01/images/mm/03.jpg" alt="mental map"><br>
+<em>Angelique&rsquo;s Daily Route</em></p>
+<p>Because there is only one place on the planet where these observations could be made, we can accept this is a map. More importantly, this image exposes the DNA of all maps – the are they mapmaker&rsquo;s story of place. Angelique sees her world as a loop through eat, study, class, and sleep. You might appreciate this view of the world.</p>
+<p>These examples are creative works in that they are drawings of the author&rsquo;s imagination (made from multiple, disconnected observations). Hand drawn maps today are <a href="https://www.davidrumsey.com/">prized historical artifacts</a> with a rich aesthetic tradition. Modern mapmakers have the benefit of computers and software to create their maps, but they are still products of an imagination that select which observations to include and which to leave out. This decision is guided by the story that wants to be told.</p>
+<p>OK, imagination is cool, but we don&rsquo;t have access to the underlying data. The original observations are embedded in the memory of the mapmaker. And, would we want to solely rely on memory to create our maps?</p>
+<p>Let&rsquo;s now explore how we can create, manage, and share exact copies of our observations. This is the basis of modern digital mapmaking.</p>
+<h2 id="owning-your-data">Owning your data</h2>
+<p>The prime benefit of creating data is that you own it. You decide how and to whom you share your data. You can even sell it.</p>
+<p>Question: Have you ever downloaded something from the internet and then couldn&rsquo;t find it? &ldquo;Where did it go?&rdquo; It&rsquo;s so frustrating! Another dimension of owning your data is being able to access the data on your device or computer. Part of this lab is to cultivate good <em>data hygiene</em> where we proactively organize data and projects on our computers.</p>
+<p>OK, let&rsquo;s fire up our personal desktop computers (PC), either in the lab or on your personal computer, and get started.</p>
+<h3 id="creating-your-local-workspace">Creating your local workspace</h3>
+<p>A <em>local workspace</em> is simply a directory on your computer that is dedicated to mapping. Everything you make in this course should live inside this workspace. The lab computers use the Windows operating system (OS), but you can use your personal computer if you prefer a different OS, e.g., macOS.</p>
+<div class="doc-instructions">
+<ol>
+<li>
+<p>Open Windows <strong>File Explorer</strong> or macOS <strong>Finder</strong> and navigate to your home directory.</p>
+</li>
+<li>
+<p>Click on <strong>Documents</strong> to enter that directory.</p>
+</li>
+<li>
+<p>Create a directory called <code>geo109</code> or another appropriate name. This will be your workspace for the semester. For this example, I&rsquo;ll use <code>YodaMaps</code> for the name of my workspace.</p>
+</li>
+</ol>
+</div>
+<p>There are a few ways to do this, but try <strong>Right-clicking</strong> an empty space in the window and select <strong>New &gt; Folder</strong>.</p>
+<p><img src="../../images/01/lab-01.jpg" alt="create workspace"><br>
+<em>Create a workspace directory in your home directory on Windows</em></p>
+<p><img src="../../images/01/lab-02.jpg" alt="create workspace"><br>
+<em>Create a workspace directory in your home directory on macOS</em></p>
+<div class="doc-instructions">
+<ol start="4">
+<li>Inside that folder, create another folder called <code>lab-01</code>. This will be your workspace for this lab.</li>
+</ol>
+</div>
+<p>(Note: You should do these steps on any computer you intend to use for class.)</p>
+<p>Right now, the folder is empty. Let&rsquo;s add some spatial data.</p>
+<h2 id="downloading-remote-files">Downloading remote files</h2>
+<p>The <em>local</em> computer is the one in front of you with a new, dedicated workspace for this lab. To get data, we often download it from a <em>remote</em> computer, one that we do not have physical access to and lives in the cloud (a.k.a. on someone else&rsquo;s computer).</p>
+<p>A remote file path is the location of a file on a remote computer. When we browse online, we&rsquo;re using remote file paths to access files on remote computers. Often, we call these path URLs (uniform resource locator). Let&rsquo;s consider this URL:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>https://uky-gis.github.io/geo109/data/01/hello-world.csv
+</span></span></code></pre></div><p>This path is unique among the billions of URLs online. Let&rsquo;s break this URL down. The <code>https://</code> tells the browser to use the <em>secure hypertext transfer protocol</em> when accessing this file, which verifies and encrypts our communications with the remote computer. The <code>uky-gis.github.io</code> is the remote computer&rsquo;s domain name. The <code>/geo109/data/01/</code> is the directory path to <code>hello-world.csv</code>, a comma-separated values (CSV) file that contains spatial data.</p>
+<p>In order to download this file, we need to use a web browser.</p>
+<div class="doc-instructions">
+<ol start="5">
+<li>
+<p>Open your favorite browser and <a download href="https://newmaps.xyz/data/01/hello-world.csv">follow this link</a> to download the file. The file will likely download to your <strong>Downloads</strong> directory.</p>
+</li>
+<li>
+<p>Move the file to your <code>lab-01</code> directory.</p>
+</li>
+</ol>
+</div>
+<p>You can use Windows File Explorer or macOS Finder to move the file.</p>
+<p><img src="../../images/01/lab-03.jpg" alt="create workspace"><br>
+<em>Move data to your lab-01 folder on Windows</em></p>
+<p><img src="../../images/01/lab-04.jpg" alt="create workspace"><br>
+<em>Move data to your lab-01 folder on macOS</em></p>
+<h2 id="viewing-and-editing-spatial-data">Viewing and editing spatial data</h2>
+<p>Now, let&rsquo;s open the file in a text editor. A text editor is an application that allows us to view and edit text files, including certain spatial data types. There are many text editors available, but we&rsquo;ll use <a href="https://code.visualstudio.com/">Visual Studio Code</a>, a free and open source text editor from Microsoft. Download and install Visual Studio Code on your computer – it is also installed on the lab computers.</p>
+<div class="doc-instructions">
+<ol start="7">
+<li>Open the <code>hello-world.csv</code> file in Visual Studio Code.</li>
+</ol>
+</div>
+<p>You should see something like this:</p>
+<p><img src="../../images/01/lab-05.jpg" alt="Viewing a CSV file"><br>
+<em>Viewing a CSV file</em></p>
+<p>CSV files are one of the most common data formats to store spatial data. They are simple text files that can be read by almost any application. The file is a table with rows and columns. The first row is called the <em>header</em> and contains the names of the columns. The remaining rows are the <em>records</em> and contain the data. In this case, we have three columns and one record. When records represent geographical points, we often refer to them as <em>features</em>. This is a simple example of a <em>tabular</em> data type.</p>
+<p>Let&rsquo;s now examine the CSV format in some detail. Commas are special characters that separate columns, though other characters could be used instead, e.g., the tab or pipe <code>|</code> characters. The CSV can encode two types of data, <em>numbers</em> (quantities) and <em>strings</em> (sequences of characters). Strings should always be wrapped in double quotes <code>&quot; string content &quot;</code>.</p>
+<p>The first two columns are numbers representing the latitude and longitude of the point. Latitude measures the distance from the equator (0 degrees) and ranges from -90 to 90 degrees. Longitude measures the distance from the prime meridian in London, England (0 degrees) and ranges from -180 to 180 degrees. The third column is a string representing the name of the point.</p>
+<p>So, where is this location? We see that the latitude is positive (northern hemisphere) and the longitude is negative (western hemisphere) – might we be in North America? Let&rsquo;s use <a href="https://www.google.com/maps">Google Maps</a> to find out.</p>
+<div class="doc-instructions">
+<ol start="8">
+<li>Copy the latitude and longitude values <code>38.038093,-84.503872</code> from the CSV file and paste them into the search box in Google Maps.</li>
+</ol>
+</div>
+<p>You should see something like this:</p>
+<p><img src="../../images/01/lab-06.jpg" alt="Viewing the locations in Google Maps"><br>
+<em>Viewing the locations in Google Maps</em></p>
+<p>As we can see, the location is Whitehall Classroom Building.</p>
+<h3 id="creating-new-features">Creating new features</h3>
+<p>Let&rsquo;s create a new feature by adding a new record with a different location and name. Use Google Maps to explore campus and discover the latitude and longitude for a location.</p>
+<div class="doc-instructions">
+<ol start="9">
+<li>Find the latitude and longitude for an interesting location on campus and add it to the CSV file.</li>
+</ol>
+</div>
+<p>What if we wanted to play video games, where would we go on campus? How about The Cornerstone:</p>
+<p><img src="../../images/01/lab-07.jpg" alt="Finding lat, lon in Google Maps"><br>
+<em>Finding lat, lon in Google Maps</em></p>
+<p>When we find a location on the map, <strong>click</strong> on the map to drop a marker. Then, <strong>right-click</strong> on the marker to display the latitude and longitude of the location. <strong>Click</strong> on the coordinates to copy them to the clipboard. Next past the latitude and longitude values into the CSV file and add a message for the location:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>lat,lon,message
+</span></span><span style="display:flex;"><span>38.038093,-84.503872,&#34;Geography, Y&#39;all!&#34;
+</span></span><span style="display:flex;"><span>38.041704,-84.504288, &#34;One pinball machine @ The Cornerstone&#34;
+</span></span></code></pre></div><p>Note: The number of decimal places in the latitude and longitude values is important. The more decimal places, the more precise the location. The number of decimal places is called the <em>precision</em> of the value. For most data we use, 6 decimal places is adequate.</p>
+<div class="doc-instructions">
+<ol start="10">
+<li>Add two more locations to the CSV file.</li>
+</ol>
+</div>
+<p>Ok, let&rsquo;s add a few more video gaming parlors that are off campus:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>lat,lon,message
+</span></span><span style="display:flex;"><span>38.038093,-84.503872,&#34;Geography, Y&#39;all!&#34;
+</span></span><span style="display:flex;"><span>38.041704,-84.504288,&#34;One pinball machine @ The Cornerstone&#34;
+</span></span><span style="display:flex;"><span>38.053765,-84.486388,&#34;Arcadium has Galaga!&#34;
+</span></span><span style="display:flex;"><span>38.057173,-84.518648,&#34;The Burl Arcade has multiple pinballs 🤪&#34;
+</span></span></code></pre></div><p>We now have a file that we can share our favorite gaming locations with friends as simply as texting the content of the file. However, you might be saying, &ldquo;I can just tell my friends to Google these locations.&rdquo; That&rsquo;s true, but what if we had locations that were not indexed by a search engine? For example, what if we wanted to share a favorite pinic spot or the best place to watch a sunset? Latitude and longitude is the most concise way to share a location anywhere on the planet. 🤯</p>
+<p>Let&rsquo;s now make a quick visualization of these locations in QGIS to verify that we have selected accurate locations.</p>
+<div class="doc-instructions">
+<ol start="11">
+<li>Save the CSV file with the three locations and close Visual Studio Code.</li>
+</ol>
+</div>
+<p>After making some edits to the CSV file, save the file in Visual Studio Code, e.g., in the application menu, find <strong>File &gt; Save</strong>.</p>
+<h2 id="making-a-quick-visualization-in-qgis">Making a quick visualization in QGIS</h2>
+<p>Mapmaking is a rather complex endeavor and requires specialized software. We&rsquo;ll use free and open source software (FOSS) applications to create our maps, which means that we can share our data with others and they can use the same software to view and edit it.</p>
+<p>In this section of the lab, we&rsquo;ll tiptoe into the world of <a href="https://qgis.org/en/site/">QGIS</a>, our main, open source mapping application. You&rsquo;ll likely want to try this part in the lab, but you can also try it at home. QGIS is available for Windows, macOS, and Linux.</p>
+<p>Find QGIS in the Start Menu on Windows or in the Applications folder on macOS. (Note: On macOS, the first time you launch QGIS, you need to right-click open.)</p>
+<div class="doc-instructions">
+<ol start="12">
+<li>Open QGIS</li>
+</ol>
+</div>
+<p>You should see something like this:</p>
+<p><img src="../../images/01/lab-08.jpg" alt="First view of QGIS"><br>
+<em>First view of QGIS</em></p>
+<p>QGIS is a powerful application with many features, but we&rsquo;ll only use a few of them in this lab. For now, let&rsquo;s just get a feel for the application.</p>
+<div class="doc-instructions">
+<ol start="13">
+<li>Create a new project in QGIS</li>
+<li>Add a basemap to the project</li>
+</ol>
+</div>
+<p>So, how do we do this? In the menu bar, select <strong>Project &gt; New</strong> or click on the <strong>New Empty Project</strong> section in the start screen shown above. Let&rsquo;s now add a basemap to our map. Basemaps are the background images that we see in maps. QGIS has a built-in basemap called <em>OpenStreetMap</em>, but we can add many others. In the <strong>Browser</strong> panel, right-click the <strong>XYZ Tiles</strong> name and select <strong>New Connection&hellip;</strong>.</p>
+<p><img src="../../images/01/lab-09.jpg" alt="Add new XYZ tile connection"><br>
+<em>Add new XYZ tile connection</em></p>
+<p>In the <strong>New XYZ Connection</strong> dialog, call the layer &ldquo;Carto Voyager&rdquo; and enter the following information for the URL:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>http://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png
+</span></span></code></pre></div><p><img src="../../images/01/lab-10.jpg" alt="Add Carto Voyager tiles"><br>
+<em>Add Carto Voyager tiles</em></p>
+<p>After you verify that you have entered the URL correctly, click <strong>OK</strong>. You should now see the new layer in the <strong>Browser &gt; XYZ Tiles</strong> panel. Double-click the layer to add it to the map. You should now see something like this:</p>
+<p><img src="../../images/01/lab-11.jpg" alt="Adding new layer to the map"><br>
+<em>Adding new layer to the map</em></p>
+<p>As we can see in this screen capture, we can add many base maps. A favorite is Stamen Watercolor, which is a painterly-styled map. Its URL is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg
+</span></span></code></pre></div><p>We&rsquo;ll find other sources to add over the semester. Now, we need to add our CSV layer.</p>
+<h3 id="adding-a-csv-layer-in-qgis">Adding a CSV layer in QGIS</h3>
+<p>When we add a text file that contains locations, we need to tell QGIS how to interpret the file. In our case, we need to tell QGIS that the file contains latitude and longitude values.</p>
+<div class="doc-instructions">
+<ol start="15">
+<li>View your CSV file in QGIS as a spatial layer.</li>
+</ol>
+</div>
+<p>In the menu bar, select <strong>Layer &gt; Add Layer &gt; Add Delimited Text Layer&hellip;</strong>. In the <strong>Data Source Manager</strong> dialog, click the <strong>Browse</strong> button and navigate to the CSV file that we created earlier. You should see something like this:</p>
+<p><img src="../../images/01/lab-12.jpg" alt="Adding a CSV point layer"><br>
+<em>Adding a CSV point layer</em></p>
+<p>Aside from the file path for the CSV, make sure your settings match the screen capture above. Click <strong>Add</strong> (and then <strong>Close</strong>) and you should see the points appear on the map:</p>
+<p><img src="../../images/01/lab-13.jpg" alt="Viewing CSV point layer on the map"><br>
+<em>Viewing CSV point layer on the map</em></p>
+<p>You now should have enough experience to move on the the assignment.</p>
+<h2 id="assignment">Assignment</h2>
+<p>A local organization called <em>LexRex</em> wants to create a map of the coolest places to visit and recreate in downtown Lexington. They are particularly interested in little-known, ecclectic hidden gems. They don&rsquo;t have any data and have asked you to help them locate four places.</p>
+<p>In this assignment, you will create a CSV file containing the latitude, longitude, and a message describing the feature for the required four locations. Make sure you have worked through the lab documentation above before you start the assignment.</p>
+<h3 id="deliverables">Deliverables</h3>
+<p>Please follow these requirements for the assignment:</p>
+<ol>
+<li>Create a CSV file containing the latitude, longitude, and a message describing the feature for the required four locations. The locations and message you want to show are completely up to you – but try to have fun. No location should exist outside of New Circle Road. (6 points @ 1.5 points each)</li>
+<li>For the feature&rsquo;s message field value, make sure there is only one pair of double quotes around the message. For example, <code>&quot;This is a message&quot;</code>. If you have extra double quotes, the CSV file will not load correctly in QGIS. That means, you&rsquo;ll need to figure out how to make a message for the feature that does not contain double quotes. (1 point)</li>
+<li>Name the file <code>lexrex-{linkblue}.csv</code> and replace <code>{linkblue}</code> with your linkblue name. For example, <code>lexrex-JLo01.csv</code>. (1 point)</li>
+<li>You can use the <code>hello-world.csv</code> file as a template. But, make sure to delete the example data and replace it with your own data. (1 point)</li>
+<li>Your lab TA will add one additional requirement. (1 point)</li>
+</ol>
+<h3 id="submitting-the-assignment">Submitting the assignment</h3>
+<p>Upload your CSV file to the Module 1 assignment on Canvas by the published due date. After the submission deadline, we will have a friendly competition in lecture to see who and what is the center of cool in Lexington.</p>
+<p>Good luck!</p>
+</div>
+</section>
+</main>
+ <footer class="footer fixed-bottom uk-liter-bg" id="footer">
+  <div class="row footer-text">
+    <div class="col-12 col-md text-center text-md-left nav-link text-dark">
+      © UKy Geography | 1944–2023
+    </div>
+  </div>
+
+  
+
+  
+  
+
+  <script src="../../js/bundle.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+    charset="utf-8"></script>
+  <script src="../../js/utilities.js"></script>
+</footer></body>
+</html>

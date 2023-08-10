@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modules on GEO 109</title>
+    <link>https://uky-gis.github.io/modules/</link>
+    <description>Recent content in Modules on GEO 109</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Apr 2021 11:58:46 -0400</lastBuildDate><atom:link href="https://uky-gis.github.io/modules/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>02 GPS</title>
+      <link>https://uky-gis.github.io/modules/02-locate/</link>
+      <pubDate>Fri, 28 May 2021 12:24:39 -0400</pubDate>
+      
+      <guid>https://uky-gis.github.io/modules/02-locate/</guid>
+      <description>Presentation Open in new tab Week 04: How we used to do it 05: Modern GNSS Task In this task, you will try to find virtual geocaches using a GPS receiver app on your mobile device&amp;rsquo;s web browser. A virtual geocache is usually a distinct or interesting feature in the landscape, like a scenic spot or sculpture, that you can find using a GPS and hints. If you find this task enjoyable, Geocaching.</description>
+    </item>
+    
+    <item>
+      <title>03 GIS</title>
+      <link>https://uky-gis.github.io/modules/03-analysis/</link>
+      <pubDate>Fri, 28 May 2021 12:24:39 -0400</pubDate>
+      
+      <guid>https://uky-gis.github.io/modules/03-analysis/</guid>
+      <description>Presentation Open in new tab Week 06: Introduction to GIS Task Maps are literally everywhere. From outdoor wayfinding to decoration, they are so common that we often don&amp;rsquo;t even notice them. In your first task for credit, you will explore the ubiquity of maps in our built environment and describe one. This is a popular past time amoung map nerds – just do a search on your favorite social media for the hashtag #mapsinthewild.</description>
+    </item>
+    
+    <item>
+      <title>01 Data</title>
+      <link>https://uky-gis.github.io/modules/01-data/</link>
+      <pubDate>Wed, 28 Apr 2021 08:24:39 -0400</pubDate>
+      
+      <guid>https://uky-gis.github.io/modules/01-data/</guid>
+      <description>Presentation Open in new tab Week 02: Data 03: Creating your own Lab In this lab we will explore how to take observations and encode them into a data format that can be stored, shared, and mapped. We will discover that we can locate any place on the planet with two numbers – an elagant and powerful concept. We will then visualize this data in our primary mapping application, QGIS.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://uky-gis.github.io/modules/00-intro/</link>
+      <pubDate>Fri, 23 Apr 2021 12:00:41 -0400</pubDate>
+      
+      <guid>https://uky-gis.github.io/modules/00-intro/</guid>
+      <description>Presentation Open in new tab Week 01: Introduction and why you should be a Geography Major Tasks Welcome to GEO109! This week we will be getting to know each other and the course. Please complete the following tasks:
+Tell us a little about yourself in this private form. Only the instructors will see your responses. Push a pin for your hometown in this interactive map. (Note: the link goes to a different website – one of our online mapping program&amp;rsquo;s collaboration servers.</description>
+    </item>
+    
+  </channel>
+</rss>

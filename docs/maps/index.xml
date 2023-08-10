@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maps on GEO 109</title>
+    <link>https://uky-gis.github.io/maps/</link>
+    <description>Recent content in Maps on GEO 109</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Apr 2021 11:43:08 -0400</lastBuildDate><atom:link href="https://uky-gis.github.io/maps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lexington environs</title>
+      <link>https://uky-gis.github.io/maps/dsm/</link>
+      <pubDate>Mon, 10 May 2021 15:51:11 -0400</pubDate>
+      
+      <guid>https://uky-gis.github.io/maps/dsm/</guid>
+      <description> Map notes This digital surface model (DSM) shaded relief map of Lexington, Kentucky was created in the Blender 3D modeling application using lidar data from KyFromAbove. Department of Geography
+New Maps Plus
+University of Kentucky
+Lexington, Kentucky </description>
+    </item>
+    
+    <item>
+      <title>Additional Maps</title>
+      <link>https://uky-gis.github.io/maps/additional/</link>
+      <pubDate>Mon, 10 May 2021 15:09:08 -0400</pubDate>
+      
+      <guid>https://uky-gis.github.io/maps/additional/</guid>
+      <description>Maps we&#39;ll use in the course Where is your hometown? link Old skool geocache! link Lexington terrain and track explorer link Maps for getting lost Red River Gorge hiking trails link Daniel Boone NF Scenic Index link Cumberland Gap NHP link Bluegrass Trails link Maps to explore UKy Campus in point clouds link Go See Trees in Lexington link Urban tree canopy analysis link Town Branch Trail link Historical Town Branch corridor link Legacy Trail link Sheltowee Trace elevation profile link Hey, walkers and bikers, watch out!</description>
+    </item>
+    
+    <item>
+      <title>Kentucky</title>
+      <link>https://uky-gis.github.io/maps/hill/</link>
+      <pubDate>Mon, 10 May 2021 15:09:08 -0400</pubDate>
+      
+      <guid>https://uky-gis.github.io/maps/hill/</guid>
+      <description> Map notes This shaded relief map of Kentucky was created in the Blender 3D modeling application using data from The National Map, USGS.
+Department of Geography
+New Maps Plus
+University of Kentucky
+Lexington, Kentucky </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>GEO109: 01-Data</title>
+
+  <link rel="stylesheet" href="../dist/reset.css" />
+  <link rel="stylesheet" href="../dist/reveal.css" />
+  <link rel="stylesheet" href="../dist/theme/league-109.css" id="theme" />
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="../plugin/highlight/tom-night-80.css" id="highlight-theme" />
+  <style>
+    /* UK Colors: 
+                #c7c9c8 light gray 
+                #63666a dark gray
+                #15397f dark blue
+                #009bda light blue
+                #0033a0 official blue
+            */
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section data-pre-load
+        data-background-image="https://www.outragegis.com/weather/img/animation/yesterday/LookRock.gif"
+        data-background-opacity="0.4">
+        <h1 class="r-fit-text">01: Data</h1>
+        <!-- <h2>Welcome</h2> -->
+        <div class="ll">
+          Yesterday in the Great Smokies<br />Webcam
+          <a href="https://www.outragegis.com/weather/img/animation" target="_blank">archive</a>
+        </div>
+        <div class='lr'>GEO 109: Digital Mapping</div>
+      </section>
+      <section data-pre-load
+        data-background-image="https://www.outragegis.com/weather/img/animation/yesterday/LookRock.gif"
+        data-background-opacity="0.4">
+        <img width="100%" src="../images/logo-uk-geo.png" />
+
+      </section>
+
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Data</h3>
+        <ul>
+          <li class="fragment">
+            A raw observation
+          </li>
+          <li class="fragment">
+            Analyzed observation ➡ information
+          </li>
+          <li class="fragment">
+            Interpreted information ➡ knowledge
+          </li>
+          <li class="fragment">
+            More knowledge ➡ more nuanced interpretations.
+          </li>
+      </section>
+
+      <section data-background-image="images/observation.jpg" data-background-color="white" data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Lexington, Kentucky?</h3>
+        <ul>
+          <li class="fragment">
+            What if you had a different understanding...
+          </li>
+          <li class="fragment">
+            different systems of analysis and interpretation...
+          </li>
+          <li class="fragment">
+            a different knowledge.
+          </li>
+      </section>
+
+      <section data-background-image="images/na-map.jpg" data-background-color="white" data-background-opacity="1">
+      </section>
+
+      <section data-background-iframe="https://native-land.ca/" data-background-interactive data-background-opacity="1">
+      </section>
+
+
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Difference Divide</h3>
+        <ul>
+          <li class="fragment">
+            Two different mappings
+            <ul>
+              <li class="fragment">
+                Will use different observations
+              </li>
+              <li class="fragment">
+                different analysis techniques
+              </li>
+              <li class="fragment">
+                different interpretations.
+              </li>
+            </ul>
+          </li>
+          <li class="fragment">
+            Maps are arguments.
+          </li>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Stick to the facts!</h3>
+        <ul>
+          <li class="fragment">
+            Use mathematical understandings to inform
+            <ul>
+              <li class="fragment">
+                analysis
+              </li>
+              <li class="fragment">
+                and interpretation.
+              </li>
+            </ul>
+          </li>
+      </section>
+
+      <section data-background-image="images/observation.jpg" data-background-color="white" data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/globe.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Location</h3>
+        <ul>
+          <li class="fragment">
+            +37.166665° latitude
+          </li>
+          <li class="fragment">
+            Also called 'parallel'
+          </li>
+          <li class="fragment">
+            Measures distance from equator
+          </li>
+          <li class="fragment">
+            Why?
+          </li>
+      </section>
+
+      <section data-background-image="images/lat.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/upsidedown.jpg" data-background-color="white"
+        data-background-size="contain" data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Location</h3>
+        <ul>
+          <li class="fragment">
+            -84.855848° longitude
+          </li>
+          <li class="fragment">
+            Also called 'meridian'
+          </li>
+          <li class="fragment">
+            Measures distance from Prime meridian
+          </li>
+          <li class="fragment">
+            Why?
+          </li>
+      </section>
+
+      <section data-background-image="images/lon.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section
+        data-background-image="https://www.bordersofadventure.com/wp-content/uploads/2019/02/How-to-Visit-the-Greenwich-Meridian-Line-in-London.jpg"
+        data-background-color="white" data-background-size="contain" data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Greenwich, England</h3>
+        <ul>
+          <li class="fragment">
+            British Board of Longitude prize
+            <ul>
+              <li class="fragment">
+                1763, John Harrison's chronometer
+              </li>
+            </ul>
+          </li>
+          <li class="fragment">
+            1884, Greenwich Meridian was chosen
+            <ul>
+              <li class="fragment">
+                World's commerce used sea-charts based on the Greenwich Meridian
+              </li>
+            </ul>
+          </li>
+      </section>
+
+      <section data-background-image="images/h4.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-iframe="https://www.youtube.com/embed/T-g27KS0yiY" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Technological Divide</h3>
+        <ul>
+          <li class="fragment">
+            Systems of understanding have been calibrated by technological advantage.
+          </li>
+          <li class="fragment">
+            But, new systems are leaping forward.
+          </li>
+      </section>
+
+      <section data-background-iframe="https://what3words.com/trio.clay.deal" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-iframe="https://what3emojis.com/map/#16/38.0377/-84.5038" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Criticism</h3>
+        <ul>
+          <li class="fragment">
+            What if your house was located with
+            <ul>
+              <li class="fragment">
+                silly.stink.person
+              </li>
+            </ul>
+          </li>
+          <li class="fragment">
+            What if the White House was
+            <ul>
+              <li class="fragment">
+                make.great.again
+              </li>
+            </ul>
+          </li>
+          <li class="fragment">
+            It's proprietary
+            <ul>
+              <li class="fragment">
+                We can't see how they label locations.
+              </li>
+            </ul>
+          </li>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3><a href="https://earth.google.com/earth/d/1gfkcm5lPNg0bmzkPzxJL1RiblsvbqrCo?usp=sharing"
+            target='_blank'>Google Earth</a></h3>
+      </section>
+
+
+
+      <section data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class="r-fit-text">Task 2</h5>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Fav Location</h3>
+        <ul>
+          <li class="fragment">Use <a href="https://what3words.com">what3words.com</a> and <a
+              href="https://what3words.com">Google Earth</a></li>
+          <li class="fragment">to find a favorite location</li>
+          <li class="fragment">in Kentucky.</li>
+          <li class="fragment">Details in Canvas.</li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class="r-fit-text">Discuss Lab</h5>
+        <a target='_blank'
+          href="https://www.google.com/maps/d/edit?mid=1o4PrGWeLcihQhPgcoPvWVl8ebeWj49sx&ll=38.040737006192096%2C-84.51360452348221&z=14">Example
+          map</a>
+      </section>
+
+
+
+
+      </section>
+      <section data-background-image="images/privacy.jpg" data-background-opacity="1">
+      </section>
+
+
+
+      <section data-background-iframe="https://www.youtube.com/embed/waQy2WKHiwY" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.2">
+        <h3>The Information Society (1979)</h3>
+        <ul>
+          <li class="fragment">
+            Information is power
+          </li>
+          <li class="fragment">
+            Computers, and their algorithms, increasingly used to collect data and create information.
+            <ul>
+              <ul>
+                <li class="fragment">
+                  Who owns your information?
+                </li>
+              </ul>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.2">
+        <h3>The 👞 shopper</h3>
+        <ul>
+          <li class="fragment">
+            You visit a few websites looking for shoes.
+            <ul>
+              <li class="fragment">
+                Who's 👀?
+              </li>
+            </ul>
+          </li>
+          <li class="fragment">
+            Soon you start seeing specific ads...
+            <ul>
+              <li class="fragment">
+                your browsing history became knowledge about you and sold.
+              </li>
+              <li class="fragment">
+                Your attention is a commodity just like shoes.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.2">
+        <h3>OK</h3>
+        <ul>
+          <li class="fragment">
+            But, computers help us work more efficiently
+          </li>
+          <li class="fragment">
+            and build communities. Right?
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-iframe="https://www.youtube.com/embed/eNT1L3jGjbA" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.2">
+        <h3>The promise of computers?</h3>
+        <ul>
+          <li class="fragment">
+            Do we have 3-day workweeks because of computers?
+          </li>
+          <li class="fragment">
+            Instead, our society has become obsessed with the stream of information computers give us.
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-iframe="https://www.youtube.com/embed/MnrJzXM7a6o" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-iframe="https://www.pewresearch.org/internet/chart/mobile-phone-ownership/iframe"
+        data-background-interactive data-background-opacity="1">
+        <script type='text/javascript' id='pew-iframe'>
+          (function () {
+            function async_load() {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src =
+                'https://www.pewresearch.org/internet/wp-content/plugins/pew-refactor-shim/pew-scripts/js/iframeResizer.min.js';
+              s.onload = s.onreadystatechange = function () {
+                var rs = this.readyState;
+                try {
+                  iFrameResize([], 'iframe#pew17312')
+                } catch (e) { }
+              };
+              var embedder = document.getElementById('pew-iframe');
+              embedder.parentNode.insertBefore(s, embedder)
+            }
+            if (window.attachEvent) window.attachEvent('onload', async_load);
+            else window.addEventListener('load', async_load, false)
+          })();
+        </script>
+      </section>
+
+      <section data-background-image="images/mobile-v-desktop.png" data-background-color="white"
+        data-background-size="contain" data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.2">
+        <h3>Mobile use?</h3>
+        <ul>
+          <li class="fragment">
+            70% of all media time is spent on smartphones, e.g., Fb, Instagram, Netflix, etc.
+          </li>
+          <li class="fragment">
+            The average internet user checks their phone 58 times daily.
+          </li>
+          <li class="fragment">
+            Female college students spend 10 hours daily on their cellphones.
+          </li>
+          <li class="fragment">
+            <a href="https://techjury.net/blog/smartphone-usage-statistics/#gref">References</a>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/pew-smartphones.png" data-background-color="white"
+        data-background-size="contain" data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.2">
+        <h3>Digital Divide</h3>
+        <ul>
+          <li class="fragment">
+            Between internet access and no access...
+          </li>
+          <li class="fragment">
+            fast vs. slow internet
+          </li>
+          <li class="fragment">
+            content creators vs. consumers
+          </li>
+          <li class="fragment">
+            ultimately, between those who own data and those who do not.
+          </li>
+        </ul>
+      </section>
+
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Difficulty Divide</h3>
+        <ul>
+          <li class="fragment">
+            Not an Influencer?
+          </li>
+          <li class="fragment">
+            It's hard to both create and own your digital data.
+          </li>
+          <li class="fragment">
+            Learning curve
+            <ul>
+              <li class="fragment">
+                Put down the mobile device (at least only use certain apps)
+              </li>
+              <li class="fragment">
+                <a href="https://sitn.hms.harvard.edu/flash/2018/dopamine-smartphones-battle-time/">break the
+                  addiction</a>
+              </li>
+              <li class="fragment">
+                learn new concepts and tools relevant on a desktop or cloud computer.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class="r-fit-text">Task 3</h5>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Create workspace</h3>
+        <ul>
+          <li class="fragment">Create a top-level directory on your computer</li>
+          <li class="fragment">to organize your map projects and data.</li>
+          <li class="fragment">Create a CSV (comma-separated values) file of Task 2.</li>
+          <li class="fragment">Details in Canvas.</li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Comma-separated values</h3>
+        <ul>
+          <li class="fragment">CSV is a delimited text file
+            <ul>
+              <li class="fragment">delimited: having fixed boundaries. </li>
+              <li class="fragment">text: readable by humans. </li>
+              <li class="fragment">file: data stored in a shareable document. </li>
+            </ul>
+          </li>
+          <li class="fragment">A common way to share data.</li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>CSV format</h3>
+        <ul>
+          <li class="fragment">First row of file is attribute field or name.</li>
+          <li class="fragment">Each subsequent row is a data record.</li>
+          <li class="fragment">Each record consists of one or more fields, separated by commas.</li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>CSV field values</h3>
+        <ul>
+          <li class="fragment">Text values are enclosed in double-quotes "
+            <ul>
+              <li class="fragment">For example, "spice.stop.supper"</li>
+            </ul>
+          </li>
+          <li class="fragment">Number values are not enclosed in double-quotes
+            <ul>
+              <li class="fragment">For example, -85.7617613</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/task-example.png" data-background-color="white"
+        data-background-size="contain" data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/task-example2.png" data-background-color="#444"
+        data-background-size="contain" data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Task 2: map & download</h3>
+        <ul>
+          <li class="fragment"><a target="_blank" href="https://uky-gis.github.io/geo109/maps/hill/">Map</a>
+          </li>
+          <li class="fragment"><a href="https://uky-gis.github.io/geo109/slides/01/locations.csv" download>CSV</a>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h1 class="r-fit-text">Data models</h1>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Data models</h3>
+        <ul>
+          <li class="fragment">Encode real-world phenomena into data.
+          </li>
+          <li class="fragment">Attribute
+            <ul>
+              <li class="fragment">Properties and values</li>
+            </ul>
+          </li>
+          <li class="fragment">Vector
+            <ul>
+              <li class="fragment">points and lines</li>
+            </ul>
+          </li>
+          <li class="fragment">Raster
+            <ul>
+              <li class="fragment">matrix of cells</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Example</h3>
+        <ul>
+          <li class="fragment">of data model with
+          </li>
+          <li class="fragment">Pine Mountain State Resort Park
+            <ul>
+              <li class="fragment">Take a tour: <a target='_blank' href="https:firstfrontier.org">First Frontier Audio
+                  Driving Tour</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </section>
+
+      <section data-background-image="images/p/00.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/p/01.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/p/02.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+
+      <section data-background-image="https://live.staticflickr.com/5471/30414323790_e4b6db0036_k.jpg"
+        data-background-color="white" data-background-size="contain" data-background-opacity="1">
+      </section>
+
+      <section
+        data-background-iframe="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/237017090&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        data-background-interactive data-background-opacity="1">
+        <div
+          style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+          <a href="https://soundcloud.com/boydx" title="boyd" target="_blank"
+            style="color: #cccccc; text-decoration: none;">boyd</a> · <a
+            href="https://soundcloud.com/boydx/sets/first-frontier-audio-tour-1"
+            title="First Frontier Audio Tour - 1 - Vistas into the Mountain Frontier" target="_blank"
+            style="color: #cccccc; text-decoration: none;">First Frontier Audio Tour - 1 - Vistas into the Mountain
+            Frontier</a></div>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/5591/30157134303_dd79c530a4_k.jpg"
+        data-background-color="white" data-background-size="contain" data-background-opacity="1">
+      </section>
+
+
+
+      <!-- https://soundcloud.com/boydx/1-10-to-chained-rock?utm_source=clipboard&utm_campaign=wtshare&utm_medium=widget&utm_content=https%253A%252F%252Fsoundcloud.com%252Fboydx%252F1-10-to-chained-rock -->
+
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Attribute model</h3>
+        <ul>
+          <li class="fragment">How can we encode the properties of things?
+          </li>
+          <li class="fragment">
+            Table of attributes
+            <ul>
+              <li class="fragment">column = attribute name</li>
+              <li class="fragment">row = attribute value</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/d/01.jpg" data-background-color="black" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Attribute model</h3>
+        <ul>
+          <li class="fragment">
+            Collection of key:value pairs
+            <ul>
+              <li class="fragment">key = attribute name</li>
+              <li class="fragment">value = attribute value</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section data-background-image="images/d/02.jpg" data-background-color="#444" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+
+        <h3>Vector model</h3>
+        <div class="ulist">
+          <img src="images/d/pnt_line_poly.png" alt="vector data model" width="40%" style="float: right"
+            class="fragment">
+          <ul style="width: 50%;">
+            <li class="fragment">Coordinate pairs (x,y) or (lon,lat)</li>
+            <ul>
+              <li class="fragment">Point</li>
+              <li class="fragment">Line</li>
+              <li class="fragment">Polygon</li>
+            </ul>
+            </li>
+
+            <li class="fragment">Often includes attribute model</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Example</h3>
+        <ul>
+          <li class="fragment">Let's build the vector layers for Pine Mountain...
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/d/03.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/d/04.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/d/05.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/d/06.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/d/07.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/d/08.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/d/09.jpg" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Practice making vector data</h3>
+        <ul>
+          <li class="fragment">Visit <a target='_blank' href="https://geojson.io">geojson.io</a></li>
+          </li>
+          <li class="fragment">Draw a</li>
+          <ul>
+            <li class="fragment">Point</li>
+            <li class="fragment">Line</li>
+            <li class="fragment">Polygon</li>
+          </ul>
+
+        </ul>
+      </section>
+
+
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Raster model</h3>
+        <img src="images/d/raster_concept.png" alt="raster data model" width="40%" style="float: right"
+          class="fragment">
+        <ul style="width: 50%;">
+          <li class="fragment">Matrix of cells (pixels)</li>
+          </li>
+          <li class="fragment">Cells are adjacent and typically square</li>
+          <li class="fragment">Cells have single numeric value</li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/d/d10.jpg" data-background-color="white" data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/d/uk.png" data-background-color="white" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Thematic raster</h3>
+        <ul>
+          <li class="fragment">Difference of type</li>
+          <ul>
+            <li class="fragment">Land cover type</li>
+          </ul>
+          </li>
+
+        </ul>
+      </section>
+
+      <section data-background-image="images/d/d11.jpg" data-background-color="white" data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Continuous raster</h3>
+        <ul>
+          <li class="fragment">Difference of magnitude</li>
+          <ul>
+            <li class="fragment">Magnitude of elevation</li>
+          </ul>
+          </li>
+
+        </ul>
+      </section>
+
+      <section data-background-image="images/d/d12.jpg" data-background-color="white" data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/d/d13.jpg" data-background-color="white" data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Source or raster</h3>
+        <ul>
+          <li class="fragment">Most raster imagery comes from</li>
+          <ul>
+            <li class="fragment">airplanes</li>
+            <li class="fragment">satellites</li>
+          </ul>
+          </li>
+          <li class="fragment">that continuously monitor earth...</li>
+
+        </ul>
+      </section>
+
+      <section data-background-iframe="https://earthengine.google.com/timelapse/" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/d/d14.jpg" data-background-color="white" data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/numbers.jpg" data-background-interactive data-background-opacity="1"
+        data-background-color="gray" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>What's in a number?</h3>
+        <ul>
+          <li class="fragment">Number represents type
+            <ul>
+              <li class="fragment">
+                Nominal: number is a literal name, '1' is a tree
+              </li>
+              <li class="fragment">
+                Ordinal: number is a rank, '1' is preferred over '2'
+              </li>
+            </ul>
+          </li>
+          <li class="fragment">Number represents magnitude
+            <ul>
+              <li class="fragment">
+                Ratio: number is a quantity
+              </li>
+            </ul>
+          </li>
+          </li>
+          <li class="fragment">Magnitude of elevation</li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/d/02.jpg" data-background-color="#444" data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Sources of data</h3>
+        <ul>
+          <li class="fragment">Natural Earth: <a target="_blank"
+              href="https://www.naturalearthdata.com/downloads/">download</a>
+          </li>
+          <li class="fragment">Lexington: <a target="_blank" href="https://data.lexingtonky.gov">download</a>
+          </li>
+          <li class="fragment">Louisville: <a target="_blank"
+              href="https://data.louisvilleky.gov/search/type/dataset">download</a>
+          <li class="fragment">UKy: <a target="_blank" href="https://www.uky.edu/gissupport/data">download</a> </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class="r-fit-text">Lab 1</h5>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Celebrity mapping</h3>
+        <ul>
+          <li class="fragment">Create CSV file of your locations
+          </li>
+          <li class="fragment">Steps: <a target="_blank"
+              href="https://uk.instructure.com/courses/2016829/assignments/10877184?module_item_id=25103158">Canvas</a>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/example-csv.png" data-background-color="white"
+        data-background-size="contain" data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Example</h3>
+        <ul>
+          <li class="fragment">Yoda home slice by the pool: <a target="_blank" href="images/l/yodas_01.jpg">photo</a>
+          </li>
+          <li class="fragment">Yoda home slice checking out campus: <a target="_blank"
+              href="images/l/yodas_02.jpg">photo</a>
+          </li>
+          <li class="fragment">Yoda home slice floatin' around town: <a target="_blank"
+              href="images/l/yodas_03.jpg">photo</a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <section class="left" data-background-image="https://live.staticflickr.com/65535/51266150200_18fdb0058f_k.jpg"
+    data-background-opacity="0.3">
+    <h3>Why lab 1</h3>
+    <ul>
+      <li class="fragment">What problem does it solve?
+      </li>
+      <li class="fragment">Creating good data that can be shared predictably.
+      </li>
+      <li class="fragment">A 'good' map uses 'good' data.
+      </li>
+    </ul>
+  </section>
+
+  </div>
+  </div>
+
+  <script src="../dist/reveal.js"></script>
+  <script src="../plugin/notes/notes.js"></script>
+  <script src="../plugin/markdown/markdown.js"></script>
+  <script src="../plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      backgroundTransition: "fade",
+      // Transition style
+      transition: "fade", // none/fade/slide/convex/concave/zoom
+
+      // Transition speed
+      transitionSpeed: "fast", // default/fast/slow
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+    });
+  </script>
+</body>
+
+</html>

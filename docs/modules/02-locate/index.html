@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html><head>
+  <title>GEO 109: 02 GPS</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Website meta description for google search results go here" />
+  <meta name="dc.relation" content="https://uky-gis.github.io/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#1A94D2" />
+  
+
+   
+  <link rel="stylesheet" href="../../css/main.min.css" media="screen" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head><body><nav class="navbar navbar-light uk-liter-bg" id='nav'>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../../">
+      <img src="https://uky-gis.github.io/graphics/logo-75th-01.svg" alt="" height="45px"
+        class="d-inline-block ">
+     <h5 class="d-inline-block font-weight-700">GEO 109</h5> 
+    </a>
+
+    <ul class="nav justify-content-start">
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Modules
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/00-intro/">  Introduction</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/01-data/">  01 Data</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/02-locate/">  02 GPS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Maps
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/hill/">  Kentucky</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/additional/">  Additional Maps</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+    <li class="nav-item">
+      <a class='nav-link' href="../../syllabus">
+         Syllabus</a>
+      </a>
+    </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid uk-lite-bg py-2" id="singleTitle">
+  <row>
+    <h3 class="font-weight-700 align-middle text-dark mt-1">
+      02 GPS 
+    </h3>
+  </row>
+</div>
+
+<main>
+<section class="py-3 container col-lg-8 col-xxl-6" id="documentation">
+<div class="d-flex justify-content-between  align-items-end">
+<h3>Presentation</h3>   
+<a href='../../slides/02' target='_blank'>Open in new tab</a>
+</div>
+<iframe src='../../slides/02' width='100%' class='slide-presentation'></iframe>
+<h2>Week</h2>
+<ul>
+<li><a href="../../slides/02">04: How we used to do it</a></li>
+<li><a href="../../slides/02/#/35">05: Modern GNSS</a></li>
+</ul>
+<div id='lab-content'>
+<h2>Task</h2>
+<p>In this task, you will try to find <em>virtual geocaches</em> using a GPS receiver app on your mobile device&rsquo;s web browser. A virtual geocache is usually a distinct or interesting feature in the landscape, like a scenic spot or sculpture, that you can find using a GPS and hints. If you find this task enjoyable, <a href="https://www.geocaching.com/">Geocaching.com</a> is a popular website for hiding and finding all types of geocaches.</p>
+<div >
+<div class="w-50 p-3 m-3 float-start">
+<a href='https://contig.us/hawaii/uky-geocache/' target='_blank'>
+<img src="../../images/02/task.jpg" alt="Geocache"></a>
+<i>Screen capture of the web page</i>
+</div>
+<p class='mb-3'>
+Before we had maps on our phones, GPS receivers gave our location in coordinate pairs – just numbers. We then used those coordinates to plot our location on a paper map. Those were fun times! 
+</p>
+<p class='mb-3'>
+If we wanted to visit a distant location, we would enter the coordinates into our GPS receiver and follow a compass arrow and distance measurement to that location. There was no route to follow, just a direction and distance.
+</p>
+<p class='mb-3'>
+Let's get started with the task. Before you begin, make sure you can access the web via a browser on a mobile device and have enabled location services. You are encouraged to work with a partner: one person with a compass and the other a GPS.
+</p>
+<p class='mb-3 px-3'>
+<b>Instructions</b><br>
+1. Open the web page <a href='https://contig.us/hawaii/uky-geocache/' target='_blank'>contig.us/hawaii/uky-geocache/</a> in your mobile device's web browser.<br>
+2. Click on the <b>Enable GPS</b>. If the browser can access your device's GPS, you should get the current latitude, longitude, and estimate of accuracy on the next line.<br>
+3. The following line gives information about the nearest geocache. The <i>Bearing</i> readout tells you the compass direction.<br>
+4. Walk in that direction until the <i>Distance</i> readout is as low as you can make it. Hints to the virtual geocache will be given. If you think you know what it is, write it down.<br>
+5. When you think that you have found all geocaches, submit your answers on Canvas for your found geocaches. Make sure to include the <i>Nearest Geocache</i> readout for each response. Each correct answer will give you +1 point of extra credit.<br>
+</p>
+</div>
+</div>
+<div class="clearfix"></div>
+<h2 >Lab</h2>
+<p>In the previous lab we created data from observations on a map. In this lab, we will physically walk around campus and collect data using your mobile device. You are encouraged to work in teams to complete this lab.</p>
+<h3>Table of Contents</h3>
+<!-- TOC -->
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#mobile-mapping">Mobile Mapping</a>
+<ul>
+<li><a href="#dynamic-vs-static-maps">Dynamic vs. Static Maps</a></li>
+<li><a href="#avenza-maps">Avenza Maps</a></li>
+<li><a href="#viewing-features-in-qgis">Viewing features in QGIS</a></li>
+</ul>
+</li>
+<li><a href="#assignment">Assignment</a>
+<ul>
+<li><a href="#deliverables">Deliverables</a></li>
+<li><a href="#submitting-the-assignment">Submitting the assignment</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="introduction">Introduction</h2>
+<p>One of the greatest joys of mapmaking is using the map in the field, a.k.a. in the area that the map represents. While you will not make a custom map in this lab, you will discover the process of using a custom maps on your mobile device. You will also learn how to collect data in the field and bring it back to your computer for additional mapmaking.</p>
+<p>As we progress through the semester, you will eventually create your own maps that can be used on mobile devices. This lab will also expose you to a thriving marketplace for these types of maps – a marketplace that you could even sell your creations.</p>
+<h2 id="mobile-mapping">Mobile Mapping</h2>
+<p>We have all likely used a map on our mobile devices, whether it is to get directions from one location to another or to locate a place to eat. We probably have a couple of favorite apps to do this. While many apps are great, they are limited to the maps that they provide.</p>
+<p>What if you wanted to use a map that you created? It&rsquo;s not hard to imagine that after a semester of mapmaking, you&rsquo;ll create a map that you&rsquo;ll want to share and use. One app stands apart from the rest in this regard – Avenza Maps. Before we turn to using this app, let&rsquo;s discuss how this app is different from others.</p>
+<h3 id="dynamic-vs-static-maps">Dynamic vs. Static Maps</h3>
+<p>Most maps that we use on our mobile apps are dynamic maps. Dynamic maps are created on the fly by a server using styled data for the area shown on your screen. When you zoom into the map, features like roads and text labels change size to fit. Typically, you have little control over the style of the map and it needs to be used with an internet connection. The benefits of a dynamic map is that it usually has global coverage. Google Maps is a good example of a dynamic map.</p>
+<p>A static map is created ahead of time and is downloaded to your device. The map is created using a mapmaking application, like QGIS, and is styled by the mapmaker. The benefits of a static map is that it can be used without an internet connection and can be styled to the mapmaker&rsquo;s liking. The downside is that it is limited to the area that the mapmaker created.</p>
+<p>A static map is a single file and usually has the extension <code>.tiff</code> (stores the map in a raster format) or <code>.pdf</code> (stores the map in raster and vector formats). QGIS can export maps in the <code>.tiff</code> format, but it adds additional information to the file: <em>georeferencing</em> information that locates the image on the Earth&rsquo;s surface. We call this format a <em>GeoTIFF</em>. Here&rsquo;s an example of a GeoTIFF that we&rsquo;ll use in this lab: <a href="http://contig.us/data/campus.tif">campus.tif</a>. (Note: this is a large file and likely not viewable in your web browser.)</p>
+<p><img src="../../images/02/l-01.jpg" alt="Screen shot of GeoTIFF"><br>
+<em>Screen shot of GeoTIFF</em></p>
+<p>As you might appreciate, this map looks different than many of the maps that we use on our mobile devices. Could the mapmaker make a better presentation? Certainly, and we&rsquo;ll explore that in a later lab. For now, let&rsquo;s use this map on our mobile devices.</p>
+<h3 id="avenza-maps">Avenza Maps</h3>
+<p>In order to use a static map on a mobile device, you need a map viewer app. We&rsquo;ll use Avenza Maps, which is available for both iOS and Android devices. It is free to download and use, though you&rsquo;ll want to set up an account.</p>
+<div class="doc-instructions">
+<ol>
+<li>Download and install Avenza Maps on your mobile device: <a href="https://store.avenza.com/pages/app-features" target="_blank">store.avenza.com/pages/app-features</a></li>
+</ol>
+</div>
+<p>Create your account and log in. You might want to explore maps that you can download and use on your new app – there are many free maps on the <a href="https://store.avenza.com/" target="_blank">Avenza Map Store</a>. However, with the free plan, you can only have three maps at a time installed on the app.</p>
+<h4 id="adding-a-map">Adding a Map</h4>
+<p>Let&rsquo;s now add the custom map of campus to the app. We have many options to do this, but the easiest is to use a QR code which loads a remote GeoTiff.</p>
+<div class="doc-instructions">
+<ol start="2">
+<li>Open Avenza Maps on your mobile device.</li>
+<li>Click on the <strong>+</strong> icon in the upper right corner.</li>
+</ol>
+</div>
+<p>The follwing image shows the three screens you&rsquo;ll see when you add a map.</p>
+<p><img src="../../images/02/l-02.jpg" alt="Adding a new map to the app"><br>
+<em>Adding a new map to the app</em></p>
+<p>To use the QR code, click on the <strong>Scan QR Code</strong> button in the upper right corner. You&rsquo;ll be prompted to allow the app to access your camera.</p>
+<div class="doc-instructions">
+<ol start="4">
+<li>Scan QR code to download the map.</li>
+</ol>
+</div>
+<p><img src="../../images/02/qr-code-map.png" alt="QR Code for campus map"><br>
+<em>QR Code for campus map</em></p>
+<p>The map will be downloaded and added to your list of maps. You can now click on the map to view it. If you are on the map, i.e., you are on campus, a blue dot will show your location.</p>
+<h4 id="adding-a-gps-track">Adding a GPS track</h4>
+<p>Once you are on the map, zoom into your location to see the buildings and other selected features on campus. Let&rsquo;s now record a GPS track, a.k.a., a vector line feature.</p>
+<div class="doc-instructions">
+<ol start="5">
+<li>Zoom into campus and start recording a GPS track.</li>
+</ol>
+</div>
+<p>The below image shows the three screens you&rsquo;ll see in the app to start recording a GPS track.</p>
+<p><img src="../../images/02/l-03.jpg" alt="Start recording a GPS track"><br>
+<em>Start recording a GPS track</em></p>
+<p>The app will prompt you to <strong>Start Tracking</strong>. After clicking that button, the app will record your location every few seconds and draw a line on the map. You can minimize the tracking information screen by swiping it down.</p>
+<p>Walk around campus with your device held out in front of you. You&rsquo;ll see the line being drawn on the map. If you put the device in a pocket or go inside a building, the GPS signal will be degraded and your track will be less accurate.</p>
+<h4 id="adding-a-placemark">Adding a placemark</h4>
+<p>Who wants to play video games? Let&rsquo;s now drop a point (known as a waypoint or placemark) for the location of The Cornerstone.</p>
+<div class="doc-instructions">
+<ol start="6">
+<li>Make a placemark for a location on campus.</li>
+</ol>
+</div>
+<p>The third screen in the image below shows how add a placemark in the app. To center the map on your location, click the bottom-left arrow. To initiate dropping a placemark, click the icon to its right.</p>
+<p><img src="../../images/02/l-04.jpg" alt="Centering your location and dropping a placemark"><br>
+<em>Centering your location and dropping a placemark</em></p>
+<p>You will now be prompted to enter the placemark&rsquo;s name, then click <strong>Submit</strong>. Continue walking around campus and dropping placemarks for locations that you want to remember.</p>
+<div class="doc-instructions">
+<ol start="6">
+<li>Finish recording your GPS track and placemarks.</li>
+</ol>
+</div>
+<p>The below image shows the three screens you&rsquo;ll see in the app to finish adding a placemark and stop recording a GPS track.</p>
+<p><img src="../../images/02/l-05.jpg" alt="Submit a placemark and stop tracking"><br>
+<em>Submit a placemark and stop tracking</em></p>
+<h4 id="exporting-mapped-features">Exporting mapped features</h4>
+<p>You should now have a line and a collection of points saved in the app. To use these features in QGIS, we need to export them from the app. We&rsquo;ll export all features at once.</p>
+<div class="doc-instructions">
+<ol start="7">
+<li>Export the GPS track and placemarks.</li>
+</ol>
+</div>
+<p>The below image shows the three screens you&rsquo;ll see in the app to initiate the export.</p>
+<p><img src="../../images/02/l-06.jpg" alt="Initiating an export of all features"><br>
+<em>Initiating an export of all features</em></p>
+<p>Once you arrive at the export screen, click the <strong>All Features</strong> option to load all features into the export queue. Then click the <strong>Export</strong> button in the upper right corner. You&rsquo;ll be prompted to select the file format. We&rsquo;ll use the KML (Keyhole Markup Language) format, which is another common text format for exchanging spatial data.</p>
+<div class="doc-instructions">
+<ol start="8">
+<li>Export all features as a KML file to your computer.</li>
+</ol>
+</div>
+<p>The below image shows the three screens you&rsquo;ll see in the app to finish the export. The last screen shows the KML text file that you&rsquo;ll download to your computer.</p>
+<p><img src="../../images/02/l-07.jpg" alt="Export KML file to your computer"><br>
+<em>Export KML file to your computer</em></p>
+<p>Now that you have the KML file on your computer, let&rsquo;s view it in QGIS.</p>
+<h3 id="viewing-features-in-qgis">Viewing features in QGIS</h3>
+<p>Similar to our first lab, let&rsquo;s create a new folder in your class mapping folder called <code>lab-02</code>. Then, move the KML file into that folder and rename the file.</p>
+<div class="doc-instructions">
+<ol start="9">
+<li>Drag the KML file into QGIS to view the features over a base map.</li>
+</ol>
+</div>
+<p>QGIS will ask which features to add, points or lines. Select both (which is the default) and click <strong>OK</strong>. You should now see the features in QGIS.</p>
+<p><img src="../../images/02/l-08.jpg" alt="Viewing features in QGIS"><br>
+<em>Viewing features in QGIS</em></p>
+<p>Ok, you can now load a custom map on your mobile device and can collect GPS tracks and placemarks. You also know how to export those features and view them in QGIS. In future labs, you can harness these abilities to make truly uniuqe maps.</p>
+<p>When you feel that you have a good understanding of the lab procedures, please complete the assignment below.</p>
+<h2 id="assignment">Assignment</h2>
+<p>Lexington&rsquo;s <em>Happy Geometry Walking Society</em> likes to document walking paths on campus that exhibit simple geometric figures. They enjoy walking in straight lines, on lines that make right angles, and especially walking lines that make perfect squares. However, what really excites the Society is finding large circles and equilateral triangles to walk on campus.</p>
+<p>They have asked you to help them find these paths, record them with a GPS device, and share a KML file.</p>
+<p>Note: A <em>path</em> is any walkable area, e.g., sidewalk, grass, hallway, etc., that does not cross private property, roads at mid-block (jaywalking), or other non-pedestrian areas.</p>
+<h3 id="deliverables">Deliverables</h3>
+<p>Please follow these requirements for the assignment:</p>
+<ol>
+<li>Walk and record a GPS track in the Avenza Maps app that creates a geometric figure on campus. (6 points)</li>
+<li>Export a KML of <em>only the track</em> – no placemarks. If you need to start over, delete any existing layers before you begin to make it easier for organization. (2 points)</li>
+<li>Name the file <code>happy-geom-{linkblue}.kml</code> and replace <code>{linkblue}</code> with your linkblue name. For example, <code>happy-geom-DoCat01.kml</code>. (1 point)</li>
+<li>Your lab TA will add one additional requirement. (1 point)</li>
+</ol>
+<p>You are encouraged to work in teams.</p>
+<h3 id="submitting-the-assignment">Submitting the assignment</h3>
+<p>Upload your KML file to the Module 2 assignment on Canvas by the published due date. After the submission deadline, we&rsquo;ll show the most exceptional geometric figures from each section during lecture.</p>
+<p>Happy walking!</p>
+<p>.</p>
+</div>
+</section>
+</main>
+ <footer class="footer fixed-bottom uk-liter-bg" id="footer">
+  <div class="row footer-text">
+    <div class="col-12 col-md text-center text-md-left nav-link text-dark">
+      © UKy Geography | 1944–2023
+    </div>
+  </div>
+
+  
+
+  
+  
+
+  <script src="../../js/bundle.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+    charset="utf-8"></script>
+  <script src="../../js/utilities.js"></script>
+</footer></body>
+</html>
