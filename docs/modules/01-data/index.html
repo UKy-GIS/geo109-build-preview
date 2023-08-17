@@ -120,8 +120,27 @@
 <li><a href="../../slides/01/#/35">03: Creating your own</a></li>
 </ul>
 <div id='lab-content'>
+<h2>Task</h2>
+<p>Maps are unique among visual media formats in that they attempt to show the location of things on the planet in relationship to each other. Because maps can be so useful, we often accept them as truthful representations. But, we&rsquo;ll discover that all maps lie in some way, and they have to, otherwise maps become unusable.</p>
+<p>One of the ways that maps lie is by <em>omission</em>. Whether by author or algorithm, a map shows a only small, curated selection of what actually exists. This selection begs the questions, &ldquo;Why show me this but not that? What is the intention of this map?&rdquo;</p>
+<h3>Deliverables</h3>
+<p>To complete this task, use your favorite map(s) and explore Lexington and the UK campus. Do not go outside of New Circle Road (look on a map 😊 if you&rsquo;re not familiar with Lexington).</p>
+<p>Please follow these requirements for this task:</p>
+<ol>
+<li>Find <strong>four places</strong> that should be on your map, but are not – or not labeled or identified the way you think they should be. These are places that <em>you</em> find important, e.g., your favorite places to enjoy a quiet walk, play pinball, do parkour, etc. You may or may not want to use these locations in the following lab component of the module.</li>
+<li>Provide brief responses to the following prompts:
+<ul>
+<li>Provide a name for each location. Why is this place important to you?</li>
+<li>What map(s) did you use?</li>
+<li>Why do you think these locations are not on the map(s) you chose to use?</li>
+</ul>
+</li>
+</ol>
+<p>This task is worth 2 pts (4 locations @ 0.5 pts each).</p>
+<h3>Submitting the task</h3>
+<p>Provide a text submission to the Module 1 Task on Canvas by the published due date.</p>
 <h2>Lab</h2>
-<p>In this lab we will explore how to take observations and encode them into a data format that can be stored, shared, and mapped. We will discover that we can locate any place on the planet with two numbers – an elagant and powerful concept. We will then visualize this data in our primary mapping application, QGIS.</p>
+<p>In this lab we will explore how to take observations of places we find important and encode them into a data format that can be stored, shared, and mapped. We will discover that we can locate any place on the planet with two numbers – an elegant and powerful concept. We will then visualize this data in our primary mapping application, QGIS.</p>
 <h3>Table of Contents</h3>
 <!-- TOC -->
 <ul>
@@ -168,7 +187,7 @@
 <p>Let&rsquo;s now explore how we can create, manage, and share exact copies of our observations. This is the basis of modern digital mapmaking.</p>
 <h2 id="owning-your-data">Owning your data</h2>
 <p>The prime benefit of creating data is that you own it. You decide how and to whom you share your data. You can even sell it.</p>
-<p>Question: Have you ever downloaded something from the internet and then couldn&rsquo;t find it? &ldquo;Where did it go?&rdquo; It&rsquo;s so frustrating! Another dimension of owning your data is being able to access the data on your device or computer. Part of this lab is to cultivate good <em>data hygiene</em> where we proactively organize data and projects on our computers.</p>
+<p>Question: Have you ever downloaded something from the internet and then couldn&rsquo;t find it? &ldquo;Where did it go?&rdquo; It&rsquo;s so frustrating! Another dimension of owning your data is being able to access the data on your device or computer. Part of this lab is cultivating good <em>data hygiene</em> where we proactively organize data and projects on our computers.</p>
 <p>OK, let&rsquo;s fire up our personal desktop computers (PC), either in the lab or on your personal computer, and get started.</p>
 <h3 id="creating-your-local-workspace">Creating your local workspace</h3>
 <p>A <em>local workspace</em> is simply a directory on your computer that is dedicated to mapping. Everything you make in this course should live inside this workspace. The lab computers use the Windows operating system (OS), but you can use your personal computer if you prefer a different OS, e.g., macOS.</p>
@@ -229,7 +248,8 @@
 <p><img src="../../images/01/lab-05.jpg" alt="Viewing a CSV file"><br>
 <em>Viewing a CSV file</em></p>
 <p>CSV files are one of the most common data formats to store spatial data. They are simple text files that can be read by almost any application. The file is a table with rows and columns. The first row is called the <em>header</em> and contains the names of the columns. The remaining rows are the <em>records</em> and contain the data. In this case, we have three columns and one record. When records represent geographical points, we often refer to them as <em>features</em>. This is a simple example of a <em>tabular</em> data type.</p>
-<p>Let&rsquo;s now examine the CSV format in some detail. Commas are special characters that separate columns, though other characters could be used instead, e.g., the tab or pipe <code>|</code> characters. The CSV can encode two types of data, <em>numbers</em> (quantities) and <em>strings</em> (sequences of characters). Strings should always be wrapped in double quotes <code>&quot; string content &quot;</code>.</p>
+<p>Let&rsquo;s now examine the CSV format in some detail. Commas are special characters that separate columns, though other characters could be used instead, e.g., the <code>tab</code> or pipe <code>|</code> characters. The CSV can encode two types of values, <em>numbers</em> (quantities) and <em>strings</em> (sequences of characters).</p>
+<p>How you type them in the CSV, defines their values. Numbers are wrapped in any quotes: <code>123.456</code>. Strings are always wrapped in double quotes: <code>&quot;This is literally just a string of characters with a beginning and an end.&quot;</code>.</p>
 <p>The first two columns are numbers representing the latitude and longitude of the point. Latitude measures the distance from the equator (0 degrees) and ranges from -90 to 90 degrees. Longitude measures the distance from the prime meridian in London, England (0 degrees) and ranges from -180 to 180 degrees. The third column is a string representing the name of the point.</p>
 <p>So, where is this location? We see that the latitude is positive (northern hemisphere) and the longitude is negative (western hemisphere) – might we be in North America? Let&rsquo;s use <a href="https://www.google.com/maps">Google Maps</a> to find out.</p>
 <div class="doc-instructions">
@@ -266,7 +286,7 @@
 </span></span><span style="display:flex;"><span>38.038093,-84.503872,&#34;Geography, Y&#39;all!&#34;
 </span></span><span style="display:flex;"><span>38.041704,-84.504288,&#34;One pinball machine @ The Cornerstone&#34;
 </span></span><span style="display:flex;"><span>38.053765,-84.486388,&#34;Arcadium has Galaga!&#34;
-</span></span><span style="display:flex;"><span>38.057173,-84.518648,&#34;The Burl Arcade has multiple pinballs 🤪&#34;
+</span></span><span style="display:flex;"><span>38.057173,-84.518648,&#34;The Burl Arcade has multiple pinballs. Let&#39;s tilt 🤪&#34;
 </span></span></code></pre></div><p>We now have a file that we can share our favorite gaming locations with friends as simply as texting the content of the file. However, you might be saying, &ldquo;I can just tell my friends to Google these locations.&rdquo; That&rsquo;s true, but what if we had locations that were not indexed by a search engine? For example, what if we wanted to share a favorite pinic spot or the best place to watch a sunset? Latitude and longitude is the most concise way to share a location anywhere on the planet. 🤯</p>
 <p>Let&rsquo;s now make a quick visualization of these locations in QGIS to verify that we have selected accurate locations.</p>
 <div class="doc-instructions">
@@ -328,10 +348,9 @@
 <p>Please follow these requirements for the assignment:</p>
 <ol>
 <li>Create a CSV file containing the latitude, longitude, and a message describing the feature for the required four locations. The locations and message you want to show are completely up to you – but try to have fun. No location should exist outside of New Circle Road. (6 points @ 1.5 points each)</li>
-<li>For the feature&rsquo;s message field value, make sure there is only one pair of double quotes around the message. For example, <code>&quot;This is a message&quot;</code>. If you have extra double quotes, the CSV file will not load correctly in QGIS. That means, you&rsquo;ll need to figure out how to make a message for the feature that does not contain double quotes. (1 point)</li>
-<li>Name the file <code>lexrex-{linkblue}.csv</code> and replace <code>{linkblue}</code> with your linkblue name. For example, <code>lexrex-JLo01.csv</code>. (1 point)</li>
+<li>For the feature&rsquo;s message field value, make sure there is only one pair of double quotes around the message. For example, <code>&quot;This is a message&quot;</code>. If you have extra double quotes, the CSV file will not load correctly in QGIS. That means, you&rsquo;ll need to figure out how to make a message for the feature that does not contain double quotes. (2 point)</li>
+<li>Name the file <code>lexrex-{linkblue}.csv</code> and replace <code>{linkblue}</code> with your linkblue name. For example, <code>lexrex-TaySwi01.csv</code>. (1 point)</li>
 <li>You can use the <code>hello-world.csv</code> file as a template. But, make sure to delete the example data and replace it with your own data. (1 point)</li>
-<li>Your lab TA will add one additional requirement. (1 point)</li>
 </ol>
 <h3 id="submitting-the-assignment">Submitting the assignment</h3>
 <p>Upload your CSV file to the Module 1 assignment on Canvas by the published due date. After the submission deadline, we will have a friendly competition in lecture to see who and what is the center of cool in Lexington.</p>
