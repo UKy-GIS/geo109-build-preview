@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Modules on GEO 109</title>
+    <title>Modules on Digital Mapping</title>
     <link>https://uky-gis.github.io/modules/</link>
-    <description>Recent content in Modules on GEO 109</description>
+    <description>Recent content in Modules on Digital Mapping</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Apr 2021 11:58:46 -0400</lastBuildDate><atom:link href="https://uky-gis.github.io/modules/index.xml" rel="self" type="application/rss+xml" />
@@ -41,7 +41,7 @@
       
       <guid>https://uky-gis.github.io/modules/00-intro/</guid>
       <description>Presentation Open in new tab Week 01: Introductions Tasks Welcome to GEO109! This week we will be getting to know each other, the course, and campus. Please complete the following tasks:
-Tell us a little about yourself in this private form. Only the instructors will see your responses. Push a pin for your hometown in this interactive map. (Note: the link goes to a different website – one of our online mapping program&amp;rsquo;s collaboration servers.</description>
+Read the syllabus. Tell us a little about yourself in this private form. Only the instructors will see your responses. Push a pin for your hometown in this interactive map. (Note: the link goes to a different website – one of our online mapping program&amp;rsquo;s collaboration servers.</description>
     </item>
     
   </channel>
