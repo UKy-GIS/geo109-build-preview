@@ -55,6 +55,26 @@
                       <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
                     </li>
                   
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/midterm/">  Midterm</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/04-cartography/">  04 Cartography</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/05-design/">  05 Design</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/06-3d/">  06 3D</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/final-project/">  Final Project</a>
+                    </li>
+                  
                 </ul> 
               </li>
           
@@ -70,6 +90,10 @@
                 </a>
              
                  <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/lab-01/">  Meaningful places</a>
+                    </li>
                   
                     <li>
                       <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
@@ -110,17 +134,28 @@
 <main>
 <section class="py-3 container col-lg-8 col-xxl-6" id="documentation">
 <div class="d-flex justify-content-between  align-items-end">
-<h3>Presentation</h3>   
+<h3>Presentation Topics</h3>   
 <a href='../../slides/02' target='_blank'>Open in new tab</a>
 </div>
-<iframe src='../../slides/02' width='100%' class='slide-presentation'></iframe>
-<h2>Week</h2>
+<a href='../../slides/02' target='_blank'>
+<img src="../../images/02/intro.jpg" alt="Cover slide for Module 2" class="w-100 mt-1 mb-4">
+</a>
+<!-- <iframe src='../../slides/02' width='100%' class='slide-presentation'></iframe> -->
+<h2>Presentation Topics</h2>
 <ul>
-<li><a href="../../slides/02">04: How we used to do it</a></li>
-<li><a href="../../slides/02/#/35">05: Modern GNSS</a></li>
+<li><a href="../../slides/02">Introduction</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/02/#/6">Reference mapping</a></li>
+  <li><a href="../../slides/02/#/45">GPS mapping</a></li>
+  <li><a href="../../slides/02/#/92">Your Love Letter to Campus</a></li>
+  <li><a href="../../slides/02/#/109">Projections</a></li>
+  <li><a href="../../slides/02/#/143">Summary</a></li>
+  <li><a href="#lab-content">Tasks</a></li>
+  <li><a href="#lab">Lab</a></li>
 </ul>
 <div id='lab-content'>
-<h2>Task</h2>
+<p>Discuss the precision of points and geometric primitives. Are you really where the GPS says you are? If you could only use two decimal places, how far off could you be? What about three decimal places? How does the precision of the GPS affect the precision of the map?</p>
+<h2>Tasks</h2>
+<h3>Virtual geocaching (extra credit)</h3>
 <p>In this task, you will try to find <em>virtual geocaches</em> using a GPS receiver app on your mobile device&rsquo;s web browser. A virtual geocache is usually a distinct or interesting feature in the landscape, like a scenic spot or sculpture, that you can find using a GPS and hints. If you find this task enjoyable, <a href="https://www.geocaching.com/">Geocaching.com</a> is a popular website for hiding and finding all types of geocaches.</p>
 <div >
 <div class="w-50 p-3 m-3 float-start">
@@ -147,7 +182,11 @@ Let's get started with the task. Before you begin, make sure you can access the 
 </p>
 </div>
 </div>
-<div class="clearfix"></div>
+<div class="clearfix" ></div>
+<h3>Reading</h3>
+<p>Read the first two sections of chapter 2 (pages 5–18) in Mark Monmonier&rsquo;s book, <em>How to Lie with Maps</em>. <a style='text-decoration: none;' target="_blank"
+href="https://uk.instructure.com/courses/2065404/files?preview=106893033">🔗</a> (link goes to Canvas)</p>
+<div id='lab'></div>
 <h2 >Lab</h2>
 <p>In the previous lab we created data from observations on a map. In this lab, we will physically walk around campus and collect data using your mobile device. You are encouraged to work in teams to complete this lab.</p>
 <h3>Table of Contents</h3>
@@ -280,12 +319,13 @@ Let's get started with the task. Before you begin, make sure you can access the 
 <h3 id="deliverables">Deliverables</h3>
 <p>Please follow these requirements for the assignment:</p>
 <ol>
-<li>Walk and record a GPS track in the Avenza Maps app that creates a geometric figure on campus. (6 points)</li>
-<li>Export a KML of <em>only the track</em> – no placemarks. If you need to start over, delete any existing layers before you begin to make it easier for organization. (2 points)</li>
+<li>Walk and record a GPS track in the Avenza Maps app that creates a geometric feature on campus that is desired by the Society. (6 points)</li>
+<li>Create a single placemark for the center of your geometric feature. (1 point)</li>
+<li>The GPS track should not extend beyond the provided base map of campus. (1 point)</li>
+<li>Export a KML file. (1 point)</li>
 <li>Name the file <code>happy-geom-{linkblue}.kml</code> and replace <code>{linkblue}</code> with your linkblue name. For example, <code>happy-geom-DoCat01.kml</code>. (1 point)</li>
-<li>Your lab TA will add one additional requirement. (1 point)</li>
 </ol>
-<p>You are encouraged to work in teams.</p>
+<p>You are encouraged to work in teams to see how your GPS tracks compare in real-time. This means you must use your own mobile device and create your own KML file.</p>
 <h3 id="submitting-the-assignment">Submitting the assignment</h3>
 <p>Upload your KML file to the Module 2 assignment on Canvas by the published due date. After the submission deadline, we&rsquo;ll show the most exceptional geometric figures from each section during lecture.</p>
 <p>Happy walking!</p>
@@ -296,7 +336,7 @@ Let's get started with the task. Before you begin, make sure you can access the 
  <footer class="footer fixed-bottom uk-liter-bg" id="footer">
   <div class="row footer-text">
     <div class="col-12 col-md text-center text-md-left nav-link text-dark">
-      © UKy Geography | 1944–2023
+      © UKy Geography | 1944–2024
     </div>
   </div>
 

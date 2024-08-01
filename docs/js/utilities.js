@@ -98,6 +98,20 @@ const basemaps = {
       opacity: 0.3,
     },
   },
+  "lab-01": {
+    // url: 'https://nyc3.digitaloceanspaces.com/astoria/tiles/ky-hillshade/{z}/{x}/{y}.jpg',
+    url: "https://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_Imagery_2019_6IN_WGS84WM/MapServer/tile/{z}/{y}/{x}",
+    options: {
+      attribution: "&copy; UKy Geography",
+      opacity: 1,
+      maxZoom: 20,
+      minZoom: 2,
+      bounds: [
+        [39.25995919, -89.80883737],
+        [36.09998597, -81.7764675],
+      ],
+    },
+  },
   ky: {
     url: "https://kyraster.ky.gov/arcgis/rest/services/ImageServices/Ky_USGS_Topographic_Maps_2016/MapServer/tile/{z}/{y}/{x}",
     options: {
@@ -212,7 +226,6 @@ function buildPage() {
     }
   }
 
-  console.log(mapId);
   if (mapId) {
     makeMap(mapId);
   }
@@ -280,7 +293,7 @@ function makeMap(id) {
     .addTo(map);
 
   if (basemaps[id]) {
-    console.log("we have a custom map", basemaps[id]);
+    // console.log("we have a custom map", basemaps[id]);
 
     if (basemaps[id].order) {
       for (j of basemaps[id].order) {
@@ -348,11 +361,59 @@ function makeMap(id) {
       }
     });
   }
-  addData(map, id);
+
+  if (id == "lab-01") {
+    lab01(map);
+  } else {
+    addData(map, id);
+  }
 
   // if (document.querySelector("#map-modal-button")) {
   //     addModal(document.querySelector("#map-modal-button"), map)
   // }
+}
+
+function lab01(map) {
+  fetch("https://uky-gis.github.io/geo109/data/2023/locations.geojson")
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+    .then((data) => {
+      const xx = L.geoJson(data, {
+        pointToLayer: function (geoJsonPoint, latlng) {
+          const options = {
+            radius: 4,
+            fillColor: "#ff00ff",
+            color: "#ff00ff",
+            weight: 1,
+          };
+          return L.circleMarker(latlng, options);
+        },
+        onEachFeature: function (feature, layer) {
+          const f = feature.properties;
+          let popup = `<h3>${f.message}</h3>`;
+
+          layer.bindPopup(popup);
+          layer.on("mouseover", function (e) {
+            this.openPopup();
+            layer.setStyle({
+              weight: 4,
+              radius: 8,
+            });
+          });
+          layer.on("mouseout", function (e) {
+            this.closePopup();
+            layer.setStyle({
+              weight: 1,
+              radius: 4,
+            });
+          });
+        },
+      }).addTo(map);
+      map.fitBounds(basemaps["dsm"].options.bounds);
+    });
 }
 
 function addModal(button, map) {
@@ -629,7 +690,7 @@ function updateLex(map, csvData) {
       geojson.addTo(map);
       if (mapId == "dsm") {
         map.fitBounds(geojson.getBounds(), {
-          animation: false,
+          animate: false,
         });
       }
       // map.flyToBounds(geojson.getBounds());

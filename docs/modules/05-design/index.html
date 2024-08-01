@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html><head>
+  <title>GEO 109: 05 Design</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Website meta description for google search results go here" />
+  <meta name="dc.relation" content="https://uky-gis.github.io/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#1A94D2" />
+  
+
+   
+  <link rel="stylesheet" href="../../css/main.min.css" media="screen" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head><body><nav class="navbar navbar-light uk-liter-bg" id='nav'>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../../">
+      <img src="https://uky-gis.github.io/graphics/logo-75th-01.svg" alt="" height="45px"
+        class="d-inline-block ">
+     <h5 class="d-inline-block font-weight-700">GEO 109</h5> 
+    </a>
+
+    <ul class="nav justify-content-start">
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Modules
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/00-intro/">  Introduction</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/01-data/">  01 Data</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/02-locate/">  02 GPS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/midterm/">  Midterm</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/04-cartography/">  04 Cartography</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/05-design/">  05 Design</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/06-3d/">  06 3D</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/final-project/">  Final Project</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Maps
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/lab-01/">  Meaningful places</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/hill/">  Kentucky</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/additional/">  Additional Maps</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+    <li class="nav-item">
+      <a class='nav-link' href="../../syllabus">
+         Syllabus</a>
+      </a>
+    </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid uk-lite-bg py-2" id="singleTitle">
+  <row>
+    <h3 class="font-weight-700 align-middle text-dark mt-1">
+      05 Design 
+    </h3>
+  </row>
+</div>
+
+<main>
+<section class="py-3 container col-lg-8 col-xxl-6" id="documentation">
+<div class="d-flex justify-content-between  align-items-end">
+<h3>Presentation</h3>  
+<a href='../../slides/05' target='_blank'>Open in new tab</a>
+</div>
+<a href='../../slides/05' target='_blank'>
+<img src="../../images/05/intro.jpg" alt="Cover slide for Module 5" class="w-100 mt-1 mb-4">
+</a>
+<!-- <iframe src='../../slides/03' width='100%' class='slide-presentation'></iframe> -->
+<h2>Presentation Topics</h2>
+<ul>
+<li><a href="../../slides/05">Introduction & announcements</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/05/#/22">Persuasive maps</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/05/#/43/0/2">Examples from lab 4</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/05/#/57">Font</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/05/#/70">Labeling & figure/ground</a></li>
+  <li><a href="#lab-content">Tasks</a></li>
+  <li><a href="#lab">Lab</a>
+  <ul><li>
+  <a target='_blank' href='https://uky.yuja.com/V/Video?v=9097429&node=39036332&a=150759897&autoplay=1'>Video: Lab practice demonstration (25 min)</a>
+  </li>
+  <li>
+  <a target='_blank' href='https://uky.yuja.com/V/Video?v=9097377&node=39036191&a=50928675&autoplay=1'>Video: Lab option 2, fantasy map (8 min)</a>
+  </li>
+  </ul>
+  </li>
+</ul>
+<div id='lab-content'>
+<h2>Task</h2>
+<p>In our last task, you will use an unorthodox method to find &ldquo;twin&rdquo; neighborhoods in Lexington and compare them to areas on campus that you frequent. The method is straightforward: We&rsquo;ll fold a map of Lexington in half, punch a hole through the map where we live or work on campus, and then find the reflected location on the other side of the map. This reflection is the twin. How different is this location from where we live or work? What do these differences tell us about Lexington&rsquo;s neighborhoods and their history?</p>
+<p>Our approach is similar the <a href="https://www.foldedmapproject.com/">Folded Map Project</a>, an art project to generate discussion about segregation and housing disparity in Chicago. The project&rsquo;s creator, Tonika Johnson, paired residents from the city&rsquo;s north and south sides and asked them to visit each other&rsquo;s homes. Part of the discussion centered on the historical practice of &ldquo;redlining&rdquo;, a discriminatory practice that denied loans to people of color (and other minorities) and investment in &ldquo;high risk&rdquo; neighborhoods. The practice was common in the 1930s and 1940s, and the federal government&rsquo;s Home Owners&rsquo; Loan Corporation (HOLC) <a href="https://dsl.richmond.edu/panorama/redlining/#loc=5/39.1/-94.58">created maps</a> to identify these neighborhoods. The legacy of this practice is still evident today – neighborhoods that saw investment during this period faired better than those that didn&rsquo;t.</p>
+<p>To complete our exercise, we need a line on which to fold our map. You might know of a dividing line in your hometown, e.g., train tracks that split your town into two geographical imaginations. While this line might be arbitrarily chosen, we&rsquo;ll use Main Street, a major thoroughfare that runs through the heart of Lexington. We&rsquo;ll also use the HOLC&rsquo;s map of Lexington to identify neighborhoods that were redlined in the 1930s.</p>
+<p><img src="../../images/05/holc-scan-lo.jpg" alt="Home Owners&rsquo; Loan Corporation Residential Security Map, 1938"><br>
+<em>Home Owners&rsquo; Loan Corporation Residential Security Map, 1938 (<a href="https://s3.amazonaws.com/holc/tiles/KY/Lexington/1936/holc-scan.jpg">Enlarge</a>)</em></p>
+<p>We can observe from this map, the University of Kentucky campus was small in 1938 and bounded by neighborhoods graded in the lowest classes. Since that time, and especially in the last decade, the university has experienced tremendous investment in new dormitories and campus amenities, like the Gatton Student Center. The university&rsquo;s growth has also impacted surrounding neighborhoods, displacing many long-time residents and creating enclaves of (often expensive) off-campus housing for students. The campus continues to grow.</p>
+<p>Let&rsquo;s take a look at the map we&rsquo;ll use for this task. It is a minimal map showing building footprints, the road network, and Main Street prominently in red.</p>
+<p><img src="../../images/05/main-street-fold.jpg" alt="Lexington building footprints with Main Street highlighted"><br>
+<em>Lexington building footprints with Main Street highlighted (<a href="../../images/05/main-street-fold.pdf">Enlarge or print</a>)</em></p>
+<p>While you may print this map and do the following exercise on your own, this task will be done in recitation with provided paper maps.</p>
+<h3>Finding the twin location</h3>
+<p>Fold this map along the red line and look at the side showing campus. You will then locate a place on campus where you spend a lot of time, let&rsquo;s say your dormitory. If you live off-campus, and it is shown on this map, you can select that location. Once you have selected your location on the campus side of the map, push a paper clip through that point, flip the map over, and note the reflected location.</p>
+<p>For example, let&rsquo;s find Patterson Office Tower&rsquo;s Main Street reflection. Push a pin through POT and photograph the other side of the folded map.</p>
+<!-- ![Patterson Office Tower twin](../../images/05/pot-twin.jpg)  
+_Patterson Office Tower twin_ -->
+<p><img src="../../images/05/task-05.jpg" alt="Patterson Office Tower twin photograph"><br>
+<em>Patterson Office Tower reflection photographed</em></p>
+<p>Next, visit Google Maps and zoom into the location you found on the other side of the map. You&rsquo;ll need to zoom close enough to see the building footprints to make a match.</p>
+<p><img src="../../images/05/google-maps-of-twin.jpg" alt="Locate the area using Google Maps, zoomed in"><br>
+<em>Locate the area using Google Maps, zoomed in</em></p>
+<p>Enable Google Street View and tour the area. You may also decide to visit the neighborhood in person.</p>
+<p>Can you find a grocery, bank, or restaurant nearby? Make observations about the quality of the public transportation; how are the sidewalks and bus stops? What is the age and condition of the buildings? Are there any parks or green spaces nearby? What grade is this area on the HOLC&rsquo;s map of Lexington?</p>
+<p>Next, screen capture two Google Street View images showing the your selected area and the reflected area you found on the other side of the map. You can use the <a href="https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b">Snipping Tool</a> on Windows or <a href="https://support.apple.com/en-us/HT201361">Command-Shift-4</a> on Mac to capture the images.</p>
+<p><img src="../../images/05/pot.jpg" alt="Google Street View of Patterson Office Tower">
+<em>Google Street View of Patterson Office Tower</em></p>
+<p><img src="../../images/05/pot-twin-street-view.jpg" alt="Google Street View of Patterson Office Tower">
+<em>Google Street View of Patterson Office Tower twin</em></p>
+<p>Ok, let&rsquo;s turn to making a submission for this task.</p>
+<h3>Completing the task</h3>
+<p>After you complete the above section, make sure you do the following to finish this task:</p>
+<div class="doc-instructions">
+<ol>
+<li>Locate a place on campus and find its reflection on the provided map.</li>
+<li>Make a screen capture for each location using Google Street View. Save those images to your computer.</li>
+<li>Using the questions above as a guide, write a short paragraph (3-5 sentences) describing what you find in the reflected location. Please try not to make a value judgement about the area, but rather describe what you see. You are not a tourist looking for entertainment in this exercise, but rather an observer.</li>
+</ol>
+</div>
+<h3>Submitting the task</h3>
+<p>Upload your screen captures and text to the Module 5 <a href="https://uk.instructure.com/courses/2065404/assignments/11614057">task</a> on Canvas by the published due date. (2 points for each screen capture and 1 point for the response.)</p>
+<div id='lab'></div>
+<h2>Lab</h2>
+<p>In the previous module we discovered what makes an effective map. In this module, we&rsquo;ll explore how to design a map that that is also persuasive. A map might seem persuasive if its design appears clean and professional – these map makers know what they are doing! Another approach is to make bold or unorthodox design choices that draw attention to the map or project. In this lab, we&rsquo;ll explore design choices that can engage the viewer and help tell our story.</p>
+<h3>Table of Contents</h3>
+<!-- TOC -->
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#typefaces">Typefaces</a>
+<ul>
+<li><a href="#labeling-features">Labeling features</a></li>
+</ul>
+</li>
+<li><a href="#changing-the-figure-ground-relationship">Changing the figure-ground relationship</a>
+<ul>
+<li><a href="#adding-a-photograph-to-the-layout">Adding a photograph to the layout</a></li>
+</ul>
+</li>
+<li><a href="#assignment-option-1">Assignment: Option 1</a>
+<ul>
+<li><a href="#video-25-min">Video: 25 min</a></li>
+<li><a href="#deliverables">Deliverables</a></li>
+</ul>
+</li>
+<li><a href="#assignment-option-2">Assignment: Option 2</a>
+<ul>
+<li><a href="#video-8-min">Video: 8 min</a></li>
+<li><a href="#deliverables-1">Deliverables</a></li>
+</ul>
+</li>
+<li><a href="#submitting-the-assignment">Submitting the assignment</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="introduction">Introduction</h2>
+<p>A persuasive map is one that is designed to influence the viewer&rsquo;s opinion and possibly take action, like voting for a candidate or supporting a cause. It also may be designed to persuade the viewer to think differently about a topic, like the impact of climate change or the distribution of wealth. Persuasion is not necessarily bad, but it is important to understand the author&rsquo;s intent and whether they are transparent with their data and methods.</p>
+<p>All good persuasive maps start with one thing in common: They grab the viewer&rsquo;s attention. After that, the map&rsquo;s story unfolds in its cartographic design (i.e., skillful use of visual variables), proper employment of map elements, and a balanced layout with strong visual hierarchy. So the question becomes how do we grab the viewer&rsquo;s attention? We&rsquo;ll explore this question by selecting unique typefaces and fine tuning our page&rsquo;s visual hierarchy.</p>
+<h2 id="typefaces">Typefaces</h2>
+<p>Typefaces are a powerful tool for map makers. They can be used to convey a map&rsquo;s theme, like a map of the Old West that uses a typeface that looks like it was printed on a letterpress. They can also be used to convey a map&rsquo;s tone, like a map of a city&rsquo;s nightlife that uses a typeface that looks like neon lights.</p>
+<p>In fact, a map could be made entirely of text. Can you recognize this US city represented in this map?</p>
+<p><img src="../../images/05/type-1.jpg" alt="A map of Chicago">  <br>
+<em>A map of Chicago</em></p>
+<p>A <em>typeface</em> is a collection of fonts that share a common design. A <em>font</em> is a specific style of a typeface. For example, the typeface <em>Helvetica</em> has many fonts, like <em>Helvetica Bold</em> and <em>Helvetica Italic</em>. <a href="https://en.wikipedia.org/wiki/Type_design">Type designers</a> create typefaces and fonts, and they are often inspired by historical typefaces. Helvetica, one of the most popular commercial typefaces, was inspired by the typeface <em>Akzidenz-Grotesk</em>, which was designed in 1890s.</p>
+<p><img src="../../images/05/type-2.png" alt="Characteristics of a font">  <br>
+<em>Characteristics of a font</em></p>
+<p>Type design is concerned with modifying font characteristics to achieve legibility while creating a unique style. <em>Legibility</em> is the ease with which a reader can distinguish one letter from another; a function of the font&rsquo;s characteristics. We broadly group typefaces into two categories: <em>serif</em> and <em>sans serif</em>. Serif typefaces have small lines at the end of each stroke, while sans serif typefaces do not.</p>
+<p>As a map maker, we often don&rsquo;t create fonts from scratch, but rather choose ones that we like and are legible. After that, we are concerned about making text on our maps readable. <em>Readability</em> is the ease with which a reader can recognize words, sentences, and paragraphs. It is a function of the font&rsquo;s size, spacing, and line length. Thankfully, we have some style conventions we can follow.</p>
+<p><img src="../../images/05/type-3.png" alt="Mapping typeface style conventions"></p>
+<p><em>Mapping typeface style conventions</em></p>
+<p>While there are no hard and fast rules in selecting and styling typefaces, our goal is make our maps readable and engaging. The first step is selecting a sans serif and serif typefaces that we&rsquo;ll use for the majority of our map&rsquo;s text. Then we&rsquo;ll select a few accent typefaces that we&rsquo;ll use sparingly to draw attention to specific map elements. We&rsquo;ll visit <a href="https://fonts.google.com/">Google Fonts</a> to find our typefaces, however, other sites like <a href="https://www.dafont.com/">DaFont</a> and <a href="https://www.fontsquirrel.com/">Font Squirrel</a> are good resources. Using your linkblue login for Adobe Creative Cloud, you can use certain fonts from <a href="https://fonts.adobe.com/">Adobe Fonts</a>.</p>
+<p>Ok, let&rsquo;s get started. The workflow is pretty simple. Visit Google Fonts, search for typefaces, download them, and then install them on your computer. The file downloaded from Google Fonts will be a zipped file that should be extracted first. Inside the extracted folder, you&rsquo;ll find the font files with the <em>.ttf</em> file extension.</p>
+<div class="doc-instructions">
+<ol>
+<li>Visit <a href="https://fonts.google.com/">Google Fonts</a></li>
+<li>Search for <strong>Open Sans</strong>, <strong>Noto Serif</strong>, and <strong>Lobster</strong>.</li>
+<li>Download the typefaces and extract the zip file.</li>
+<li>Install the typefaces on your computer by double-clicking the <em>.ttf</em> files.</li>
+</ol>
+</div>
+<p><img src="../../images/05/type-5.jpg" alt="Downloading Google Fonts">  <br>
+<em>Downloading Google Fonts</em></p>
+<p>Feel free to explore and install other typefaces. It&rsquo;s fun to test different font pairings and see how they look on the page. Next, we&rsquo;ll do just that.</p>
+<div class="doc-instructions">
+<ol start="6">
+<li>Launch QGIS and create a new layout.</li>
+<li>Add three text boxes to the layout and style them with the <strong>Open Sans</strong>, <strong>Noto Serif</strong>, and <strong>Lobster</strong> fonts in each box.</li>
+<li>Also, note the many variations that come with each typeface. For example, <strong>Noto Serif</strong> has many weights.</li>
+</ol>
+</div>
+<p><img src="../../images/05/type-6.jpg" alt="Showing font specimens in a layout">  <br>
+<em>Showing font specimens in a layout</em></p>
+<p>Keep iterating over different typefaces with the goal of discovering unique combinations. The end result might be a mark you could use for identity on your layouts.</p>
+<p><img src="../../images/05/type-4.png" alt="Searching for unique font pairings">  <br>
+<em>Searching for unique font pairings</em></p>
+<h3 id="labeling-features">Labeling features</h3>
+<p>Labeling features on the map is a common map making activity. But, it is one of the most difficult ones. Good label placement increases readability through visually balanced, intuitive, and predictable placement.</p>
+<p><img src="../../images/05/type-7.jpg" alt="Labeling point features">  <br>
+<img src="../../images/05/type-8.jpg" alt="Labeling line and polygon features">  <br>
+<em>Labeling vector features</em></p>
+<p>We can manually place labels on the map, but this is time consuming and often results in a cluttered map. Instead, we&rsquo;ll use QGIS&rsquo;s labeling engine to automatically place labels on the map from a vector layer&rsquo;s attribute table. However, if we wanted precisely placed labels, we would need use a different tool, like Adobe Illustrator. That&rsquo;s application is explored in our GEO 305 &amp; 405 courses.</p>
+<p>Let&rsquo;s get some data for Lexington streets and label them. We&rsquo;ll download an archive of the city&rsquo;s street and buildings from Openstreetmap.org and then import them into QGIS. We&rsquo;ll then access the label engine in QGIS&rsquo;s Layer Styling panel.</p>
+<div class="doc-instructions">
+<ol start="9">
+<li>Download and extract <a href="https://uk.instructure.com/files/107831079/download?download_frd=1">lexington-main-street.zip</a> into a workspace folder called <em>lab-05</em>.</li>
+<li>Open QGIS and add the <em>buildings</em> and <em>highway</em> layers.</li>
+<li>Make sure the map projection is EPSG: 3089 and rotate the map canvas so that Main Street is horizontal.</li>
+</ol>
+</div>
+<p><img src="../../images/05/label-1.jpg" alt="Add layers, rotate canvas, and project to EPSG: 3089">  <br>
+<em>Add layers, rotate canvas, and project to EPSG: 3089</em></p>
+<p>Next, make sure the <strong>highway</strong> layer is selected and click on the <strong>Labels</strong> icon in the Layer Styling panel to initiate feature labeling. The attribute that contains the name of the street is called <em>name</em>. We&rsquo;ll use this attribute to label the streets. The style of text is up to you, but think about the typeface we discussed earlier.</p>
+<div class="doc-instructions">
+<ol start="12">
+<li>Click on the <strong>Labels</strong> icon in the Layer Styling panel for the <strong>highway</strong> layer.</li>
+<li>Select <strong>Single Labels</strong> and choose the <em>name</em> attribute in the <strong>Value</strong> dropdown menu.</li>
+<li>Choose the <strong>Open Sans</strong> typeface and select an italic style.</li>
+</ol>
+</div>
+<p><img src="../../images/05/label-2.jpg" alt="First step in labeling line layers">  <br>
+<em>First step in labeling line layers</em></p>
+<p>How&rsquo;s it look? Not too well at this step. We need to adjust the placement of the labels. We&rsquo;ll do this by adjusting the label&rsquo;s <strong>Placement</strong> and then add a halo <strong>Buffer</strong>.</p>
+<div class="doc-instructions">
+<ol start="15">
+<li>Select the <strong>Placement</strong> tab and choose <strong>Curved</strong> in the <strong>Mode</strong> dropdown menu.</li>
+<li>Make the <strong>Allowed Positions</strong> to be <strong>On Line</strong>.</li>
+</ol>
+</div>
+<p><img src="../../images/05/label-3.jpg" alt="Curving labels on line">  <br>
+<em>Curving labels on line</em></p>
+<p>Getting better, but it is hard to read the dark text over a dark line. We need to &ldquo;knock out&rdquo; the line below the label. We&rsquo;ll do this by adding a halo around the text.</p>
+<div class="doc-instructions">
+<ol start="17">
+<li>Select the <strong>Buffer</strong> tab and choose <strong>Draw text buffer</strong>.</li>
+<li>Make sure the color matches the background color.</li>
+</ol>
+</div>
+<p><img src="../../images/05/label-4.jpg" alt="Adding a halo buffer for labels">  <br>
+<em>Adding a halo buffer for labels</em></p>
+<p>To finish labeling, we need to test whether the labels are readable at our target scale with a map canvas placed in a layout. If the labels are easily readable at 400%, the labels can be read in most printed applications. If not, we&rsquo;ll adjust the label&rsquo;s size and buffer width to make them readable.</p>
+<div class="doc-instructions">
+<ol start="19">
+<li>Create a new 11 x 17 inch layout and add a map canvas. Fill the entire page with the map.</li>
+<li>Use the <strong>Zoom</strong> dropdown to zoom to 400%.</li>
+<li>Change the size of the label&rsquo;s text and buffer width to add as many labels as possible while still making then readable.</li>
+</ol>
+</div>
+<p><img src="../../images/05/label-5.jpg" alt="Check readability of labels and make changes accordingly">  <br>
+<em>Check readability of labels and make changes accordingly</em></p>
+<p>Here we have better labeling than the default settings. Depending on your purpose and the type of feature being labeled, the labeling options could vary dramatically. For example, labeling a point layer of cities would require a different approach than labeling a line layer of streets.</p>
+<p>Ok, save your map project before moving on to our next section.</p>
+<h2 id="changing-the-figure-ground-relationship">Changing the figure-ground relationship</h2>
+<p>The figure-ground relationship is a design principle that describes the relationship between the foreground and background of a map. The foreground is the area of the map that is the focus of the viewer&rsquo;s attention, while the background is the area that is not – it&rsquo;s area for resting the eyes.</p>
+<p>By default, QGIS uses a white background for the map canvas. This is a good choice for printed maps, but most maps today are viewed on a screen. The &ldquo;dark mode&rdquo; aesthetic is popular in many applications,and has been shown to reduce eye strain and power consumption on mobile devices. Another dark mode advantage is that it helps photographs and other colorful elements stand out. We&rsquo;ll explore this idea by adding a photograph to our map and changing the background color of the map canvas.</p>
+<p>The first step in reversing the figure-ground relationship is to change the background color of the map canvas. We&rsquo;ll do this by changing the map canvas&rsquo;s <strong>Background color</strong> in the <strong>Project Properties &gt; General</strong> tab.</p>
+<div class="doc-instructions">
+<ol start="22">
+<li>From the main QGIS menu, select <strong>Project &gt; Properties &gt; General</strong> tab.</li>
+<li>Click on the <strong>Background color</strong> button and choose a dark color, <code>#333333</code>.</li>
+<li>Click <strong>OK</strong> to save the changes.</li>
+</ol>
+</div>
+<p><img src="../../images/05/fg-1.jpg" alt="Changing the map canvas background color">  <br>
+<em>Changing the map canvas background color</em></p>
+<p>Now, we need to change the placed map canvas in our layout to use the same color. Switch to the layout and select the map canvas.</p>
+<div class="doc-instructions">
+<ol start="25">
+<li>Select the map&rsquo;s <strong>Item Properties</strong> panel and change the <strong>Background</strong> color to the same color selected earlier</li>
+</ol>
+</div>
+<p><img src="../../images/05/fg-2.jpg" alt="Changing the layout background color">  <br>
+<em>Changing the layout background color</em></p>
+<p>OK, now the tough part. We need to revisit each layer and labeling options and make adjustments to their colors. The label&rsquo;s buffer color needs to match the background color and text color should be lighter than the road color. The buildings layer should be darker than roads but lighter than the background. Got it?</p>
+<div class="doc-instructions">
+<ol start="26">
+<li>Revisit each layer and label color option and make them lighter against the dark background.</li>
+<li>Aim for a strong visual hierarchy.</li>
+</ol>
+</div>
+<p><img src="../../images/05/fg-3.jpg" alt="Changing the feature and label colors in new figure-ground relationship">  <br>
+<em>Changing the feature and label colors in new figure-ground relationship</em></p>
+<h3 id="adding-a-photograph-to-the-layout">Adding a photograph to the layout</h3>
+<p>Adding a photograph to a layout is a great way to add visual interest to a map. We can even use a photograph as a &ldquo;call out&rdquo; to highlight a specific location on the map. We&rsquo;ll use a Google Street View photograph of Patterson Office Tower (saved in the same folder as our spatial data) and highlight the location of the photograph with an arrow on the map.</p>
+<div class="doc-instructions">
+<ol start="28">
+<li>Use the <strong>Add Picture</strong>, <strong>Add Shape</strong>, and <strong>Add Arrow</strong> layout tools to add a photograph of Patterson Office Tower to the layout, mark POT with a rectangle, and add an arrow pointing from the photograph to the rectangle.</li>
+<li>Modify each elements <strong>Item Properties</strong> to make them stand out against the dark background.</li>
+</ol>
+</div>
+<p>The following screenshots show how to add each of the three elements to the layout.</p>
+<p><img src="../../images/05/fg-4.jpg" alt="Add a picture and change its frame color">  <br>
+<em>Add a picture and change its frame color</em></p>
+<p><img src="../../images/05/fg-5.jpg" alt="Add a shape representing Patterson Office Tower">  <br>
+<em>Add a shape representing Patterson Office Tower</em></p>
+<p><img src="../../images/05/fg-6.jpg" alt="Add an arrow">  <br>
+<em>Add an arrow pointing to Patterson Office Tower</em></p>
+<p>Ok, that&rsquo;s it! Save your project. You can use it for the base map for your lab assignment.</p>
+<h2 id="assignment-option-1">Assignment: Option 1</h2>
+<p>The <em>BluDDCon</em>, the Bluegrass Dungeons &amp; Dragons Convention, is holding their annual competitive games at the Loudoun House in Castlewood Park (201 Castlewood Dr, Lexington, KY 40505). They need a map showing this location on a map with a photograph of the Loudoun House, which can be taken in-person or from Google Street View. They want an arrow from the photograph pointing this impressive Gothic style villa. The map should show streets with labels and part of the University of Kentucky campus. The map should be 11 x 17 inches and include a bold title and layout. You should add additional map elements as needed.</p>
+<p>Save your QGIS project often via the menu item <strong>Project &gt; Save</strong>.</p>
+<h3 id="video-25-min">Video: 25 min</h3>
+<iframe title='Embedded Media titled: lab-05-option-01'width="100%"  height="400"  src="https://uky.yuja.com/V/Video?v=9097429&node=39036332&a=150759897&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h3 id="deliverables">Deliverables</h3>
+<p>Please follow these requirements for the assignment:</p>
+<ol>
+<li>Create an 11 x 17 inch layout using the highway and buildings layers. Make sure to show both the Loudoun House and Willy T. Young Library on campus. (3 points)</li>
+<li>Add labels for the highway layer that curve over the highway lines and are clearly readable. (2 points)</li>
+<li>Add a photograph of the Loudoun House and an arrow pointing to the building. (2 points)</li>
+<li>Add the title, &ldquo;Bluegrass Dungeons &amp; Dragons Convention&rdquo; with an accent typeface.  (1 point)</li>
+<li>Add the title, &ldquo;Loudoun House, Castlewood Park&rdquo; with another typeface.  (1 point)</li>
+<li>Include a scale bar, north arrow, and attribution (including one for Openstreetmap.org). (1 point)</li>
+<li>Export the layout as a GeoPDF file.</li>
+<li>Name the file <code>bluddcon-linkblue.pdf</code> and replace <code>linkblue</code> with your linkblue name. For example, <code>bluddcon-jabr01.pdf</code>.</li>
+</ol>
+<h2 id="assignment-option-2">Assignment: Option 2</h2>
+<p>BluDDCon is also looking for fantasy maps that explore a futuristic or post-apocalyptic Lexington. They have a data file, <a href="https://uk.instructure.com/files/107831093/download?download_frd=1">flooded-lexington.zip</a>, that shows the region after runaway global warming raised sea levels over 1,000 feet. What kind of story could you tell with this data? The first rule of fantasy mapping is that there are no rules. For example, consider the following layout (which is included in the data file):</p>
+<p><img src="../../images/05/assignment-o2.jpg" alt="Add an arrow">  <br>
+<em>Port Wildcat after meltdown</em></p>
+<p>Save your QGIS project often via the menu item <strong>Project &gt; Save</strong>.</p>
+<h3 id="video-8-min">Video: 8 min</h3>
+<iframe title='Embedded Media titled: lab-05-option-02' width="100%"  height="400"  src="https://uky.yuja.com/V/Video?v=9097377&node=39036191&a=50928675&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h3 id="deliverables-1">Deliverables</h3>
+<p>Please follow these requirements for the assignment:</p>
+<ol>
+<li>Create an 11 x 17 inch layout using one of the flooded map layers. (3 points)</li>
+<li>Add three images to the layout that are made with generative AI technology, e.g., <a href="https://openai.com/dall-e-2">DALL·E 2</a>, that develop your story. (3 points)</li>
+<li>Add a captivating title and subtitle.  (2 point)</li>
+<li>Add a narrative that explains what happened.  (1 point)</li>
+<li>Include a scale bar, north arrow, and attribution (including one for the generative AI technology that was used). (1 point)</li>
+<li>Export the layout as a GeoPDF file.</li>
+<li>Name the file <code>bluddcon-future-linkblue.pdf</code> and replace <code>linkblue</code> with your linkblue name. For example, <code>bluddcon-future-jabr01.pdf</code>.</li>
+</ol>
+<h2 id="submitting-the-assignment">Submitting the assignment</h2>
+<p>Upload your PDF file from one of the assignment options to the Module 5 assignment on Canvas by the published due date. If you do both options, upload both PDF files in two separate submissions. Make note in a submission comment that you are going for extra credit. (+5 extra credit points)</p>
+<p>Happy designing!</p>
+<p>.</p>
+</section>
+</main>
+ <footer class="footer fixed-bottom uk-liter-bg" id="footer">
+  <div class="row footer-text">
+    <div class="col-12 col-md text-center text-md-left nav-link text-dark">
+      © UKy Geography | 1944–2024
+    </div>
+  </div>
+
+  
+
+  
+  
+
+  <script src="../../js/bundle.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+    charset="utf-8"></script>
+  <script src="../../js/utilities.js"></script>
+</footer></body>
+</html>

@@ -1,0 +1,51 @@
+n,abbr,name,rank,percent
+1,HI,Hawaii,1,9.41
+2,AK,Alaska,2,9.10
+3,FL,Florida,6,6.63
+4,NH,New Hampshire,20,1.35
+5,VT,Vermont,30,0.84
+6,ME,Maine,10,3.5
+7,RI,Rhode Island,31,0.84
+8,NY,New York,23,1.09
+9,PA,Pennsylvania,24,1.02
+10,NJ,New Jersey,5,7.28
+11,DE,Delaware,16,1.69
+12,MD,Maryland,21,1.28
+13,VA,Virginia,26,0.98
+14,WV,West Virginia,27,0.95
+15,OH,Ohio,34,0.77
+16,IN,Indiana,32,0.8
+17,IL,Illinois,19,1.39
+18,CT,Connecticut,4,7.41
+19,WI,Wisconsin,13,1.95
+20,NC,North Carolina,18,1.45
+21,MA,Massachusetts,7,4.23
+22,TN,Tennessee,17,1.68
+23,AR,Arkansas,44,0.18
+24,MO,Missouri,37,0.34
+25,GA,Georgia,40,0.23
+26,SC,South Carolina,35,0.53
+27,KY,Kentucky,15,1.72
+28,AL,Alabama,46,0.14
+29,LA,Louisiana,48,0.10
+30,MS,Mississippi,49,0.07
+31,IA,Iowa,42,0.21
+32,MN,Minnesota,29,0.89
+33,OK,Oklahoma,47,0.13
+34,TX,Texas,28,0.95
+35,NM,New Mexico,43,0.18
+36,KS,Kansas,50,0.06
+37,NE,Nebraska,38,0.31
+38,SD,South Dakota,33,0.77
+39,ND,North Dakota,41,0.22
+40,WY,Wyoming,8,4.09
+41,MT,Montana,22,1.20
+42,CO,Colorado,25,1.02
+43,UT,Utah,14,1.80
+44,AZ,Arizona,12,2.16
+45,NV,Nevada,39,0.30
+46,OR,Oregon,36,0.46
+47,WA,Washington,9,3.93
+48,CA,California,3,7.49
+49,MI,Michigan,11,2.24
+50,ID,Idaho,45,0.16

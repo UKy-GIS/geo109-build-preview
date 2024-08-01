@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find parks</title>
+</head>
+<body>
+    <script>
+        const parks = {
+                HI: {
+                    name: "Hawaii",
+                    color: "#005900",
+                    hover_color: "#004C00",
+                    description:
+                        "<p>Rank: 1</p><p></p><ul><li><p>State Size: <strong>4,134,000 acres</strong></p></li><li><p>Number of State Parks: <strong>50 (30,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.73%</strong></p></li><li><p>Number of National Parks: <strong>2 (358,870 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>8.68%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>388,870 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>9.41%</strong></p></li></ul>",
+                },
+                AK: {
+                    name: "Alaska",
+                    color: "#005900",
+                    hover_color: "#004C00",
+                    description:
+                        "<p>Rank: 2</p><p></p><ul><li><p>State Size: <strong>393,747,000 acres</strong></p></li><li><p>Number of State Parks: <strong>119 (3,300,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.84%</strong></p></li><li><p>Number of National Parks: <strong>8 (32,526,051 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>8.26%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>35,826,051 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>9.10%</strong></p></li></ul>",
+                },
+                FL: {
+                    name: "Florida",
+                    color: "#135f00",
+                    hover_color: "#065200",
+                    description:
+                        "<p>Rank: 6</p><p></p><ul><li><p>State Size: <strong>38,392,000 acres</strong></p></li><li><p>Number of State Parks: <strong>191 (800,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>2.08%</strong></p></li><li><p>Number of National Parks: <strong>3 (1,746,611 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>4.55%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>2,546,611 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>6.63%</strong></p></li></ul>",
+                },
+                NH: {
+                    name: "New Hampshire",
+                    color: "#5f7902",
+                    hover_color: "#526C00",
+                    description:
+                        "<p>Rank: 20</p><p></p><ul><li><p>State Size: <strong>5,941,000 acres</strong></p></li><li><p>Number of State Parks: <strong>68 (80,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>1.35%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>80,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.35%</strong></p></li></ul>",
+                },
+                VT: {
+                    name: "Vermont",
+                    color: "#858702",
+                    hover_color: "#787A00",
+                    description:
+                        "<p>Rank: 30</p><p></p><ul><li><p>State Size: <strong>6,154,000 acres</strong></p></li><li><p>Number of State Parks: <strong>58 (52,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.84%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>52,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.84%</strong></p></li></ul>",
+                },
+                ME: {
+                    name: "Maine",
+                    color: "#396c01",
+                    hover_color: "#2C5F00",
+                    description:
+                        "<p>Rank: 10</p><p></p><ul><li><p>State Size: <strong>21,594,000 acres</strong></p></li><li><p>Number of State Parks: <strong>83 (725,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>3.36%</strong></p></li><li><p>Number of National Parks: <strong>1 (49,075 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.23%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>774,075 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>3.5</strong>%</strong></p></li></ul>",
+                },
+                RI: {
+                    name: "Rhode Island",
+                    color: "#858702",
+                    hover_color: "#787A00",
+                    description:
+                        "<p>Rank: 31</p><p></p><ul><li><p>State Size: <strong>788,000 acres</strong></p></li><li><p>Number of State Parks: <strong>15 (6,646 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.84%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>6,646 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.84%</strong></p></li></ul>",
+                },
+                NY: {
+                    name: "New York",
+                    color: "#728002",
+                    hover_color: "#657300",
+                    description:
+                        "<p>Rank: 23</p><p></p><ul><li><p>State Size: <strong>32,056,000 acres</strong></p></li><li><p>Number of State Parks: <strong>215 (350,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>1.09%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>350,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.09%</strong></p></li></ul>",
+                },
+                PA: {
+                    name: "Pennsylvania",
+                    color: "#728002",
+                    hover_color: "#657300",
+                    description:
+                        "<p>Rank: 24</p><p></p><ul><li><p>State Size: <strong>28,806,000 acres</strong></p></li><li><p>Number of State Parks: <strong>121 (295,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>1.02%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>295,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.02%</strong></p></li></ul>",
+                },
+                NJ: {
+                    name: "New Jersey",
+                    color: "#135f00",
+                    hover_color: "#065200",
+                    description:
+                        "<p>Rank: 5</p><p></p><ul><li><p>State Size: <strong>5,258,000 acres</strong></p></li><li><p>Number of State Parks: <strong>50 (383,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>7.28%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>383,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>7.28%</strong></p></li></ul>",
+                },
+                DE: {
+                    name: "Delaware",
+                    color: "#4c7301",
+                    hover_color: "#3F6600",
+                    description:
+                        "<p>Rank: 16</p><p></p><ul><li><p>State Size: <strong>1,534,000 acres</strong></p></li><li><p>Number of State Parks: <strong>16 (26,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>1.69%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>26,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.69%</strong></p></li></ul>",
+                },
+                MD: {
+                    name: "Maryland",
+                    color: "#5f7902",
+                    hover_color: "#526C00",
+                    description:
+                        "<p>Rank: 21</p><p></p><ul><li><p>State Size: <strong>7,870,000 acres</strong></p></li><li><p>Number of State Parks: <strong>46 (101,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>1.28%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>101,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.28%</strong></p></li></ul>",
+                },
+                VA: {
+                    name: "Virginia",
+                    color: "#858702",
+                    hover_color: "#787A00",
+                    description:
+                        "<p>Rank: 26</p><p></p><ul><li><p>State Size: <strong>27,089,000 acres</strong></p></li><li><p>Number of State Parks: <strong>37 (67,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.25%</strong></p></li><li><p>Number of National Parks: <strong>1 (199,224 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.74%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>266,224 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.98%</strong></p></li></ul>",
+                },
+                WV: {
+                    name: "West Virginia",
+                    color: "#858702",
+                    hover_color: "#787A00",
+                    description:
+                        "<p>Rank: 27</p><p></p><ul><li><p>State Size: <strong>15,508,000 acres</strong></p></li><li><p>Number of State Parks: <strong>45 (148,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.95%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>148,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.95%</strong></p></li></ul>",
+                },
+                OH: {
+                    name: "Ohio",
+                    color: "#988d03",
+                    hover_color: "#8B8000",
+                    description:
+                        "<p>Rank: 34</p><p></p><ul><li><p>State Size: <strong>26,451,000 acres</strong></p></li><li><p>Number of State Parks: <strong>75 (170,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.64%</strong></p></li><li><p>Number of National Parks: <strong>1 (32,572 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.12%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>202,572 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.77%</strong></p></li></ul>",
+                },
+                IN: {
+                    name: "Indiana",
+                    color: "#858702",
+                    hover_color: "#787A00",
+                    description:
+                        "<p>Rank: 32</p><p></p><ul><li><p>State Size: <strong>23,158,000 acres</strong></p></li><li><p>Number of State Parks: <strong>34 (173,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.75%</strong></p></li><li><p>Number of National Parks: <strong>1 (15,348 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.07%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>188,348 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.8</strong>%</strong></p></li></ul>",
+                },
+                IL: {
+                    name: "Illinois",
+                    color: "#5f7902",
+                    hover_color: "#526C00",
+                    description:
+                        "<p>Rank: 19</p><p></p><ul><li><p>State Size: <strong>36,060,000 acres</strong></p></li><li><p>Number of State Parks: <strong>142 (500,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>1.39%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>500,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.39%</strong></p></li></ul>",
+                },
+                CT: {
+                    name: "Connecticut",
+                    color: "#135f00",
+                    hover_color: "#065200",
+                    description:
+                        "<p>Rank: 4</p><p></p><ul><li><p>State Size: <strong>3,548,000 acres</strong></p></li><li><p>Number of State Parks: <strong>109 (263,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>7.41%</strong></p></li><li><p>Number of National Parks:<strong> </strong><strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>263,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>7.41%</strong></p></li></ul>",
+                },
+                WI: {
+                    name: "Wisconsin",
+                    color: "#4c7301",
+                    hover_color: "#3F6600",
+                    description:
+                        "<p>Rank: 13</p><p></p><ul><li><p>State Size: <strong>35,933,000 acres</strong></p></li><li><p>Number of State Parks: <strong>76 (700,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>1.95%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>700,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.95%</strong></p></li></ul>",
+                },
+                NC: {
+                    name: "North Carolina",
+                    color: "#5f7902",
+                    hover_color: "#526C00",
+                    description:
+                        "<p>Rank: 18</p><p></p><ul><li><p>State Size: <strong>33,710,000 acres</strong></p></li><li><p>Number of State Parks: <strong>41 (212,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.63%</strong></p></li><li><p>Number of National Parks: <strong>1 (276,000 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.82%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>488,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.45%</strong></p></li></ul>",
+                },
+                // DC: { name: "District of Columbia", hide: "yes" },
+                MA: {
+                    name: "Massachusetts",
+                    color: "#266600",
+                    hover_color: "#195900",
+                    description:
+                        "<p>Rank: 7</p><p></p><ul><li><p>State Size: <strong>5,914,000 acres</strong></p></li><li><p>Number of State Parks: <strong>154 (250,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>4.23%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>250,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>4.23%</strong></p></li></ul>",
+                },
+                TN: {
+                    name: "Tennessee",
+                    color: "#4c7301",
+                    hover_color: "#3F6600",
+                    description:
+                        "<p>Rank: 17</p><p></p><ul><li><p>State Size: <strong>26,973,000 acres</strong></p></li><li><p>Number of State Parks: <strong>56 (210,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.78%</strong></p></li><li><p>Number of National Parks: <strong>1 (244,000 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.90%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>454,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.68%</strong></p></li></ul>",
+                },
+                AR: {
+                    name: "Arkansas",
+                    color: "#d1a104",
+                    hover_color: "#C49400",
+                    description:
+                        "<p>Rank: 44</p><p></p><ul><li><p>State Size: <strong>34,036,000 acres</strong></p></li><li><p>Number of State Parks: <strong>52 (55,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.16%</strong></p></li><li><p>Number of National Parks: <strong>1 (5,552 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.02%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>60,552 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.18%</strong></p></li></ul>",
+                },
+                MO: {
+                    name: "Missouri",
+                    color: "#be9a04",
+                    hover_color: "#B18D00",
+                    description:
+                        "<p>Rank: 37</p><p></p><ul><li><p>State Size: <strong>44,614,000 acres</strong></p></li><li><p>Number of State Parks: <strong>93 (151,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.34%</strong></p></li><li><p>Number of National Parks: <strong>1 (91 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.0002%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>151,091 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.34%</strong></p></li></ul>",
+                },
+                GA: {
+                    name: "Georgia",
+                    color: "#be9a04",
+                    hover_color: "#B18D00",
+                    description:
+                        "<p>Rank: 40</p><p></p><ul><li><p>State Size: <strong>37,745,000 acres</strong></p></li><li><p>Number of State Parks: <strong>63 (85,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.23%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>85,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.23%</strong></p></li></ul>",
+                },
+                SC: {
+                    name: "South Carolina",
+                    color: "#ab9403",
+                    hover_color: "#9E8700",
+                    description:
+                        "<p>Rank: 35</p><p></p><ul><li><p>State Size: <strong>19,961,000 acres</strong></p></li><li><p>Number of State Parks: <strong>47 (80,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.40%</strong></p></li><li><p>Number of National Parks: <strong>1 (26,640 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.13%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>106,640 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.53%</strong></p></li></ul>",
+                },
+                KY: {
+                    name: "Kentucky",
+                    color: "#4c7301",
+                    hover_color: "#3F6600",
+                    description:
+                        "<p>Rank: 15</p><p></p><ul><li><p>State Size: <strong>25,863,000 acres</strong></p></li><li><p>Number of State Parks: <strong>50 (390,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>1.51%</strong></p></li><li><p>Number of National Parks: <strong>1 (54,012 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.21%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>444,012 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.72%</strong></p></li></ul>",
+                },
+                AL: {
+                    name: "Alabama",
+                    color: "#d1a104",
+                    hover_color: "#C49400",
+                    description:
+                        "<p>Rank: 46</p><p></p><ul><li><p>State Size: <strong>33,432,000 acres</strong></p></li><li><p>Number of State Parks: <strong>22 (48,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.14%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>48,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.14%</strong></p></li></ul>",
+                },
+                LA: {
+                    name: "Louisiana",
+                    color: "#d1a104",
+                    hover_color: "#C49400",
+                    description:
+                        "<p>Rank: 48</p><p></p><ul><li><p>State Size: <strong>31,776,000 acres</strong></p></li><li><p>Number of State Parks: <strong>40 (32,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.10%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>32,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.10%</strong></p></li></ul>",
+                },
+                MS: {
+                    name: "Mississippi",
+                    color: "#e5a805",
+                    hover_color: "#D89B00",
+                    description:
+                        "<p>Rank: 49</p><p></p><ul><li><p>State Size: <strong>30,903,000 acres</strong></p></li><li><p>Number of State Parks: <strong>25 (23,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.07%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>23,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.07%</strong></p></li></ul>",
+                },
+                IA: {
+                    name: "Iowa",
+                    color: "#be9a04",
+                    hover_color: "#B18D00",
+                    description:
+                        "<p>Rank: 42</p><p></p><ul><li><p>State Size: <strong>36,017,000 acres</strong></p></li><li><p>Number of State Parks: <strong>71 (75,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.21%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>75,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.21%</strong></p></li></ul>",
+                },
+                MN: {
+                    name: "Minnesota",
+                    color: "#858702",
+                    hover_color: "#787A00",
+                    description:
+                        "<p>Rank: 29</p><p></p><ul><li><p>State Size: <strong>54,014,000 acres</strong></p></li><li><p>Number of State Parks: <strong>67 (267,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.49%</strong></p></li><li><p>Number of National Parks: <strong>1 (218,200 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.40%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>485,200 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.89%</strong></p></li></ul>",
+                },
+                OK: {
+                    name: "Oklahoma",
+                    color: "#d1a104",
+                    hover_color: "#C49400",
+                    description:
+                        "<p>Rank: 47</p><p></p><ul><li><p>State Size: <strong>44,738,000 acres</strong></p></li><li><p>Number of State Parks: <strong>39 (56,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.13%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>56,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.13%</strong></p></li></ul>",
+                },
+                TX: {
+                    name: "Texas",
+                    color: "#858702",
+                    hover_color: "#787A00",
+                    description:
+                        "<p>Rank: 28</p><p></p><ul><li><p>State Size: <strong>171,057,000 acres</strong></p></li><li><p>Number of State Parks: <strong>99 (740,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.43%</strong></p></li><li><p>Number of National Parks: <strong>2 (887,530 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.52%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>1,627,530 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.95%</strong></p></li></ul>",
+                },
+                NM: {
+                    name: "New Mexico",
+                    color: "#d1a104",
+                    hover_color: "#C49400",
+                    description:
+                        "<p>Rank: 43</p><p></p><ul><li><p>State Size: <strong>77,823,000 acres</strong></p></li><li><p>Number of State Parks: <strong>34 (95,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.12%</strong></p></li><li><p>Number of National Parks: <strong>1 (46,766 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.06%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>141,766 acres </strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.18%</strong></p></li></ul>",
+                },
+                KS: {
+                    name: "Kansas",
+                    color: "#e5a805",
+                    hover_color: "#D89B00",
+                    description:
+                        "<p>Rank: 50</p><p></p><ul><li><p>State Size: <strong>52,660,000 acres</strong></p></li><li><p>Number of State Parks: <strong>26 (32,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.06%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>32,000 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.06%</strong></p></li></ul>",
+                },
+                NE: {
+                    name: "Nebraska",
+                    color: "#be9a04",
+                    hover_color: "#B18D00",
+                    description:
+                        "<p>Rank: 38</p><p></p><ul><li><p>State Size: <strong>49,523,000 acres</strong></p></li><li><p>Number of State Parks: <strong>74 (155,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.31%</strong></p></li><li><p>Number of National Parks: <strong>0</strong></p></li><li><p>State Coverage of National Parks: <strong>0</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>155,000 acres </strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.31%</strong></p></li></ul>",
+                },
+                SD: {
+                    name: "South Dakota",
+                    color: "#988d03",
+                    hover_color: "#8B8000",
+                    description:
+                        "<p>Rank: 33</p><p></p><ul><li><p>State Size: <strong>49,357,000 acres</strong></p></li><li><p>Number of State Parks: <strong>63 (102,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.21%</strong></p></li><li><p>Number of National Parks: <strong>2 (276,727 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.56%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>378,727 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.77%</strong></p></li></ul>",
+                },
+                ND: {
+                    name: "North Dakota",
+                    color: "#be9a04",
+                    hover_color: "#B18D00",
+                    description:
+                        "<p>Rank: 41</p><p></p><ul><li><p>State Size: <strong>45,251,000 acres</strong></p></li><li><p>Number of State Parks: <strong>20 (25,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.06%</strong></p></li><li><p>Number of National Parks: <strong>1 (70,447 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.16%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>95,447 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.22%</strong></p></li></ul>",
+                },
+                WY: {
+                    name: "Wyoming",
+                    color: "#266600",
+                    hover_color: "#195900",
+                    description:
+                        "<p>Rank: 8</p><p></p><ul><li><p>State Size: <strong>62,604,000 acres</strong></p></li><li><p>Number of State Parks: <strong>31 (120,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.19%</strong></p></li><li><p>Number of National Parks: <strong>2 (2,441,043 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>3.90%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>2,561,043 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>4.09%</strong></p></li></ul>",
+                },
+                MT: {
+                    name: "Montana",
+                    color: "#728002",
+                    hover_color: "#657300",
+                    description:
+                        "<p>Rank: 22</p><p></p><ul><li><p>State Size: <strong>94,109,000 acres</strong></p></li><li><p>Number of State Parks: <strong>53 (45,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.05%</strong></p></li><li><p>Number of National Parks: <strong>2 (1,079,720 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>1.15%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>1,124,720 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.20%</strong></p></li></ul>",
+                },
+                CO: {
+                    name: "Colorado",
+                    color: "#728002",
+                    hover_color: "#657300",
+                    description:
+                        "<p>Rank: 25</p><p></p><ul><li><p>State Size: <strong>66,624,000 acres</strong></p></li><li><p>Number of State Parks: <strong>43 (220,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.33%</strong></p></li><li><p>Number of National Parks: <strong>4 (456,414 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.69%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>676,414 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.02%</strong></p></li></ul>",
+                },
+                UT: {
+                    name: "Utah",
+                    color: "#4c7301",
+                    hover_color: "#3F6600",
+                    description:
+                        "<p>Rank: 14</p><p></p><ul><li><p>State Size: <strong>54,339,000 acres</strong></p></li><li><p>Number of State Parks: <strong>44 (140,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.26%</strong></p></li><li><p>Number of National Parks: <strong>5 (839,259 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>1.54%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>979,259 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>1.80%</strong></p></li></ul>",
+                },
+                AZ: {
+                    name: "Arizona",
+                    color: "#396c01",
+                    hover_color: "#2C5F00",
+                    description:
+                        "<p>Rank: 12</p><p></p><ul><li><p>State Size: <strong>72,964,000 acres</strong></p></li><li><p>Number of State Parks: <strong>36 (60,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.08%</strong></p></li><li><p>Number of National Parks: <strong>3 (1,514,753 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>2.08%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>1,574,753 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>2.16%</strong></p></li></ul>",
+                },
+                NV: {
+                    name: "Nevada",
+                    color: "#be9a04",
+                    hover_color: "#B18D00",
+                    description:
+                        "<p>Rank: 39</p><p></p><ul><li><p>State Size: <strong>70,763,000 acres</strong></p></li><li><p>Number of State Parks: <strong>23 (132,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.19%</strong></p></li><li><p>Number of National Parks: <strong>1 (77,180 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.11%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>209,180 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.30%</strong></p></li></ul>",
+                },
+                OR: {
+                    name: "Oregon",
+                    color: "#ab9403",
+                    hover_color: "#9E8700",
+                    description:
+                        "<p>Rank: 36</p><p></p><ul><li><p>State Size: <strong>62,140,000 acres</strong></p></li><li><p>Number of State Parks: <strong>195 (102,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.16%</strong></p></li><li><p>Number of National Parks: <strong>1 (183,224 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.29%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>285,224 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.46%</strong></p></li></ul>",
+                },
+                WA: {
+                    name: "Washington",
+                    color: "#396c01",
+                    hover_color: "#2C5F00",
+                    description:
+                        "<p>Rank: 9</p><p></p><ul><li><p>State Size: <strong>45,208,000 acres</strong></p></li><li><p>Number of State Parks: <strong>212 (112,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.25%</strong></p></li><li><p>Number of National Parks: <strong>3 (1,663,812 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>3.68%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>1,775,812 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>3.93%</strong></p></li></ul>",
+                },
+                CA: {
+                    name: "California",
+                    color: "#135f00",
+                    hover_color: "#065200",
+                    description:
+                        "<p>Rank: 3</p><p></p><ul><li><p>State Size: <strong>101,676,000 acres</strong></p></li><li><p>Number of State Parks: <strong>270 (1,300,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>1.28%</strong></p></li><li><p>Number of National Parks: <strong>9 (6,313,164 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>6.21%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>7,613,164 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>7.49%</strong></p></li></ul>",
+                },
+                MI: {
+                    name: "Michigan",
+                    color: "#396c01",
+                    hover_color: "#2C5F00",
+                    description:
+                        "<p>Rank: 11</p><p></p><ul><li><p>State Size: <strong>37,448,000 acres</strong></p></li><li><p>Number of State Parks: <strong>104 (265,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.71%</strong></p></li><li><p>Number of National Parks: <strong>1 (571,790 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>1.53%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>836,790 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>2.24%</strong></p></li></ul><p>Rank: </p><p></p><p>Rank: </p><p></p>",
+                },
+                ID: {
+                    name: "Idaho",
+                    color: "#d1a104",
+                    hover_color: "#C49400",
+                    description:
+                        "<p>Rank: 45</p><p></p><ul><li><p>State Size: <strong>53,487,000 acres</strong></p></li><li><p>Number of State Parks: <strong>32 (62,000 acres)</strong></p></li><li><p>State Coverage of State Parks: <strong>0.12%</strong></p></li><li><p>Number of National Parks: <strong>1 (22,197 acres)</strong></p></li><li><p>State Coverage of National Parks: <strong>0.04%</strong></p></li><li><p>Total Acreage of State &amp; National Parks: <strong>84,197 acres</strong></p></li><li><p>Percentage of State Covered in Parks: <strong>0.16%</strong></p></li></ul>",
+                },
+                // GU: { name: "Guam", hide: "yes" },
+                // VI: { name: "Virgin Islands", hide: "yes" },
+                // PR: { name: "Puerto Rico", hide: "yes" },
+                // MP: { name: "Northern Mariana Islands", hide: "yes" },
+                // AS: { name: "American Samoa", hide: "yes" },
+            }
+
+            const body = document.querySelector("body")
+            let content = 'n,abbr,name,rank,percent<br>'
+            let n = 1
+            for (a in parks) {
+                const park = parks[a]
+                const description = park.description
+                const rank = description.split("<p>Rank: ")[1].split("</p>")[0]
+                const national = description.split("<p>Percentage of State Covered in Parks: <strong>")[1].split("%</strong>")[0]
+                console.log(a, rank, national)
+                content += `${n},${a},${parks[a].name},${rank},${national}<br>`
+                n++
+            }
+            content += `<br><br><a href='parks.csv' download>Download CSV</a><br>
+            <a href='parks-by-state.geojson' download>Download GeoJSON</a>`
+            body.innerHTML = content
+            
+    </script>
+</body>
+</html>

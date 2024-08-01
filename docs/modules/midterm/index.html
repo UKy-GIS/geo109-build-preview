@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html><head>
+  <title>GEO 109: Midterm</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Website meta description for google search results go here" />
+  <meta name="dc.relation" content="https://uky-gis.github.io/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#1A94D2" />
+  
+
+   
+  <link rel="stylesheet" href="../../css/main.min.css" media="screen" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head><body><nav class="navbar navbar-light uk-liter-bg" id='nav'>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../../">
+      <img src="https://uky-gis.github.io/graphics/logo-75th-01.svg" alt="" height="45px"
+        class="d-inline-block ">
+     <h5 class="d-inline-block font-weight-700">GEO 109</h5> 
+    </a>
+
+    <ul class="nav justify-content-start">
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Modules
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/00-intro/">  Introduction</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/01-data/">  01 Data</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/02-locate/">  02 GPS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/midterm/">  Midterm</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/04-cartography/">  04 Cartography</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/05-design/">  05 Design</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/06-3d/">  06 3D</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/final-project/">  Final Project</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Maps
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/lab-01/">  Meaningful places</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/hill/">  Kentucky</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/additional/">  Additional Maps</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+    <li class="nav-item">
+      <a class='nav-link' href="../../syllabus">
+         Syllabus</a>
+      </a>
+    </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid uk-lite-bg py-2" id="singleTitle">
+  <row>
+    <h3 class="font-weight-700 align-middle text-dark mt-1">
+      Midterm 
+    </h3>
+  </row>
+</div>
+
+<main>
+<section class="py-3 container col-lg-8 col-xxl-6" id="documentation">
+<div class="d-flex justify-content-between  align-items-end">
+<h3>Presentation</h3>  
+<a href='../../slides/midterm' target='_blank'>Open in new tab</a>
+</div>
+<a href='../../slides/midterm' target='_blank'>
+<img src="../../slides/midterm/images/intro.jpg" alt="Cover slide for Module 3" class="w-100 mt-1 mb-4">
+</a>
+<h3>Table of Contents</h3>
+<!-- TOC -->
+<ul>
+<li><a href="#format-of-the-midterm">Format of the midterm</a>
+<ul>
+<li><a href="#review">Review</a></li>
+<li><a href="#office-hours-and-help">Office hours and help</a></li>
+<li><a href="#time-of-quiz">Time of quiz</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="format-of-the-midterm">Format of the midterm</h2>
+<p>The midterm exam is a 20-question, multiple-choice Canvas quiz that is based on the lectures and labs from the first half of the course. It is worth 10 points and each question is worth 0.5 points. The exam is open book and open notes, but you must complete it on your own and on a device that can access Canvas.</p>
+<p>The goal of the midterm is to assess your ability to find and apply relevant information from the course materials. The questions are designed to be straightforward and you should be able to answer the questions by reviewing the slides and labs. We will have an optional extra credit quiz that has a few questions that are directly from the lecture demonstrations.</p>
+<h3 id="review">Review</h3>
+<p>We will have a review session for the quiz during class on Tuesday, Oct 10. We will go over the format of the quiz, do a practice quiz, and answer any questions you have about the material.</p>
+<p><a href="../../slides/midterm/">This slideshow</a> shows similar questions to the ones on the quiz. You can use it to practice for the quiz.</p>
+<h3 id="office-hours-and-help">Office hours and help</h3>
+<p>The primary instructor is at conference that week, so there will be no office hours. However, you can email the instructor with questions. Check with your TA for their availability.</p>
+<h3 id="time-of-quiz">Time of quiz</h3>
+<p>You will have <strong>two hours and one attempt</strong> to complete the quiz. It will be available on Canvas at 8:00am on Thursday, Oct 12 and due at 12:00pm that day. If you submit the quiz after this time, it will considered late. The quiz will close at 2:00pm that day and will not be available after that time.</p>
+<p>Summary:</p>
+<ul>
+<li>Opens: 8:00am on Thursday, Oct 12</li>
+<li>Due: 12:00pm on Thursday, Oct 12</li>
+<li>Closes: 2:00pm on Thursday, Oct 12</li>
+</ul>
+<p>We wish you the best!
+.</p>
+</div>
+</section>
+</main>
+ <footer class="footer fixed-bottom uk-liter-bg" id="footer">
+  <div class="row footer-text">
+    <div class="col-12 col-md text-center text-md-left nav-link text-dark">
+      © UKy Geography | 1944–2024
+    </div>
+  </div>
+
+  
+
+  
+  
+
+  <script src="../../js/bundle.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+    charset="utf-8"></script>
+  <script src="../../js/utilities.js"></script>
+</footer></body>
+</html>

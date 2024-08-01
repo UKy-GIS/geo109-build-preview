@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>GEO109: Final Project</title>
+
+  <link rel="stylesheet" href="../dist/reset.css" />
+  <link rel="stylesheet" href="../dist/reveal.css" />
+  <link rel="stylesheet" href="../dist/theme/league-109.css" id="theme" />
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="../plugin/highlight/tom-night-80.css" id="highlight-theme" />
+  <style>
+    /* UK Colors: 
+                #c7c9c8 light gray 
+                #63666a dark gray
+                #15397f dark blue
+                #009bda light blue
+                #0033a0 official blue
+            */
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+      <section data-pre-load
+        data-background-image="https://www.outragegis.com/weather/img/animation/yesterday/LookRock.gif"
+        data-background-opacity="0.4">
+        <h1 class="r-fit-text">Final Project</h1>
+        <!-- <h2>Welcome</h2> -->
+        <div class="ll">
+          Yesterday in the Great Smokies<br />Webcam
+          <a href="https://www.outragegis.com/weather/img/animation" target="_blank">archive</a>
+        </div>
+        <div class='lr'><a target='_blank' href="https://uky-gis.github.io/geo109">GEO 109: Digital Mapping</a> </div>
+      </section>
+      <section data-pre-load
+        data-background-image="https://www.outragegis.com/weather/img/animation/yesterday/LookRock.gif"
+        data-background-opacity="0.4">
+        <img width="100%" src="../images/logo-uk-geo.png" />
+
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h1 class="r-fit-text">Announcements</h1>
+      </section>
+
+      <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Remaining classes</h3>
+        <ul>
+          <li class="fragment">
+            Two more lectures after Nov 28th.
+          </li>
+          <li class="fragment">
+            One or two recitations left.
+          </li>
+          <li class="fragment">
+            Due Dec 3: Draft.
+          </li>
+          <li class="fragment">
+            Any outstanding assignment can be submitted for partial credit though you might not get feedback.
+          </li>
+        </ul>
+      </section>
+
+      <section  class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>S24 mapping courses</h3>
+        <ul>
+          <li class="fragment">
+            GEO 309: Intro to GIS
+            <ul>
+              <li class="fragment">
+                MWF: 1:00 pm - 1:50 pm (ArcGIS Pro)
+              </li>
+              <li class="fragment">
+                TR: 3:30 pm - 4:45 pm (Primarily QGIS)
+              </li>
+            </ul>
+          </li>
+          <li class="fragment">
+            GEO 361: GIS Applications for Health
+            <ul>
+              <li class="fragment">
+                MWF: 2:00 pm - 2:50 pm (ArcGIS Pro)
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Our primary tool</h3>
+        <ul>
+          <li class="fragment">
+            QGIS <span class="fragment">might not be your jam</span> 
+          </li>
+          <li class="fragment">
+            but there are ways to make it better.
+          </li>
+          <li class="fragment">
+            Pro tip: use a mouse for precise control, right-clicking, scrolling, etc.
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Lab 5 examples</h3>
+      </section>
+      
+      <section data-background-image="./images/maps/01.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+      
+      <section data-background-image="./images/maps/02.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+      
+      <section data-background-image="./images/maps/03.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+      
+      <section data-background-image="./images/maps/04.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+      
+      <section data-background-image="./images/maps/05.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+      
+      <section data-background-image="./images/maps/06.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+
+      <section data-background-image="./images/maps/10.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+      
+      <section data-background-image="./images/maps/11.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+      
+      <section data-background-image="./images/maps/12.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+
+      <section data-background-image="./images/maps/13.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+      
+      <section data-background-image="./images/maps/14.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+      
+      <section data-background-image="./images/maps/15.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+
+      <section data-background-image="./images/maps/16.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#333333">
+      </section>
+
+      <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Powers earned 🐉</h3>
+        <ul>
+          <li class="fragment">
+            Collect observations (a.k.a. data)
+          </li>
+          <li class="fragment">
+            Analyze observations
+          </li>
+          <li class="fragment">
+            Make a map of observations
+          </li>
+          <li class="fragment">
+            Design to hold someone's attention
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>This is the arc of map making</h3>
+        <h3 class="fragment">What's missing?</h3>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h5 style="font-size:12rem;">You<span class='fragment'>r story</span></h5>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>What brings you joy?</h3>
+        <h3 class="fragment">What makes you angry?</h3>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Extra credit +2</h3>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h5 style="font-size:12rem;">Proposal</h5>
+      </section>
+
+      <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Final Project Proposal</h3>
+        <ul>
+          <li class="fragment">
+            What's your topic? <span class="fragment">Why does it need a map?</span>
+          </li>
+          <li class="fragment">
+            Methods of getting data? <span class="fragment">Area of interest?</span>
+          </li>
+          <li class="fragment">
+            Audience for your map? <span class="fragment">"Vibe" of your map?</span>
+          </li>
+          <li class="fragment">
+            <a target='_blank' href="https://uky-gis.github.io/geo109/modules/final-project/">Documentation</a>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Getting detailed spatial data</h3>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+        data-background-opacity="0.3">
+        <h3>QuickOSM</h3>
+        <ul>
+          <li class="fragment">
+            A QGIS plugin that allows you to download <a  target='_blank' href="https://www.openstreetmap.org">OpenStreetMap</a> data directly into QGIS.
+          </li>
+          <li class="fragment">
+            OpenStreetMap <a target='_blank' href="https://wiki.openstreetmap.org/wiki/Map_features">key/value pairs</a>  are used to filter data.
+          </li>
+          <li class="fragment">
+            In-class demonstration. 🤞
+          </li>
+        </ul>
+      </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9130686&node=39152365&a=82251368&preload=false"
+          data-background-opacity="1" data-pre-load="false">
+        
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3 >Other sources of data</h2>
+        </section>
+
+        <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Local</h3>
+          <ul>
+            <li class="fragment">Lexington: <a target="_blank" href="https://data.lexingtonky.gov">🔗</a>
+            </li>
+            <li class="fragment">Louisville: <a target="_blank" href="https://data.louisvilleky.gov/search?tags=lojic">🔗</a>
+            <li class="fragment">UKy: <a target="_blank" href="https://www.uky.edu/gissupport/data">🔗</a> </li>
+            <li class="fragment">Kentucky: <a target="_blank" href="https://kygeonet.ky.gov/">🔗</a></li>
+          </ul>
+        </section>
+        
+        <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>World & National</h3>
+          <ul>
+            <li class="fragment">Natural Earth: <a target="_blank" href="https://www.naturalearthdata.com/downloads/">🔗</a>
+            </li>
+            <li class="fragment">USGS: <a target="_blank" href="https://apps.nationalmap.gov/downloader/">🔗</a>
+            </li>
+          </ul>
+        </section>
+        
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=8545003&node=37029686&a=190930736&preload=false"
+          data-background-interactive data-background-opacity="1">
+        </section>
+      
+
+        <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>You</h3>
+          <ul>
+            <li class="fragment">Pull observations from existing maps</a>
+            </li>
+            <li class="fragment">Make observations in the field with your phone</a>
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9158454&node=39244521&a=112840445&preload=false"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Base maps</h2>
+        </section>
+      
+
+        <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>QGIS XYZ tiles</h3>
+          <ul>
+            <li class="fragment">Get more than OpenStreetMap
+            </li>
+            <li class="fragment">Load <a download href="../../data/geo109-xyz-base-maps.xml">these connections</a> into QGIS
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9158427&node=39244465&a=114619969&autoplay=1"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Completing the proposal</h2>
+        </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9163667&node=39259336&a=13164529&autoplay=1"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h2 class="r-fit-text">🚨Alert🚨</h2>
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>If you're stuck</h3><h3>reach out for help.</h3>
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h5 style="font-size:12rem;">Draft</h5>
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Final Project Draft</h3>
+          <ul>
+            <li class="fragment">
+              Using your proposal as a guide, create a draft of your final project.
+            </li>
+            <li class="fragment">
+              Two layers: <span class="fragment">base map and your observations.</span>
+            </li>
+            <li class="fragment">
+              At least two classes or symbols for your observations.
+            </li>
+            <li class="fragment">
+              <a target='_blank' href="https://uky-gis.github.io/geo109/modules/final-project/#draft-map-and-reflection">Documentation</a>
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Instructor's example</h3>
+          <p class="fragment">Short demonstration <a target='_blank' href="https://uky-gis.github.io/geo109/modules/final-project/#video-demonstrations">videos</a> showing crucial steps.</p>
+        </section>
+
+        <section data-background-image="https://uky-gis.github.io/geo109/images/final-project/final-project-yodasmaps.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="https://uky-gis.github.io/geo109/images/final-project/final-project-alt-yodasmaps.jpg"
+          data-background-opacity="1" data-background-size="contain" data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Submission</h3>
+          <ul>
+            <li class="fragment">
+              Export layout as a JPG, 300px dpi.
+            </li>
+            <li class="fragment">
+              Write a reflection from these <a target='_blank' href="https://uky-gis.github.io/geo109/modules/final-project/#reflection">prompts</a>.
+            </li>
+            <li class="fragment">
+              Submit the JPG and reflection to this <a target='_blank' href="https://uk.instructure.com/courses/2065404/assignments/11552003">Canvas Assignment</a>.
+            </li>
+            <li class="fragment">
+              Submit only the JPG to this <a target='_blank'
+                href="https://uk.instructure.com/courses/2065404/discussion_topics/13320384">Canvas Discussion</a>.
+            </li>
+          </ul>
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Improvement?</h3>
+          <ul>
+            <li class="fragment">
+              You will have time to improve the map.
+            </li>
+            <li class="fragment">
+              Final submission on Dec 14th.
+            </li>
+            <li class="fragment">
+              Instructor will be highly available for feedback and help.
+            </li>
+            <li class="fragment">
+              Think of it as an opportunity to collaborate.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Your proposals</h3>
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Common challenges</h3>
+          <ul>
+            <li class="fragment">
+              Finding/creating data <span class="fragment">– observations.</span> 
+            </li>
+            <li class="fragment">
+              Making that work in QGIS
+            </li>
+            <li class="fragment">
+              likely means editing the data
+            </li>
+            <li class="fragment">
+              to add attributes for symbology, labels, etc.
+            </li>
+          </ul>
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Common steps</h3>
+          <ul>
+            <li class="fragment">
+              Often, you can't edit data
+            </li>
+            <li class="fragment">
+              unless it is in certain formats.
+            </li>
+            <li class="fragment">
+              Export to a GeoJSON
+            </li>
+            <li class="fragment">
+              and edit attribute table.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-image="./images/export-1.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/export-2.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/export-3.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/export-4.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/export-5.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/export-6.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Your proposals with example solutions</h3>
+        </section>
+
+        <section data-background-image="./images/proposals/0.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>GPS data</h3>
+          <ul>
+            <li class="fragment">
+              Export features as KML and load into QGIS.
+            </li>
+            <li class="fragment">
+              Export GeoJSON from QGIS.
+            </li>
+            <li class="fragment">
+              Edit layer attributes in QGIS.
+            </li>
+            <li class="fragment">
+              Applies to Google My Maps KMLs.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9178641&node=39302187&a=94712267&preload=false"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+        <section data-background-image="./images/proposals/4.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+        
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Eclectic CSVs</h3>
+          <ul>
+            <li class="fragment">
+              Look for odd-ball data sources.
+            </li>
+            <li class="fragment">
+              Retired people and hobbyists collect and share weird data.
+            </li>
+            <li class="fragment">
+              Sites like <a target='_blank' href="http://www.poi-factory.com/poifiles/popular">POI Factory</a>.
+            </li>
+            <li class="fragment">
+              Might have to edit attribute table.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9201356&node=39378436&a=173697942&preload=false"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+        <section data-background-image="./images/proposals/2.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Download data</h3>
+          <ul>
+            <li class="fragment">
+              Look for conventional spatial data sources
+            </li>
+            <li class="fragment">
+              as given in previous lectures and recitations.
+            </li>
+            <li class="fragment">
+              Look for attributes for symbology: categorical or quantitative.
+            </li>
+            <li class="fragment">
+              Might have to edit attribute table.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-image="./images/ex-01.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9201340&node=39378411&a=33541447&preload=false"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+        <section data-background-image="./images/proposals/3.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Create data</h3>
+          <ul>
+            <li class="fragment">
+              Add aerial imagery as a base map.
+            </li>
+            <li class="fragment">
+              Add points, lines, and polygons
+            </li>
+            <li class="fragment">
+              using the digitizing tools in QGIS.
+            </li>
+            <li class="fragment">
+              Might have to edit attribute table.
+            </li>
+            <li class="fragment">
+              Next video from previous slide.
+            </li>
+          </ul>
+        </section>
+
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9158454&node=39244521&a=112840445&preload=false"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+
+        <section data-background-image="./images/proposals/5.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Selected data</h3>
+          <ul>
+            <li class="fragment">
+              Find leisure areas on the water.
+            </li>
+            <li class="fragment">
+              Parks, swimming areas, and natural reserves
+            </li>
+            <li class="fragment">
+              using QuickOSM in QGIS and adding attribute for dog-friendly as 'yes' or 'no'.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9201326&node=39378392&a=92888410&preload=false"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+        <section data-background-image="./images/proposals/1.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Analyzed data</h3>
+          <ul>
+            <li class="fragment">
+              Create new data from analyzing existing data.
+            </li>
+            <li class="fragment">
+              An ambulance leaves the hospital driving 70 mph. How far can it get in 30 minutes?
+            </li>
+            <li class="fragment">
+              Doable with QGIS <a target='_blank' href="https://docs.qgis.org/3.28/en/docs/training_manual/vector_analysis/network_analysis.html">Network Analysis</a> tools but slightly advanced.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-image="./images/ex-02.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9201370&node=39378468&a=160575870&preload=false"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+        <section data-background-image="./images/proposals/6.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+        
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Joined data</h3>
+          <ul>
+            <li class="fragment">
+              Combine attributes with spatial layer.
+            </li>
+            <li class="fragment">
+              Map of parks by state from <a target='_blank' href="https://www.playgroundequipment.com/us-states-ranked-by-state-and-national-park-coverage/#:~:text=California%20has%20the%20most%20state,with%20just%2015%20state%20parks.">Playground equipment company</a>.
+            </li>
+            <li class="fragment">
+              Scrape data from site to get <a target='_blank'
+                href="parks">CSV</a>.
+            </li>
+          </ul>
+        </section>
+        
+        <section data-background-image="./images/proposals/7.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9214084&node=39451537&a=200852001&preload=false"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+        <section data-background-image="./images/proposals/10.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/proposals/11.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Fantasy maps</h3>
+          <ul>
+            <li class="fragment">
+              are fine, but still must meet project requirements.
+            </li>
+            <li class="fragment">
+              Middle Earth even has <a target='blank' href="https://scholarworks.wm.edu/asoer/3/">GIS data available</a>. 
+            </li>
+            <li class="fragment">
+              Did Frodo take the best path? <a target='blank' href="https://scholarworks.wm.edu/cgi/viewcontent.cgi?article=1002&context=asoer">An analysis</a>.
+            </li>
+            <li class="fragment">
+              Example of how GIS concepts can be used to analyze fictional worlds.
+            </li>
+          </ul>
+        </section>
+
+
+        <section data-background-image="./images/proposals/12.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/proposals/13.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Impact</h3>
+          <ul>
+            <li class="fragment">
+              These two proposals can make maps 
+            </li>
+            <li class="fragment">
+              that reveal patterns and conditions
+            </li>
+            <li class="fragment">
+              that no other single image can.
+            </li>
+          </ul>
+        </section>
+
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Summary</h3>
+          <ul>
+            <li class="fragment">
+              Add a base map that is not OpenStreetMap.
+            </li>
+            <li class="fragment">
+              Add your observations and be able to symbolize them with at least two classes.
+            </li>
+            <li class="fragment">
+              Make sure the projection is not EPSG code 4326.
+            </li>
+            <li class="fragment">
+              Add additional map elements.
+            </li>
+            <li class="fragment">
+              Style it for your audience.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h5 style="font-size:12rem;">Final</h5>
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Before we start, let's explore some maps in the news.</h3>
+        </section>
+
+        <section data-background-image="./images/z1.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Symbology</h3>
+          <ul>
+            <li class="fragment">
+              How does the use of color and symbology influence the message?
+            </li>
+            <li class="fragment">
+              Could there be more than one class for this data?
+            </li>
+            <li class="fragment">
+              🤢
+            </li>
+            <li class="fragment">
+              The point is to be over the top.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-image="./images/z2.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Projection</h3>
+          <ul>
+            <li class="fragment">
+              Did they get it right?
+            </li>
+            <li class="fragment">
+              How can you make sure you get it right?
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-image="./images/z3.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/z4.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/z5.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/z5.1.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/z6.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Analysis</h3>
+          <ul>
+            <li class="fragment">
+              Size of hexagon: number of attempts.
+            </li>
+            <li class="fragment">
+              Color: success rate compared to D1 average.
+            </li>
+            <li class="fragment">
+              Analysis techniques can be applied outside of conventional maps.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-image="./images/z7.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Usefulness</h3>
+          <ul>
+            <li class="fragment">
+              Maps whether or not it exists.
+            </li>
+            <li class="fragment">
+              What people really want to know: how much is there?
+            </li>
+          </ul>
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Your map classes</h3>
+          <ul>
+            <li class="fragment">
+              A least two classes for your theme.
+            </li>
+            <li class="fragment">
+              Difference of
+              <ul>
+                <li class="fragment">
+                  type: <span class="fragment">Layer styling is Categorized.</span>
+                </li>
+                <li class="fragment">
+                  quantity: <span class="fragment">Layer styling is Graduated.</span>
+                </li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Or multiple layers for theme with different symbology.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-iframe="https://uky.yuja.com/V/Video?v=9178641&node=39302187&a=94712267&preload=false"
+          data-background-interactive data-background-opacity="1">
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Your Superpowers 🐉</h3>
+          <ul>
+            <li class="fragment">
+              Make a single-page design
+            </li>
+            <li class="fragment">
+              with immediate visual impact
+            </li>
+            <li class="fragment">
+              and long-term usefulness.
+            </li>
+            <li class="fragment">
+              You are a cartographer.
+            </li>
+          </ul>
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Three levels of engagement</h3>
+          <ul>
+            <li class="fragment">
+              First impression: <span class="fragment">good graphic design.</span>
+            </li>
+            <li class="fragment">
+              Understanding the map: <span class="fragment">good cartographic design.</span>
+            </li>
+            <li class="fragment">
+              Usefulness: <span class="fragment">accurate observations and analysis.</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Final project submission</h3>
+          <ul>
+            <li class="fragment">
+              After completing the draft,
+            </li>
+            <li class="fragment">
+              refine it to meet the deliverables.
+            </li>
+            <li class="fragment">
+             <a target='_blank' href="https://uky-gis.github.io/geo109/modules/final-project/#final-map-submission">Documentation</a>
+            </li>
+            <li class="fragment">
+              Extra credit opportunity.
+            </li>
+          </ul>
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Feedback</h3>
+          <ul>
+            <li class="fragment">
+              We working through proposal feedback.
+            </li>
+            <li class="fragment">
+              If your draft is good, minimal feedback.
+            </li>
+            <li class="fragment">
+              If your draft needs work, a list of deliverables will be given.
+            </li>
+            <li class="fragment">
+              Want more feedback, please reach out.
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Draft examples</h3>
+        </section>
+        
+        <section data-background-image="./images/z10.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/z11.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/z12.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/z13.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="./images/z14.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>A parting message</h3>
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Your superpowers</h3>
+          <ul>
+            <li class="fragment">
+              are transferable to other disciplines.
+            </li>
+            <li class="fragment">
+              Collect & visualize your observations <span class="fragment">☑️</span>
+            </li>
+            <li class="fragment">
+              ChatGPT-proof <span class="fragment">☑️</span>
+            </li>
+            <li class="fragment">
+              Build your portfolio <span class="fragment">☑️</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class='left' data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h3>Mapping & GIS Minor</h3>
+          <ul>
+            <li class="fragment">
+              GEO 109 meets first requirement.
+            </li>
+            <li class="fragment">
+              Spatial applications are everywhere.
+            </li>
+            <li class="fragment">
+              <a target='_blank' href="https://www.uky.edu/academics/minor/college-arts-sciences/mapping-and-gis-minor">Get your minor</a>.
+            </li>
+          </ul>
+        </section>
+        
+        <section data-background-image="https://geography.as.uky.edu/sites/default/files/Geography%20Courses%20Spring%202024%20Poster%20150dpi_UPDATE2.jpg" data-background-opacity="1" data-background-size="contain"
+          data-background-color="#333333">
+        </section>
+
+        <section data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h5 style="font-size:12rem;">Keep in touch 💖</h5>
+        </section>
+
+
+        <!-- <section class="left" data-background-image="https://live.staticflickr.com/65535/51304263743_df220194a7_k.jpg"
+          data-background-opacity="0.3">
+          <h1 class="r-fit-text">STOP</h1>
+        
+        </section> -->
+
+
+
+    </div>
+  </div>
+
+  <script src="../dist/reveal.js"></script>
+  <script src="../plugin/notes/notes.js"></script>
+  <script src="../plugin/markdown/markdown.js"></script>
+  <script src="../plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      backgroundTransition: "fade",
+      // Transition style
+      transition: "fade", // none/fade/slide/convex/concave/zoom
+
+      // Transition speed
+      transitionSpeed: "fast", // default/fast/slow
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+    });
+  </script>
+</body>
+
+</html>

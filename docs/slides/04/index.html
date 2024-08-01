@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <title>GEO109: 04-Reference</title>
+  <title>GEO109: 04-cartography</title>
 
   <link rel="stylesheet" href="../dist/reset.css" />
   <link rel="stylesheet" href="../dist/reveal.css" />
@@ -21,6 +21,10 @@
                 #009bda light blue
                 #0033a0 official blue
             */
+    .hl {
+      background-color: #009bda;
+      /* #8abccf */
+    }
   </style>
 </head>
 
@@ -32,12 +36,12 @@
       <section data-pre-load
         data-background-image="https://www.outragegis.com/weather/img/animation/yesterday/LookRock.gif"
         data-background-opacity="0.4">
-        <h1 class="r-fit-text">04: Locate</h1>
+        <h1 class="r-fit-text">04: Cartography</h1>
         <!-- <h2>Welcome</h2> -->
         <div class="ll">
           Yesterday in the Great Smokies<br />Webcam
           <a href="https://www.outragegis.com/weather/img/animation" target="_blank">archive</a>
-        </div>x
+        </div>
         <div class='lr'><a target='_blank' href="https://uky-gis.github.io/geo109">GEO 109: Digital Mapping</a> </div>
       </section>
       <section data-pre-load
@@ -47,850 +51,1321 @@
 
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
+      <section data-background-image="./images/geo-day-2023.jpg" data-background-color="#DEECF2"
+        data-background-opacity="1"
+        data-background-size="contain"
+        >
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h3>Field Trips</h3>
-        <ul>
-          <li class="fragment">
-            Internet infrastructure tour next Tuesday.
-          </li>
-          <li class="fragment">
-            Field work Wednesday and Thursday, with your phone 🎉!
-          </li>
-          <li class="fragment">
-            Art Museum next week.
-          </li>
-          <li class="fragment">
-            <a target='_blank' href="images/Raisz_Landforms1957.jpg">Most liked map from library</a>
-          </li>
-
-          </ul>
+        <h2>Final project</h2>
+        <h3>
+          <span class="fragment">What do you</span> <span class="fragment">love?</span> <span class="fragment">hate?</span>
+        </h3>
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h1 class='r-fit-text'>Review</h1>
+        <h2>Your story</h2>
+        <h3>
+          <span class="fragment">has a place.</span>
+        </h3>
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h3>Modules</h3>
-        <ul>
-          <li class="fragment">
-            01: Data
-          </li>
-          <li class="fragment">
-            02: Persuade
-          </li>
-          <li class="fragment">
-            03: Analysis
-          </li>
-          </ul>
+        <h2>My story?</h2>
+        <h3>
+          <span class="fragment">UOT</span>
+        </h3>
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h3>Data</h3>
-        <ul>
-          <li class="fragment">
-            You created <a target='_blank' href="https://uky-gis.github.io/geo109/data/210712_CelebMap/locations.csv">this</a>
-          </li>
-          <li class="fragment">
-            which became a <a target='_blank' href="https://uky-gis.github.io/geo109/maps/dsm/">map</a>. 
-          </li>
-          <li class="fragment">
-            If you can create data, you will be a creator and own it.
-          </li>
-          </ul>
-      </section>
-
-      <section class="left" data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h3>Persuade</h3>
-        <ul>
-          <li class="fragment">
-            Maps are arguments.
-          </li>
-          <li class="fragment">
-            Convince your audience that your creation is good. 
-          </li>
-          <li class="fragment">
-            How? Play with your tools. Create space.
-          </li>
-          </ul>
-      </section>
-
-      <section data-background-image="images/f1.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/f2.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/f3.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/f4.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section class="left" data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h3>Challenge</h3>
-        <ul>
-          <li class="fragment">
-            If you can show me how to make a persuasive map completely on your phone
-          </li>
-          <li class="fragment">
-            without using images from the web
-          </li>
-          <li class="fragment">
-            I will give you something awesome.
-          </li>
-          </ul>
-      </section>
-
-      <section class="left" data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h3>Analysis</h3>
-        <ul>
-          <li class="fragment">
-            What stories can a map tell?
-          </li>
-          <li class="fragment">
-            They can reveal space
-          </li>
-          <li class="fragment">
-            but they are constrained by data.
-          </li>
-          </ul>
-      </section>
-
-      <section data-background-image="images/f5.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/f6.jpg"
-      data-background-opacity="1" data-background-color="white" data-background-size="contain">
-    </section>
-
-    <section data-background-image="images/f7.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/f8.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section class="left" data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h3>Final Project</h3>
-        <ul>
-          <li class="fragment">
-            You will make a map of a real place.
-          </li>
-          <li class="fragment">
-            You will present it to class.
-          </li>
-          <li class="fragment">
-            Proposals are due next week and we will chat individually this Thursday.
-          </li>
-          <li class="fragment">
-            How can I get data?
-          </li>
-          </ul>
-      </section>
-
-      <section class="left" data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h3>OpenStreetMap (OSM)</h3>
-        <ul>
-          <li class="fragment">
-            Download data anywhere in the world
-          </li>
-          <li class="fragment">
-            use it for free, even sell it,
-          </li>
-          <li class="fragment">
-            but just add the following line to your map, <code>© OpenStreetMap contributors</code>
-          </li>
-          </ul>
-      </section>
-
-      <section data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h1 class='r-fit-text'>Demonstration</h1>
-      </section>
-
-      <section data-background-image="images/q1.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      
-
-      <section data-background-image="images/q2.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/q3.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/q4.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/q5.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/q6.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/q7.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      <section >
-        https://tile.openstreetmap.org/{z}/{x}/{y}.png
-      </section>
-
-
-
-
-
-
-      <section data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h1 class='r-fit-text'>OSM Key/Value pairs</h1>
-        <a href="https://wiki.openstreetmap.org/wiki/Map_features">Web page</a>
-      </section>
-
-      <section class="left" data-background-iframe="https://wiki.openstreetmap.org/wiki/Map_features#Amenity"
-        data-background-opacity="1" data-background-interactive="true">
-      </section>
-
-      <section data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h1 class='r-fit-text'>LOCATE</h1>
-      </section>
-
-      <section data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h5 class='r-fit-text'>Task 10</h5>
-      </section>
-
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Paper maps</h3>
-      <ul>
-        <li class="fragment">
-          Use the provided paper maps to:
-        </li>
-        <li class="fragment">
-          locate where you are
-        </li>
-        <li class="fragment">
-         <a target='_blank' href="https://www.geographyrealm.com/map-orientation/">orient</a> the map so that it aligns with our environment
-        </li>
-        <li class="fragment">
-          determine how far we are from Rupp Arena, as the cow flies.
-        </li>
-        <li class="fragment">
-          <a href="https://uk.instructure.com/courses/2016829/assignments/10885863">Submit</a>
-        </li>
-        </ul>
-    </section>
-
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>How do you know where you are?</h3>
-      <ul>
-        <li class="fragment">
-          with no GPS...
-        </li>
-        <li class="fragment">
-          with no electronics...
-        </li>
-        <li class="fragment">
-          Reference maps
-        </li>
-        <li class="fragment">
-          portray landmarks, places, transportation, etc. in a spatial relationship.
-        </li>
-        </ul>
-    </section>
-
-    <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Topographic maps</h3>
-      <ul>
-        <li class="fragment">
-          A detailed record of natural and human-made features.
-        </li>
-        <li class="fragment">
-          U.S. Geological Survey (USGS) created first map in 1882.
-        </li>
-        <li class="fragment">
-          <a target='_blank' href="https://pubs.usgs.gov/circ/1341/">History</a> and 
-          <a target='_blank' href="https://pubs.usgs.gov/gip/TopographicMapSymbols/topomapsymbols.pdf">map symbols</a>
-
-        </li>
-        </ul>
-    </section>
-
-    <section data-background-image="images/t1.jpg"
+      <section data-background-image="images/final-project/gar-10.jpg" data-background-color="white"
         data-background-opacity="1">
       </section>
 
-      <section data-background-image="images/t2.jpg"
-      data-background-opacity="1">
-    </section>
-
-    <section data-background-image="images/w.jpg"
-      data-background-opacity="0.5">
-      <h5 class='r-fit-text'>Waverly Hills</h5>
-      <a target="_blank" href="https://digital.library.louisville.edu/cdm/search/field/covera/searchterm/Waverly%20Hills%20(Ky.)/mode/exact">Historic photos</a>
-
-    </section>
-
-    <section data-background-image="images/w2.jpg"
-      data-background-opacity="1"
-      data-background-color="black"
-      data-background-size="contain">
-    </section>
-
-    <section data-background-image="images/w.jpg"
-      data-background-opacity="0.5">
-      <h5 class='r-fit-text'>Let's explore</h5>
-      <a target="_blank" href="https://ngmdb.usgs.gov/topoview/viewer/#13/38.1668/-85.8103">on old maps</a>
-
-    </section>
-
-    <section data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h5 class='r-fit-text'>Task 11</h5>
+      <section data-background-image="images/final-project/gar-10-2.jpg" data-background-color="white"
+        data-background-opacity="1">
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Historic map</h3>
-      <ul>
-        <li class="fragment">
-          Use this USGS <a target='_blank' href="https://ngmdb.usgs.gov/topoview/viewer/#4/39.98/-100.06">topographic map viewer</a>
-         </li>
-        <li class="fragment">
-          Find your neighborhood.
-        </li>
-        <li class="fragment">
-          Find a map that was published before you were born.
-        </li>
-        
-        <li class="fragment">
-          Take a screen capture of the neighborhood on that map.
-        </li>
-        <li class="fragment">
-          <a href="https://uk.instructure.com/courses/2016829/assignments/10885865">Submit</a>
-        </li>
+      <section data-background-image="images/final-project/gar-10-5.jpg" data-background-color="#333"
+      data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/final-project/gar-10-3.jpg" data-background-color="#333"
+      data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/final-project/gar-10-6.jpg" data-background-color="#333"
+      data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/final-project/gar-10-7.jpg" data-background-color="#333"
+      data-background-size="contain"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/final-project/gar-10-9.jpg" data-background-color="white"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/final-project/gar-10-14.jpg" data-background-color="white"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/final-project/gar-10-13.jpg" data-background-color="white"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/final-project/gar-12.jpg" data-background-color="white"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/final-project/gar-10-11.jpg" data-background-color="white"
+        data-background-opacity="1">
+      </section>
+
+
+      <section data-background-image="images/final-project/gar-10-4.jpg" data-background-color="white"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/8128/29455080531_960546da80_o.jpg" data-background-color="white"
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/4163/34760614734_ea6fe46d2c_o.jpg" data-background-color="white"
+        data-background-opacity="1">
+        <a target='_blank' href="https://www.flickr.com/photos/28640579@N02/34760614734/in/album-72157660005553093/">360</a>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h2>Urban observation towers</h2>
+        <h3>
+          <span class="fragment">Important places for me.</span>
+        </h3>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h2>Map?</h2>
+        <h3>
+          <span class="fragment">I've never seen one, let's make one!</span>
+        </h3>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>How to start?</h3>
+        <ul>
+          <li class="fragment">
+            Use my mobile device and GPS their locations.
+          </li>
+          <li class="fragment">
+            Add that to QGIS, maybe add more attributes.
+          </li>
+          <li class="fragment">
+            Tell a story about these places.
+          </li>
         </ul>
-    </section>
+      </section>
 
-    <section data-background-image="images/campus.jpg"
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h5 class='r-fit-text'>Map Library tour!</h5>
-      </section>
-
-    <section data-background-image="images/i1.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-    <section data-background-image="images/i2.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-    <section data-background-image="images/i3.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-    <section data-background-image="images/i4.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-    <section data-background-image="images/i5.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/campus.jpg"
-        data-background-opacity="0.3">
-        <h1>GPS</h1>
-        <h4 class="fragment">What is it?</h4>
-      </section>
-
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Global positioning system </h3>
-      <ul>
-        <li class="fragment">
-          We know it uses satellite signals to determine where we are.
-         </li>
-        <li class="fragment">
-          So let's take a look at a satellite.
-        </li>
+        <h3>Powers earned 🐉</h3>
+        <ul>
+          <li class="fragment">
+            Create and manipulate data
+          </li>
+          <li class="fragment">
+            with basic understanding of workflows.
+          </li>
+          <li class="fragment">
+            Solid foundation on which to create unique maps.
+          </li>
         </ul>
-    </section>
-
-    <section class="left" data-background-iframe="https://www.youtube.com/embed/ror4P1UAv_g"
-    data-background-opacity="1" data-background-interactive="true"></section>
-
-    <section data-background-image="images/sat1.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
       </section>
 
-      <section data-background-image="images/sat2.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h2>Cartography</h2>
+        <h3 class="fragment">
+          art & science of map making
+        </h3>
       </section>
 
-      <section data-background-image="images/sat3.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-        <div class='lr'>
-          <a target="_blank" href="https://timeandnavigation.si.edu/multimedia-asset/cesium-frequency-standard">Cesium clock</a><br>
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Caesium">Cesium metal</a>
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Maps as art?</h3>
+        <ul>
+          <li class="fragment">
+            Highly collectable, rare historic maps. Just pick one from the David Rumsey Collection <a target="_blank"
+              href="https://www.davidrumsey.com">🔗</a>
+          </li>
+          <li class="fragment">
+            Modern map makers selling wall art at Muir Way <a target="_blank" href="https://muir-way.com/">🔗</a>
+          </li>
+          <li class="fragment">
+            Artists making maps: Hell's Hundred Acres, 1960-2000 <a target="_blank"
+              href="https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~354717~90121675:SoHo--Hell%25E2%2580%2599s-Hundred-Acres-1960-%25E2%2580%2593-2?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:new%20york%20city;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=3&trs=3837">🔗</a>
+          </li>
+        </ul>
+      </section>
+
+
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Effective map?</h3>
+        <ul>
+          <li class="fragment">
+            Cartographic design,
+          </li>
+          <li class="fragment">
+            use of map elements,
+          </li>
+          <li class="fragment">
+            and deliberate layout.
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h2>Cartographic design</h2>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Cartographic design</h3>
+        <ul>
+          <li class="fragment">
+            is data realized on page.
+          </li>
+          <li class="fragment">
+            Subset of graphic design.
+          </li>
+          <li class="fragment">
+            but marks represent real-world features and phenomena.
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Puzzles 🧩</h3>
+        <ul>
+          <li class="fragment">
+            Making a map is a puzzle
+          </li>
+          <li class="fragment">
+            using <span style="background-color:#70B56F;">visual</span> <span
+              style="background-color:#8aa85d;">variables</span> on the page.
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Visual variables</h3>
+        <ul>
+          <li class="fragment">
+            Visual characteristics of a map layer that can be used to represent different features, themes, or data
+            categories.
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="../../images/04/viz-var.jpg" data-background-color="white"
+        data-background-size="contain" data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Color, size, shape</h3>
+        <ul>
+          <li class="fragment">
+            How might you change and combine these to communicate different information?
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Take GEO305</h3>
+      </section>
+
+      <section class="left" data-background-image="images/lines.jpg" data-background-opacity="0.3">
+        <h1 class='r-fit-text'>lines</h3>
+
+      </section>
+
+      <section data-background-iframe="https://maptimelex.github.io/monochromatic-maps/map/" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section data-pre-load
+        data-background-image="https://www.typeroom.eu/assets/original/2020/05/18/JoyDivision-UnknownPleasures-B1.jpg"
+        data-background-opacity="1" data-background-size="contain" data-background-color="#000">
+      </section>
+      <section data-pre-load
+        data-background-image="https://www.typeroom.eu/assets/original/2020/05/18/JoyDivision-UnknownPleasures-B1.jpg"
+        data-background-opacity="0.2" data-background-size="contain" data-background-color="#000">
+        <h1><a href="https://youtu.be/PDCeGZ3n8jY" target="_blank">🎶</a></h1>
+        <div class='lr'>Bizarre Love Triangle
+          <br>&copy;1987 New Order
         </div>
-        
+
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>GPS</h3>
-      <ul>
-        <li class="fragment">
-          Constellation of 24+ satellites
-         </li>
-        <li class="fragment">
-          became fully operational in 1995.
-        </li>
-        <li class="fragment">
-         They carry the best clocks humans have ever made.
-         <ul>
-           <li class="fragment">Drifts about 1 second in 20 million years.</li>
-         </ul>
-        </li>
-        </ul>
-    </section>
-
-      <section data-background-image="images/gps0.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-        <div class='lr'><a target="_blank" href="https://www.gps.gov/">link</a></div>
-        
+      <section data-background-image="images/crater-lake.jpeg" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
       </section>
 
-      <section data-background-image="images/campus.jpg"
+      <section class='left'
+        data-background-image='https://nyc3.digitaloceanspaces.com/astoria/pro-relief/images/end.jpg'
+        data-background-opacity="1" data-background-size="contain" data-background-color="#666">
+      </section>
+
+      <section data-background-image="images/density-lines.jpeg" data-background-color="white"
+        data-background-opacity="1" data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/Minard-wine-exports-1854.jpeg" data-background-color="white"
+        data-background-opacity="1" data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/Minard-nap.png" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h2>Selective Availability</h2>
-        <h4 class="fragment">Our government degraded the signal until May 2000</h4>
+        <h3>Previous two maps</h3>
+        <ul>
+          <li class="fragment">
+            Charles Joseph Minard
+          </li>
+          <li class="fragment">
+            Pioneered the flow line – Wine exports, 1854. (Compare to <a target='_blank'
+              href="https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~299855~90070865">this map</a> in 1944)
+          </li>
+          <li class="fragment">
+            Figurative Map of the successive losses in men of the French Army in the Russian campaign 1812–1813.
+          </li>
+        </ul>
       </section>
 
-      <section data-background-image="images/gps3.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      <section data-background-image="images/lines.png" data-background-color="#f6f6f6" data-background-opacity="1"
+        data-background-size="contain">
       </section>
 
-      <section data-background-image="images/gps1.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      <section class="left" data-background-image="images/color.jpg" data-background-opacity="0.3">
+        <h1 class='r-fit-text'>color</h3>
       </section>
 
-      <section data-background-image="images/gps2.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      <section data-background-image="images/connotations.jpg" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
       </section>
 
-      <section data-background-image="images/gps4.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+
+      <section data-background-image="images/color-wheel-2.jpg" data-background-color="white"
+        data-background-opacity="1" data-background-size="contain">
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Google Mapping</h3>
-      <ul>
-        <li class="fragment">
-          Street View started in 2007.
-          <ul>
-            <li class="fragment">Uses GPS location tied to pano cameras</li>
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Color scheme</h3>
+        <ul>
+          <li class="fragment">
+            A collection (palette, ramp, scale, etc.) of colors used in a design.
+          </li>
+          <li class="fragment">
+            Choice depends on map layer.
+          </li>
+          <li class="fragment">
+            Advice:
+            <ul>
+              <li class="fragment">
+                specifically for mappers: <a target='_blank' href="https://colorbrewer2.org/">ColorBrewer</a>
+              </li>
+              <li class="fragment">
+                and general design: <a target='_blank' href="https://color.adobe.com/">Adobe Color</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Rules 🔨</h3>
+        <ul>
+          <li class="fragment">
+            Do not overuse color.
+          </li>
+          <li class="fragment">
+            Follow conventions (at least initially).
+          </li>
+          <li class="fragment">
+            Use an appropriate color scheme for the feature presented.
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/bad-color-1.png" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/bad-color-2.png" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section
+        data-background-iframe="https://designwebkit.com/web-and-trends/color-combinations-hell-death-sentence-designs/"
+        data-background-interactive data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/conventions.jpg" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Color schemes</h3>
+        <ul>
+          <li class="fragment"><span class="hl">By type</span>: use categorical (qualitative) color scheme, e.g., land
+            use
+            type.</li>
+          <li class="fragment"><span class="hl">By magnitude</span>: use sequential (quantitative) color scheme, e.g.,
+            county
+            population.</li>
+          <li class="fragment"><a target="_blank" href="https://clauswilke.com/dataviz/color-basics.html">Reference</a>
+          </li>
+        </ul>
+      </section>
+      <section data-background-image="../../images/04/color-schemes.jpg" data-background-color="white"
+        data-background-size="contain" data-background-opacity="1">
+      </section>
+
+      <section data-background-image="images/type.jpg" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/magnitude.jpg" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/diverging.jpg" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h2>How is color used in these maps?</h2>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>You're thirsty</h3>
+        <ul>
+          <li class="fragment">Do you ask for a pop, soda, or coke?</li>
+          <li class="fragment"><a target="_blank" href="https://popvssoda.com/">popvssoda.com</a>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/soda.jpeg" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Mississippi meander belt</h3>
+        <ul>
+          <li class="fragment">Harold Fisk, 1944</li>
+          <li class="fragment">Color and pattern shows river meandering over time</li>
+          <li class="fragment"><a target="_blank"
+              href="https://www.atlasofplaces.com/cartography/mississippi-river-meander-belt/">Hi-resolution maps</a>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/mississippi-river.jpg" data-background-color="white"
+        data-background-opacity="1" data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Considerations</h3>
+        <ul>
+          <li class="fragment">Color vision deficiency (CVD) – <a target='_blank'
+              href="https://www.colourblindawareness.org/colour-blindness/">1 in 12 men</a> have condition.</li>
+
+          <li class="fragment">Color-Contrast Effects – <a target='_blank'
+              href="https://www.uxmatters.com/mt/archives/2006/01/color-theory-for-digital-displays-a-quick-reference-part-ii.php">overlapping
+              & adjacent colors influence perception</a> </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/cvd.jpg" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+
+      <section data-background-iframe="https://boydx.github.io/color-time/" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Hexadecimal</h3>
+        <ul>
+          <li class="fragment">Condensed color notation</li>
+
+          <li class="fragment">Used primarily for <a target="_blank" href="https://en.wikipedia.org/wiki/Web_colors">web
+              colors</a> and
+            a good
+            way to copy color values.</li>
+          <li class="fragment">Examples
+            <ul>
+              <li class="fragment">#000000 = black</li>
+              <li class="fragment">#ffffff = white</li>
+              <li class="fragment">#ff0000 = red</li>
+              <li class="fragment">#ff00ff = magenta</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Tips</h3>
+        <ul>
+          <li class="fragment">
+            Use <a target="_blank" href="https://gka.github.io/palettes">Chroma.js Color Palette Helper</a> to get color
+            values for
+            classed
+            sequential color schemes.
+
+          </li>
+          <li class="fragment">
+            Use <a target="_blank" href="https://color.adobe.com/create/image">Adobe Color</a> to get color values for
+            qualitative color
+            schemes.
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/chroma.jpg" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/adobe-color.jpg" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/60-30-10-rule.png" data-background-color="white"
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="images/symbol-back.jpg" data-background-opacity="0.3">
+        <h1 class='r-fit-text'>symbols</h3>
+      </section>
+
+      <section data-background-image="images/nps-symbols.png" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/symbols-2.png" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section data-background-image="images/symbols-3.png" data-background-color="white" data-background-opacity="1"
+        data-background-size="contain">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Symbol sets</h3>
+        <ul>
+          <li class="fragment">
+            Combining visual variables to show real-world features and phenomena.
+          </li>
+          <li class="fragment">
+            Maps are mostly symbols.
+          </li>
+          <li class="fragment">
+            <a href="http://gistbok.ucgis.org/bok-topics/symbolization-and-visual-variables"
+              target='_blank'>Reference</a>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="../../images/04/symbols.jpg" data-background-color="white"
+        data-background-opacity="1" data-background-size="contain">
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h2>Where do you define map symbols?</h2>
+        <h3 class="fragment">
+          In a map legend.
+        </h3>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h2>Map elements</h2>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>What completes a map?</h3>
+        <ul>
+          <li class="fragment">
+            Asides, marginalia, surrounds, or elements
+          </li>
+          <li class="fragment">
+            that helps people interpret the map.
+          </li>
+          <li class="fragment">
+            Without them, the map is a graphic.
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Required elements</h3>
+        <ul>
+          <li class="fragment">
+            Title (& subtitle)
+            <ul>
+              <li class="fragment">The what and where.</li>
+            </ul>
+          </li>
+          <li class="fragment">
+            Legend (or key)
+            <ul>
+              <li class="fragment">Decipher the visual variables.</li>
+            </ul>
+          </li>
+          <li class="fragment">
+            Source attribution & date
+            <ul>
+              <li class="fragment">The who and when.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Elements on reference maps</h3>
+        <ul>
+          <li class="fragment">
+            Scale
+            <ul>
+              <li class="fragment">for measuring.</li>
+            </ul>
+          </li>
+          <li class="fragment">
+            North arrow
+            <ul>
+              <li class="fragment">for orienting.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Other elements?</h3>
+        <ul>
+          <li class="fragment">
+            Yes, like photos, illustrations, and text
+          </li>
+          <li class="fragment">
+            that enhance your map's story.
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="./images/pr.jpg" data-background-opacity="1"
+        data-background-size="contain" data-background-color="#fff">
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h2>Map layout</h2>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>What completes a page?</h3>
+        <ul>
+          <li class="fragment">
+            Balanced layout of all elements on page.
+          </li>
+          <li class="fragment">
+            Compartmentalized system
+          </li>
+          <li class="fragment">
+            vs. a fluid system.
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://uky-gis.github.io/geo109/images/04/layout-2.png"
+        data-background-opacity="1"
+        data-background-size="contain"
+        data-background-color="#333"
+        >
+      </section>
+      <section data-background-image="https://uky-gis.github.io/geo109/images/04/layout-3.jpg"
+        data-background-opacity="1"
+        data-background-size="contain"
+        data-background-color="#333"
+        >
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.2">
+        <h3>Visual hierarchy</h3>
+        <ul>
+          <li class="fragment">
+            The order in which the 👁️ perceives what it sees
+          </li>
+          <li class="fragment">
+            should match the intellectual hierarchy.
+          </li>
+          <li class="fragment">
+            Try: <span class="fragment">title</span> <span class="fragment">> map</span> <span class="fragment">> legend</span>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://uky-gis.github.io/geo109/images/04/map-example.jpg" data-background-opacity="1"
+        data-background-size="contain" data-background-color="#fff">
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h2>Take GEO 305</h2>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h5 style="font-size: 15rem;">Lab</h5>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Requirements</h3>
+        <ul>
+          <li class="fragment"> <a target='_blank'
+              href="https://uky-gis.github.io/geo109/modules/04-cartography/#lab">Documentation</a> </li>
+          <li class="fragment">Design a thematic or reference map</li>
+          <li class="fragment">and we'll do it live in class!</li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Reference Map</h3>
+        <ul>
+          <li class="fragment">Map used for navigation</li>
+          <li class="fragment">and referencing features.</li>
+          <li class="fragment">Example: USGS Topographic maps <a target='_blank' href="https://ngmdb.usgs.gov/topoview/viewer/#4/40.00/-100.00">🔗</a> </li>
+          <li class="fragment">Example: Trail map <a target='_blank' 
+              href="https://www.flickr.com/photos/28640579@N02/27333636335/in/album-72157668647475382/">🔗</a> </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Thematic Map</h3>
+        <ul>
+          <li class="fragment">Map used for showing a particular theme</li>
+          <li class="fragment">like the distribution of population.</li>
+          <li class="fragment">Choropleth map 
+            <ul class="fragment">
+              <li>colors polygon to show quantity of distribution.</li>
+            </ul>
+          </li>
+          <li class="fragment">Example: Population density <a target='_blank'
+              href="https://www.flickr.com/photos/28640579@N02/31923848984/in/album-72157668647475382/">🔗</a> </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h2>Getting ideas for a final project?</h2>
+      </section>
+
+
+
+
+
+      <!-- 
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Lab 1</h3>
+        <ul>
+          <li class="fragment">
+            Summer 2021 <a href="https://uky-gis.github.io/geo109/maps/dsm/">map</a>
+          </li>
+          <li class="fragment">
+            Spring 2021 <a
+              href="https://www.google.com/maps/d/edit?mid=1o4PrGWeLcihQhPgcoPvWVl8ebeWj49sx&ll=38.04128327580797%2C-84.50193808236209&z=16">map</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>News</h3>
+        <ul>
+          <li class="fragment">
+            Bring iPad and laptop to the lab next Monday.
+          </li>
+          <li class="fragment">
+            Field trip next Wednesday!
+          </li>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Good maps?</h3>
+        <ul>
+          <li class="fragment">
+            are persuasive.
+          </li>
+          <li class="fragment">
+            They influence a reader's opinion.
+          </li>
+          <li class="fragment">
+            Maps are arguments;
+            <ul>
+              <li class="fragment">
+                they make a statement</li>
+              <li class="fragment">
+                and provide data to support that statement.</li>
+            </ul>
+
+          </li>
+      </section>
+
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Persuasive Cartography</h3>
+        <ul>
+          <li class="fragment">
+            Cartography: the art of map making, literally 'earth writing'
+          </li>
+          <li class="fragment">
+            Propaganda vs. geographic information
+          </li>
+          <li class="fragment">
+            <a href="https://persuasivemaps.library.cornell.edu/">Cornell online exhibition</a>
+          </li>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h1 class='r-fit-text' style='margin-bottom:-100px;margin-top:30px;'>Persuasion is not?</h1>
+        <h1 class='r-fit-text fragment' style='margin-top:-30px;'>bad</h1>
+
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Purposes of persuasion</h3>
+        <ul>
+          <li class="fragment">
+            Create and infuse new beliefs and ideas
+            <ul>
+              <li class="fragment">
+                A tourist map of downtown restaurants.
+              </li>
+            </ul>
+          </li>
+
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Purposes of persuasion</h3>
+        <ul>
+          <li class="fragment">
+            Reinforce current beliefs and ideas
+            <ul>
+              <li class="fragment">
+                A map of your property
+              </li>
+            </ul>
+          </li>
+
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Purposes of persuasion</h3>
+        <ul>
+          <li class="fragment">
+            Invalidate current beliefs and ideas
+            <ul>
+              <li class="fragment">
+                A map of COVID-19 rates
+              </li>
+            </ul>
+          </li>
+
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Purposes of persuasion</h3>
+        <ul>
+          <li class="fragment">
+            Instill doubt in current beliefs and ideas
+            <ul>
+              <li class="fragment">
+                A map of unrealized threats
+              </li>
+            </ul>
+          </li>
+
+      </section>
+
+      <section data-background-image="images/cuba.jpg" data-background-opacity="1" data-background-color="white">
+      </section>
+
+      <section data-background-image="images/trump.webp" data-background-opacity="1" data-background-color="white">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Methods of persuasion</h3>
+        <ul>
+          <li class="fragment">
+            Appeal with data and rational arguments
+          </li>
+          <li class="fragment">
+            Argue with 'facts'
+          </li>
+      </section>
+
+      <section data-background-image="images/Hunt4-1.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#d7c39e">
+      </section>
+
+      <section data-background-image="images/Hunt4-2.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#d7c39e">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+
+        <h3>Environmental determinism</h3>
+        <div class="ulist">
+          <img src="images/Hunt4.jpg" alt="vector data model" width="40%" style="float: right" class="fragment">
+          <ul style="width: 50%;">
+            <li class="fragment">Physical environment determines how societies evolved.</li>
+            </li>
+            <li class="fragment">Used to justify colonialism in non-western world.</li>
+            <li>
+              KY native <a href="https://en.wikipedia.org/wiki/Ellen_Churchill_Semple">Ellen Churchill Semple</a>
+            </li>
           </ul>
-         </li>
-        <li class="fragment">
-          Trail View <a target='_blank' href="https://www.google.com/maps/@37.4851268,-83.9176674,12.21z">map</a>
-        </li>
-        <li class="fragment">
-         In 2019 10+ million miles mapped with GPS.
-        </li>
-        <li class="fragment">
-          And, now there's Dog View...
-         </li>
-        </ul>
-    </section>
+        </div>
+      </section>
 
-    <section class="left" data-background-iframe="https://www.youtube.com/embed/FMf57MAgoS0"
-    data-background-opacity="1" data-background-interactive="true"></section>
+      <section data-background-image="images/colonize-africa.jpg" data-background-opacity="1"
+        data-background-size="contain" data-background-color="#d7c39e">
+      </section>
 
-    <section data-background-image="images/campus.jpg"
+      <section data-background-image="images/colonize-africa-legend.jpg" data-background-opacity="1"
+        data-background-size="contain" data-background-color="#d7c39e">
+      </section>
+
+
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h1>GPS</h1>
-        <h5 class="fragment">Is in everything!</h5>
+        <h3>Methods of persuasion</h3>
+        <ul>
+          <li class="fragment">
+            Appeal with emotion and story
+          </li>
+          <li class="fragment">
+            Argue with 'heart'
+          </li>
       </section>
 
-    <section data-background-image="images/gps6.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      <section data-background-image="images/man-of-commerce.jpg" data-background-opacity="1"
+        data-background-size="contain" data-background-color="#d7c39e">
+        <a href="https://collections.lib.uwm.edu/digital/collection/agdm/id/864/" target='_blank'>enlarge</a>
       </section>
 
-      <section data-background-image="images/gps7.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
+      <section data-background-image="images/georgia.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#d7c39e">
       </section>
 
-      <section data-background-image="images/gps8.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/campus.jpg"
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h2>In fitness trackers?</h2>
-        <h4 class="fragment">Strava heatmap of activity shows military bases</h4>
+        <h3>The humble 🐙</h3>
+        <ul>
+          <li class="fragment">
+            Becomes a symbol of human greed
+          </li>
+          <li class="fragment">
+            on maps.
+          </li>
       </section>
 
-      <section data-background-image="images/gps9.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      <section data-background-image="images/octopus-2.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#d7c39e">
       </section>
 
-
-
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Privacy?</h3>
-      <ul>
-        <li class="fragment">
-          Your location is a commodity
-         </li>
-        <li class="fragment">
-          Do you mind if private companies log your location?
-        </li>
-        <li class="fragment">
-         Do you mind if they sell it to other people?
-        </li>
-        <li class="fragment">
-          Check your apps...
-         </li>
-        </ul>
-    </section>
-
-    <section data-background-image="images/p1.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      <section data-background-image="images/octopus-1.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#d7c39e">
       </section>
 
-      <section data-background-image="images/p2.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
+      <section data-background-image="images/octopus-3.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#d7c39e">
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3><code>IKnowWhereYourCatLives.com</code></h3>
-      <ul>
-        <li class="fragment">
-          and where you do, too.
-         </li>
-        <li class="fragment">
-          Experiment to show how much location is shared on social media
-        </li>
-        <li class="fragment">
-         often without the poster's knowledge.
-        </li>
-        </ul>
-    </section>
-
-      <section class="left" data-background-iframe="https://iknowwhereyourcatlives.com/"
-        data-background-opacity="1" data-background-interactive="true">
-
+      <section data-background-image="images/the-west.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#d7c39e">
+        <a target='_blank'
+          href="https://www.leventhalmap.org/digital-exhibitions/bending-lines/why-persuade/1.3.1/">enlarge</a>
       </section>
 
-      <section data-background-image="images/campus.jpg"
+      <section data-background-image="images/octopus-4.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="#d7c39e">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h5 class='r-fit-text'>Task 12</h5>
+        <h3>Don't need a monster</h3>
+        <ul>
+          <li class="fragment">
+            Just the right color and words.
+          </li>
+          <li class="fragment">
+            William Bunge <a target='_blank' href="https://vimeo.com/223383681">Nuclear War Atlas</a>, 1982
+          </li>
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>First Geocache</h3>
-      <ul>
-        <li class="fragment">
-          Use this map <a target='_blank' href="https://uky-gis.github.io/geo109/maps/geocache/">of 1907 campus town</a>
-         </li>
-        <li class="fragment">
-          to find the "Old wise one, knobbly and gnarled".
-        </li>
-        <li class="fragment">
-          Hints
-          <ul>
-            <li class="fragment">Use map on phone, turn on location services, click location arrow <img src="images/arrow.jpg" style='vertical-align:middle;' height='20px' alt="locate me!"> </li>
-          </ul>
-        </li>
-        
-        <li class="fragment">
-          Take selfie photo with it & save as JPG image.
-        </li>
-        <li class="fragment">
-          <a href="https://uk.instructure.com/courses/2016829/assignments/10886732">Submit to Canvas</a>
-        </li>
-        </ul>
-    </section>
+      <section data-background-image="images/nuclear.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="white">
+      </section>
 
-    <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Tour of UKy's Internet</h3>
-      <ul>
-        <li class="fragment">
-          Field trip!
-         </li>
-        <li class="fragment">
-          Page: <a target='_blank' href="https://www.vox.com/a/internet-maps">40 maps that explain the internet</a>
-        </li>
-        <li class="fragment">
-          Page: <a target='_blank' href="https://global-internet-map-2021.telegeography.com/">Global Internet Map 2021</a>
-        </li>
-        <li class="fragment">
-          Page: <a target='_blank' href="https://submarine-cable-map-2020.telegeography.com/">Submarine Cable Map 2020</a>
-          <ul>
-            <li class='fragment'>Average submarine cable speed carries 30 Terabytes per second.</li>
-          </ul>
-        </li>
-        
-        </ul>
-    </section>
+      <section data-background-image="images/laser-beam.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="white">
+      </section>
 
-    <section data-background-image="images/campus.jpg"
+
+
+      <section
+        data-background-iframe="https://dsl.richmond.edu/panorama/redlining/#loc=14/38.043/-84.511&city=lexington-ky"
+        data-background-interactive data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h5 class='r-fit-text'>Task 13</h5>
+        <h3>Sources</h3>
+        <li>Leventhal Map & Education Center <a
+            href="https://www.leventhalmap.org/digital-exhibitions/bending-lines">Bending Lines Exhibit</a> </li>
+        <li>University of Wisconsin <a href="https://uwm.edu/lib-collections/agsl-digital-map-collection/">American
+            Geographical Society Library Digital Map Collection</a> </li>
       </section>
 
-    <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Geocache Two!</h3>
-      <ul>
-        <li class="fragment">
-          Find this second geocache on campus (from <a target='_blank' href="https://www.geocaching.com/">Geocaching.com</a>)
-         </li>
-         <li class="fragment">
-          and start lab 4. 
-         </li>
-        <li class="fragment">
-          Download <a target='_blank' href="https://www.avenzamaps.com/">Avenza Maps</a> app to your phone
-        </li>
-        <li class="fragment">
-          Download <a target='_blank' href="https://outrageGIS.com/download/a/04-locate.zip">QGIS Project (with data)</a>
-        </li>
-        <li class="fragment">
-          Install the following map in Avenza Maps using the QR Code...
-        </li>
-        
-        </ul>
-    </section>
-
-    <section data-background-image="images/qr-code.png"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/a1.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/a2.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/a3.jpg"
-        data-background-opacity="1" data-background-color="black" data-background-size="contain">
-      </section>
-
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Record GPS Track</h3>
-      <ul>
-        <li class="fragment">
-          of our exploration to the Geocache.
-         </li>
-        <li class="fragment">
-          Export the layer a KML file.
-         </li>
-         <li class="fragment">
-          <a href="https://uk.instructure.com/courses/2016829/assignments/10887897">Submit to Canvas</a> 
-         </li>
-
-        </ul>
-    </section>
-
-    <section class="left" data-background-iframe="https://www.youtube.com/embed/egDjE80HGJI"
-    data-background-opacity="1" data-background-interactive="true"></section>
-
-    <section data-background-image="images/campus.jpg"
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h5 class='r-fit-text'>Old wise one</h5>
+        <h5 class="r-fit-text">Task 4</h5>
       </section>
 
-      <section data-background-image="images/y1.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/y2.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/y3.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/y4.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-    <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Task 13</h3>
-      <ul>
-        <li class="fragment">
-          Due today
-         </li>
-        <li class="fragment">
-            and the progress so far...
-         </li>
-        
-        </ul>
-    </section>
-
-    <section data-background-image="images/z1.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/z2.jpg"
-        data-background-opacity="1" data-background-color="white" data-background-size="contain">
-      </section>
-
-      <section data-background-image="images/campus.jpg"
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h5 class='r-fit-text'>Lab 4</h5>
+        <h3>Fantasy map</h3>
+        <ul>
+          <li class="fragment">Find a fantasy map and help us understand it.
+          </li>
+          <li class="fragment">Steps: <a target="_blank"
+              href="https://uk.instructure.com/courses/2016829/assignments/10879460">Canvas</a>
+          </li>
+        </ul>
+
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Reference Mapping</h3>
-      <ul>
-        <li class="fragment">
-          Trace your initial into the landscape.
-       </li>
-        <li class="fragment">
-          Use Avenza Maps (<a target="_blank" href="https://support.avenzamaps.com/hc/en-us">app help</a>) from Task 13 to:
-          <ul>
-            <li class="fragment">
-              Record a GPS Track of your initial (app help: <a target="_blank" href="https://support.avenzamaps.com/hc/en-us/articles/360035065232-Record-GPS-Tracks-Tool">iOS</a> | <a target="_blank" href="https://support.avenzamaps.com/hc/en-us/articles/360034714672-Record-GPS-Tracks-Tool">Android</a>)
-           </li>
-           <li class="fragment">
-            Export a KML file of your GPS Track (app help: <a target="_blank" href="https://support.avenzamaps.com/hc/en-us/articles/360035074732">iOS</a> | <a target="_blank" href="https://support.avenzamaps.com/hc/en-us/articles/360035481091">Android</a>)
-         </li>
-          </ul>
-         </li>
-         <li class="fragment">
-          Requirement: track must be no shorter than 30 feet in the shortest dimension
-       </li>
-
-       <li class="fragment">
-        Submission and more details in <a href="https://uk.instructure.com/courses/2016829/assignments/10889513">Canvas</a>
-      </li>
-
-        </ul>
-    </section>
-
-    <section data-background-image="images/campus.jpg"
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
         data-background-opacity="0.3">
-        <h5 class='r-fit-text'>Final Project</h5>
+        <h3>So, how do you make a persuasive map?</h3>
+        <ul>
+          <li class="fragment">Data
+          </li>
+          <li class="fragment">Map design
+          </li>
+          <li class="fragment">Narrative design
+          </li>
+          <li class="fragment"> <a
+              href="https://uk.instructure.com/courses/2016829/pages/video-persuasive-maps-63-min">Video: Persuasive
+              maps</a>
+        </ul>
+
       </section>
 
-      <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Proposal</h3>
-      <ul>
-        <li class="fragment">
-          Prepare to talk about it on Monday individually
-       </li>
-        <li class="fragment">
-          Option 1: Create a custom map of a topic of your choice
-          <ul>
-            <li class="fragment">
-              What is question or topic of your map?
-           </li>
-            <li class="fragment">
-              What is the area mapped?
-           </li>
-
-           <li class="fragment">
-            Where will you get the data?
-         </li>
-          </ul>
-       </li>
-        
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Data</h3>
+        <ul>
+          <li class="fragment">How 'good' is your data?
+          </li>
+          <li class="fragment">What attributes does it have?
+          </li>
+          <li class="fragment">Where areas and features does it show?
+          </li>
         </ul>
-    </section>
 
-    <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Example</h3>
-      <ul>
-        <li class="fragment">
-          Vending machines in Japan are weird.
-          <ul>
-            <li class="fragment">
-              Where are vending machines?
-           </li>
-            <li class="fragment">
-              Downtown Tokyo
-           </li>
-           <li class="fragment">
-            QuickOSM Amenity data from OpenStreetMap
-         </li>
-          </ul>
-       </li>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Map design</h3>
+        <ul>
+          <li class="fragment">What projection and scale do you use?
+          </li>
+          <li class="fragment">What colors and fonts do you use?
+          </li>
+          <li class="fragment">Do the visual variables make sense?
+          </li>
         </ul>
-    </section>
 
-    <section class="left" data-background-image="images/campus.jpg"
-      data-background-opacity="0.3">
-      <h3>Option 2</h3>
-      <ul>
-        <li class="fragment">
-          A Love Letter to Campus
-       </li>
-        <li class="fragment">
-          Where should incoming students go for inspiration and relief?
-       </li>
-       <li class="fragment">
-        Where should they avoid?
-     </li>
+      </section>
 
-       <li class="fragment">
-        Find three destinations on campus and in Kentucky.
-      </li>
-      <li class="fragment">
-        Visit those places and create media of that location that shows a handwritten statement or artwork that you have produced.
-      </li>
-        
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Narrative design</h3>
+        <ul>
+          <li class="fragment">Are the map elements clear?
+          </li>
+          <li class="fragment">Do you compelling text and images in the layout? </li>
+          <li class="fragment">Can the presentation be understood without your explanation? </li>
         </ul>
-    </section>
 
-    <section class="left" data-background-iframe="https://www.youtube.com/embed/jobJr0ebhdU"
-    data-background-opacity="1" data-background-interactive="true"></section>
+      </section>
 
-      
-      
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class="r-fit-text">Task 5</h5>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Start Lab 2</h3>
+        <ul>
+          <li class="fragment">Add raster base maps in QGIS.
+          </li>
+          <li class="fragment">Steps: <a target="_blank"
+              href="https://uk.instructure.com/courses/2016829/assignments/10879493">Canvas</a>
+          </li>
+        </ul>
+
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Data</h3>
+        <ul>
+          <li class="fragment">Three raster layers
+            <ul>
+              <li class="fragment">Digital Elevation Model (DEM)</li>
+              <li class="fragment">The Bluegrass region flooded</li>
+              <li class="fragment">Campus area flooded</li>
+              <li class="fragment">All GeoTIFF files with the .tif file extension</li>
+            </ul>
+          </li>
+          <li class="fragment">Vector layers
+            <ul>
+              <li class="fragment">Create points, lines, and polygons</li>
+              <li class="fragment">in the GeoPackage (with a .gpkg file extension)</li>
+            </ul>
+          </li>
+        </ul>
+
+      </section>
+
+      <section data-background-image="images/b-1.jpg" data-background-opacity="1" data-background-color="white">
+      </section>
+
+      <section data-background-image="images/b-2.jpg" data-background-opacity="1" data-background-color="white">
+      </section>
+
+      <section data-background-image="images/b-3.jpg" data-background-opacity="1" data-background-color="white">
+      </section>
 
 
-      
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Map design</h3>
+        <ul>
+          <li class="fragment">QGIS application
+            <ul>
+              <li class="fragment">Open source and free to use</li>
+              <li class="fragment"> <a href="https://qgis.org/en/site/forusers/download.html">Install</a> on your
+                personal computer </li>
+              <li class="fragment">It's a Geographic Information System (GIS)</li>
+            </ul>
+
+      </section>
+
+      <section data-background-image="images/gis.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="white">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Map design</h3>
+        <ul>
+          <li class="fragment">Projections: how world becomes flat
+            <ul>
+              <li class="fragment">Use codes EPSG 3089 or 3857 for Kentucky</li>
+              <li class="fragment">We'll explore more projections in next module</li>
+            </ul>
+
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Map design</h3>
+        <ul>
+          <li class="fragment">Color: create a visual hierarchy
+            <ul>
+              <li class="fragment">background uses muted colors</li>
+              <li class="fragment">foreground uses more vivid colors.</li>
+              <li class="fragment">Use convention when possible.</li>
+            </ul>
+
+      </section>
+
+      <section data-background-image="images/color.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="white">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Map design</h3>
+        <ul>
+          <li class="fragment">Visual variables
+            <ul>
+              <li class="fragment">The symbols used to show different feature types.</li>
+            </ul>
+
+      </section>
+
+      <section data-background-image="images/symbols.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="white">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Map design</h3>
+        <ul>
+          <li class="fragment">Typography
+            <ul>
+              <li class="fragment">The art and technique of placing type.</li>
+              <li class="fragment">Typeface or font: a particular design of type.</li>
+              <li class="fragment"> <a href="https://www.dafont.com/">Download new font</a></li>
+            </ul>
+
+      </section>
+
+      <section data-background-image="images/font.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="white">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Resources to help with map building</h3>
+        <ul>
+          <li class="fragment"> <a
+              href="https://uk.instructure.com/courses/2016829/pages/reading-how-to-lie-with-maps">Reading: Elements of
+              a map</a> </li>
+          <li class="fragment">The following video on Beginner QGIS</li>
+        </ul>
+      </section>
+
+
+      <section data-background-iframe="https://www.youtube.com/embed/kCnNWyl9qSE" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section data-background-iframe="https://www.youtube.com/embed/GT8FK7S5YG8" data-background-interactive
+        data-background-opacity="1">
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Fantasy map rules</h3>
+        <ul>
+          <li class="fragment">There are no rules</li>
+          <li class="fragment">except to make a persuasive map.</li>
+        </ul>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Fantasy names</h3>
+        <ul>
+          <li class="fragment"> <a href="https://www.fantasynamegenerators.com/">Generator 1</a> </li>
+          <li class="fragment"> <a href="https://www.fantasynamegen.com/">Generator 2</a> </li>
+          <li class="fragment"> <a href="https://ui2.worldspinner.com/nameGenerator">Generator 3</a> </li>
+        </ul>
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class="r-fit-text">Task 6</h5>
+      </section>
+
+      <section class="left" data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h3>Task 6</h3>
+        <ul>
+          <li class="fragment">Build your world on either flooded base map.
+          </li>
+          <li class="fragment">Steps: <a target="_blank"
+              href="https://uk.instructure.com/courses/2016829/assignments/10880907?module_item_id=25114344">Canvas</a>
+          </li>
+        </ul>
+
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class="r-fit-text">Lab 2: Fantasy Map</h5>
+      </section>
+
+      <section data-background-image="images/port-tron.jpg" data-background-opacity="1" data-background-size="contain"
+        data-background-color="white">
+      </section>
+
+      <section data-background-image="https://live.staticflickr.com/65535/53257666728_3142cc64c5_k.jpg"
+        data-background-opacity="0.3">
+        <h5 class="r-fit-text">Let's do it!</h5>
+      </section> -->
 
 
 

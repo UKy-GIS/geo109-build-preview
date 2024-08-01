@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html><head>
+  <title>GEO 109: Final Project</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Website meta description for google search results go here" />
+  <meta name="dc.relation" content="https://uky-gis.github.io/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#1A94D2" />
+  
+
+   
+  <link rel="stylesheet" href="../../css/main.min.css" media="screen" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head><body><nav class="navbar navbar-light uk-liter-bg" id='nav'>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../../">
+      <img src="https://uky-gis.github.io/graphics/logo-75th-01.svg" alt="" height="45px"
+        class="d-inline-block ">
+     <h5 class="d-inline-block font-weight-700">GEO 109</h5> 
+    </a>
+
+    <ul class="nav justify-content-start">
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Modules
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/00-intro/">  Introduction</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/01-data/">  01 Data</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/02-locate/">  02 GPS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/midterm/">  Midterm</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/04-cartography/">  04 Cartography</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/05-design/">  05 Design</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/06-3d/">  06 3D</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/final-project/">  Final Project</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Maps
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/lab-01/">  Meaningful places</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/hill/">  Kentucky</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/additional/">  Additional Maps</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+    <li class="nav-item">
+      <a class='nav-link' href="../../syllabus">
+         Syllabus</a>
+      </a>
+    </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid uk-lite-bg py-2" id="singleTitle">
+  <row>
+    <h3 class="font-weight-700 align-middle text-dark mt-1">
+      Final Project 
+    </h3>
+  </row>
+</div>
+
+<main>
+<section class="py-3 container col-lg-8 col-xxl-6" id="documentation">
+<div class="d-flex justify-content-between  align-items-end">
+<h3>Presentation</h3>  
+<a href='../../slides/final-project' target='_blank'>Open in new tab</a>
+</div>
+<a href='../../slides/final-project' target='_blank'>
+<img src="../../images/final-project/intro.jpg" alt="Cover slide for Module 5" class="w-100 mt-1 mb-4">
+</a>
+<h2>Presentation Topics</h2>
+<ul>
+<li><a href="../../slides/final-project">Introduction & announcements</a></li>
+<li><a href="https://uky-gis.github.io/geo109/slides/final-project/#/6">Examples from lab 5</a></li>
+<li><a href="https://uky-gis.github.io/geo109/slides/final-project/#/20/0/3">Thinking of a map topic</a></li>
+<li><strong>Proposal</strong>
+<ul>
+<li><a href="https://uky-gis.github.io/geo109/slides/final-project/#/25">Introduction</a>
+   <ul><li>
+  <a target='_blank' href='https://uky.yuja.com/V/Video?v=9163667&node=39259336&a=13164529&autoplay=1'>Video: Completing the project proposal (6 min)</a>
+  </li></ul>
+  </li>
+</ul>
+</li>
+<li><strong>Technical demonstrations</strong>
+<ul>
+<!-- <li><a href="https://uky-gis.github.io/geo109/slides/04/#/6">Cartographic design</a></li> -->
+  <li><a href="https://uky-gis.github.io/geo109/slides/final-project/#/27">Getting detailed data from OpenStreetMap</a>
+  <ul><li>
+  <a target='_blank' href='https://uky.yuja.com/V/Video?v=9130686&node=39152365&a=82251368&autoplay=1'>Video: Downloading data inside QGIS (16 min)</a>
+  </li></ul>
+  <li><a href="https://uky-gis.github.io/geo109/slides/final-project/#/30">Other sources of data</a>
+  <ul><li>
+  <a target='_blank' href='https://uky.yuja.com/V/Video?v=8545003&node=37029686&a=190930736&autoplay=1'>Video: Downloading data from websites (14 min)</a>
+  </li>
+  <li>
+  <a target='_blank' href='https://uky.yuja.com/V/Video?v=9158454&node=39244521&a=112840445&autoplay=1'>Video: Creating points, lines, and polygons inside QGIS (6 min)</a>
+  </li>
+  </ul></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/final-project/#/36">Base maps</a>
+   <ul><li>
+  <a target='_blank' href='https://uky.yuja.com/V/Video?v=9158427&node=39244465&a=114619969&autoplay=1'>Video: Adding base maps in QGIS (6 min)</a>
+  </li></ul>
+  </li>
+  </li></ul>
+  <li><strong>Draft</strong>
+<ul>
+  <li>
+  <a href="https://uky-gis.github.io/geo109/slides/final-project/#/41">Introduction</a>
+  <li><a href="https://uky-gis.github.io/geo109/slides/final-project/#/50">Turning proposals into drafts (with inline videos)</a></li>
+   </li>
+</ul>
+</li>
+<li><strong>Final submission</strong>
+<ul>
+  <li>
+  <a href="https://uky-gis.github.io/geo109/slides/final-project/#/91">Introduction</a>
+  <li><a href="https://uky-gis.github.io/geo109/slides/final-project/#/100">Tips</a></li>
+   </li>
+</ul>
+</li>
+</ul>
+<h2>Final Project</h2>
+<p>Your journey in this course has followed the typical path a map maker takes when creating a map. We started with finding and creating data, manipulating and analyzing the data, and finally designing and publishing the map. The final project will be a culmination of all the skills you have learned in this course.</p>
+<p>However, one dimension of map making has been overlooked. What do <strong>you</strong> want to map? What is the story you want to tell and the purpose of your map? These are questions that need to be answered before you start making a map. The topic and design are completely up you. For example, we have seen fishing hot spot maps, vending machines in Tokyo maps, a wide variety of sporting maps, and maps made as holiday gifts. The possibilities are endless – you first need to find a topic that interests you.</p>
+<h3>Table of Contents</h3>
+<!-- TOC -->
+<ul>
+<li><a href="#final-project-proposal">Final project proposal</a>
+<ul>
+<li><a href="#step-by-step-instructions">Step-by-step instructions</a></li>
+<li><a href="#video-completing-the-final-project-proposal-6-min">Video: Completing the final project proposal (6 min)</a></li>
+<li><a href="#final-project-proposal-deliverables">Final project proposal deliverables</a></li>
+<li><a href="#submitting-the-proposal">Submitting the proposal</a></li>
+</ul>
+</li>
+<li><a href="#draft-map-and-reflection">Draft map and reflection</a>
+<ul>
+<li><a href="#instructions">Instructions</a></li>
+<li><a href="#final-draft-deliverables">Final draft deliverables</a></li>
+<li><a href="#submitting-the-draft-and-reflection">Submitting the draft and reflection</a></li>
+</ul>
+</li>
+<li><a href="#example-final-project">Example final project</a>
+<ul>
+<li><a href="#video-demonstrations">Video demonstrations</a></li>
+</ul>
+</li>
+<li><a href="#final-map-submission">Final map submission</a>
+<ul>
+<li><a href="#the-three-levels-of-engagement">The three levels of engagement</a></li>
+<li><a href="#final-project-deliverables">Final project deliverables</a></li>
+<li><a href="#submitting-the-final-design">Submitting the final design</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="final-project-proposal">Final project proposal</h2>
+<p>Finding a topic might be easy for you. If not, think about places that bring you, or people you care about, joy. Study the geography around these places and describe why and how they do so. Or, maybe you see problems or injustice in the world that you want to bring attention to. Write a short paragraph explaining why your map needs to be made, who is the audience, and what is the desired outcome.</p>
+<p>Once you have a topic, try making a concise yet compelling statement about it. This will be the title of your map. For example, &ldquo;The Best Places to Eat in Lexington, Kentucky&rdquo; or &ldquo;The Impact of COVID-19 on the Kentucky Economy&rdquo;. Then, make a subtitle that elaborates more on the topic. The title and subtitle should address the &ldquo;what and where&rdquo; of your topic.</p>
+<p>Now, you need observations, a.k.a. data, to map. We have discovered many methods to obtain data. You can:</p>
+<ul>
+<li>Create observations from existing maps by encoding them as list of latitude and longitude coordinates or digitizing them in QGIS.</li>
+<li>Create new observations by GPS mapping them in the field.</li>
+<li>Download existing data from the internet. Remember to look for spatial data formats like Shapefiles and GeoJSONs. If you need help finding sources of data, please ask and we will help you.</li>
+<li>Manipulate spatial layers in QGIS to create new data. For example, you can use the <code>Buffer</code> and <code>Clip</code> tools to find features in one layer that are within distance of features in another layer.</li>
+</ul>
+<p>Map making is often a mix of all these methods. Think about the approaches that you would like to take. If you are going to download data, where will you look? If you are going to digitize features, what maps will you use as a reference? If you are going to manipulate data, what tools will you use? If you are going to GPS map features, where will you go? Write a short paragraph describing your method of obtaining data.</p>
+<p>What is your area of interest? Will you map the entire world or a small neighborhood? Using QGIS and a base map, zoom to your area of interest. Think about the projection you might use. For example, if you are mapping the entire world, you should use the Equal Earth projection. If you are mapping a small neighborhood, you will want to use a local projection tuned to that area.</p>
+<p>Think about the design of your map. What is the &ldquo;vibe&rdquo; you want to convey? What map elements will you use to tell your story? Will you use photographs or other images? Write a short paragraph describing your intended design.</p>
+<p>Finally, you will create a proposal for your final project. The proposal will be a 11 x 17 inch QGIS layout that includes a title, subtitle, map of the area of interest, and three paragraphs describing your project. We suggest that paragraphs be written in a word processor, edited for typos and grammatical errors, and then copied and pasted into the layout. The layout should be exported as a GeoPDF file.</p>
+<h4 id="example-proposal">Example proposal</h4>
+<p>This example shows a proposal for the urban observation tower project. While the map of the area of interest shows data, you do not need to have data in your map. But, if you do have data, please add it. The map of the area of interest is just to show the location of your project.</p>
+<p><img src="../../images/final-project/final-project-proposal-yodasmaps.jpg" alt="Downtown Urban Observation Towers in Lexington, Kentucky"><br>
+<em>Downtown Urban Observation Towers in Lexington, Kentucky</em></p>
+<h3 id="step-by-step-instructions">Step-by-step instructions</h3>
+<div class="doc-instructions">
+<ol>
+<li>Create a title and subtitle for your map.</li>
+<li>Write a paragraph that explains why your map needs to be made, who is the audience, and what is the desired outcome.</li>
+<li>Write a paragraph discussing your method of obtaining the data. For example, will you GPS map your features or do you plan on downloading data from somewhere? If you have data already, where did you get it from? If you are looking for data, tell us where you plan on looking – we might be able to help.</li>
+<li>Write a paragraph discussing your intended design and what type of map elements you will use to tell your story. Do you plan on using photographs or other images? Will you use a particular typeface to convey a certain mood or feeling? Summarize the overall look or tone of your map with three words.</li>
+<li>Create a new QGIS project called, &ldquo;final-project-linkblue&rdquo; (replacing &ldquo;linkblue&rdquo; with your linkblue name) and save it in your class workspace.</li>
+<li>Add a base map to the Map Canvas and zoom to your area of interest.</li>
+<li>Create an 11 x 17 inch layout and add the map showing your area of interest.</li>
+<li>Add the title and subtitle created in the first step to the layout. Experiment with the typeface and size to create a captivating title.</li>
+<li>Add the paragraphs created in the second through fourth steps to the layout.</li>
+<li>Add your name and the date to the layout.</li>
+</ol>
+</div>
+<h3 id="video-completing-the-final-project-proposal-6-min">Video: Completing the final project proposal (6 min)</h3>
+<iframe title='Embedded Media titled: final-project-proposal' width="100%" height='400px' src="https://uky.yuja.com/V/Video?v=9163667&node=39259336&a=13164529&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h3 id="final-project-proposal-deliverables">Final project proposal deliverables</h3>
+<p>Please follow these requirements for completing the 11 x 17 inch proposal:</p>
+<ol>
+<li>Add a title and subtitle and experiment with the typeface. (1 point)</li>
+<li>Add a map showing your area of interest. (1 point)</li>
+<li>Add the three paragraphs explaining your project. (3 points)</li>
+<li>Export the layout as a GeoPDF file.</li>
+<li>Name the file <code>final-project-proposal-linkblue.pdf</code> and replace <code>linkblue</code> with your linkblue name. For example, <code>final-project-proposal-luksky00.pdf</code>.</li>
+</ol>
+<h3 id="submitting-the-proposal">Submitting the proposal</h3>
+<p>Upload your proposal PDF file to the Final Project Proposal assignment on Canvas by the published due date.</p>
+<div id="draft"></div>
+<h2 id="draft-map-and-reflection">Draft map and reflection</h2>
+<p>Now you need to make the map. You will have two weeks to complete it and should be a draft of your final map and ready for feedback. You will also write a short reflection about the process of making the map, its strengths and weaknesses, and areas where you would like improvement. Your instructors will provide feedback to help you improve your map. The final map is due at the end of the semester.</p>
+<p>During lecture, we will explore tools and methods that will help you make your map.</p>
+<h3 id="instructions">Instructions</h3>
+<p>The exact way you complete your map will be unique to you and your topic. However, you can use your proposal to start. First, you need to have your data and a base map. Note: Do not use OpenStreetMap as a base map. You can create a base map from other layers like a county or state boundaries. Or, you can use a any combination of XYZ tiles as a base map.</p>
+<div class="doc-instructions">
+<ol>
+<li>Open your QGIS project proposal and add a new base map to the Map Canvas and zoom to your area of interest.</li>
+<li>Add your data to the Map Canvas.</li>
+</ol>
+</div>
+<p>Now, you need to decide what projection you want to use. We have learned about a few projections in this course. If you are mapping the entire world, you should use the Equal Earth projection with EPSG code 8857. If you are mapping a state, you will want to use a local projection tuned to that area. For example, for Kentucky we use the projection with the EPSG code 3089. For mapping North America, we use the projection with the EPSG code 102008. If you are not sure what projection to use, please ask and we will help you.</p>
+<div class="doc-instructions">
+<ol start="3">
+<li>Select a projection for your map and set it as the project&rsquo;s CRS. It cannot be EPSG code 4326 (WGS 84).</li>
+</ol>
+</div>
+<p>Next, you will need to symbolize your data. You can use the <code>Graduated</code> or <code>Categorized</code> symbology to symbolize your data. The method you select depends of the type of data you have. For example, if you have a quantity that you are mapping like population by county, you will want to use the <code>Graduated</code> symbology and show five classes. If you want to show different types like different sports venues in Lexington, you will want to use the <code>Categorized</code> symbology and show at least two different classes.</p>
+<div class="doc-instructions">
+<ol start="4">
+<li>Appropriately symbolize your data with at least two different classes in your symbology.</li>
+</ol>
+</div>
+<p>Develop a visual hierarchy in your symbology where viewers can distinguish the theme of the map and the features presented. You may want to use SVG symbols and add feature labels to your map. After you finished the cartographic design, we need to create a new 11 x 17 in layout, either in portrait or landscape orientation. Add the map to the layout.</p>
+<div class="doc-instructions">
+<ol start="5">
+<li>Create a new 11 x 17 inch layout called, <code>final-project-draft-linkblue</code> (replacing &ldquo;linkblue&rdquo; with your linkblue name).</li>
+<li>Add the map showing your area of interest, base map, and symbolized data.</li>
+</ol>
+</div>
+<p>Now, you need to add the title and subtitle. You can use the same title and subtitle from your proposal or create a new one. The titles should explain the what and where of the topic. Next, add a paragraph that explains your map, why it&rsquo;s needed, etc., which can be copied from your proposal. Add the legend and format its content to remove the base map and grammatical errors. Finally, add your name, date, sources of data, and attribution. For example, if you are using any data acquired from OpenStreetMap, you need to add this attribution to the layout: <code>© OpenStreetMap contributors</code>.</p>
+<div class="doc-instructions">
+<ol start="7">
+<li>Add the title and subtitle to the layout. Experiment with the typeface and size to create a captivating title.</li>
+<li>Add a legend to the layout and format its content to remove the base map and grammatical errors.</li>
+<li>Add a paragraph explaining your map, why it&rsquo;s needed, etc.</li>
+<li>Add your name, date, sources of data, and attribution to the layout.</li>
+</ol>
+</div>
+<p>Next we need to a scale bar and north arrow. If you are mapping the entire world, you may skip these steps.</p>
+<div class="doc-instructions">
+<ol start="11">
+<li>Add a scale bar and north arrow.</li>
+</ol>
+</div>
+<p>Finally, apply some TLC to your layout, making sure that all the elements are balanced on the page and the layout is visually appealing. Here is where you develop the &ldquo;vibe&rdquo; of your map and continue to develop the visual hierarchy. You can add images, photographs, and other elements to your map to help tell your story. Don&rsquo;t worry if it&rsquo;s not perfect. This is a draft and you will have time to improve it.</p>
+<div class="doc-instructions">
+<ol start="12">
+<li>Add TLC to your layout by iterating on the design and making sure that all the elements are balanced on the page and the layout is visually appealing.</li>
+</ol>
+</div>
+<p>Save your work in QGIS and export the layout as a JPG file. Note: This is different than previous assignments where we exported the layout as a GeoPDF file. We are exporting as a JPG file because it is easier to share and view in Canvas.</p>
+<div class="doc-instructions">
+<ol start="13">
+<li>Save your work in QGIS.</li>
+<li>Export the layout as a JPG file. In QGIS menu, select <strong>Layout &gt; Export as image&hellip;</strong> In the next screen, select the format <strong>JPG</strong> and use the following name: <code>final-project-draft-linkblue.jpg</code> (replacing &ldquo;linkblue&rdquo; with your linkblue name).</li>
+<li>In the final screen, make sure the resolution is set to 300 dpi and click <strong>Save</strong>.</li>
+</ol>
+</div>
+<p>You should see the follow screenshots when you export the image.</p>
+<p><img src="../../images/final-project/save-1.jpg" alt="Saving the layout as JPG"><br>
+<em>Saving the layout as JPG</em></p>
+<p><img src="../../images/final-project/save-2.jpg" alt="Setting the resolution to 300 dpi"><br>
+<em>Setting the resolution to 300 dpi</em></p>
+<h4 id="reflection">Reflection</h4>
+<p>After spending some time working on your design, you will have an opinion about what you&rsquo;ve made. Write a short reflection about the process of making the map, its strengths and weaknesses, and areas where you would like improvement. Write a paragraph for each of these prompts:</p>
+<ol>
+<li>What are the strengths of your map and layout, e.g., what are you most proud of?</li>
+<li>What are its weaknesses, e.g., what would you like to improve?</li>
+<li>What part of this process, from getting data to designing the layout, was the most enjoyable?</li>
+<li>Imagine showing your design to someone in your target audience. What do you think they would say about your page after looking at it for 10 seconds?</li>
+</ol>
+<div class="doc-instructions">
+<ol start="16">
+<li>Write a paragraph for each of the four prompts above.</li>
+</ol>
+</div>
+<h3 id="final-draft-deliverables">Final draft deliverables</h3>
+<p>Please follow the 16 steps above for completing the draft map and reflection.</p>
+<ol>
+<li>Create an 11 x 17 layout with all of the required map elements. (2 points)</li>
+<li>Make sure your map has at least two different layers in the map canvas. (1 point)</li>
+<li>Make sure the layout is visually balanced with no elements stepping on each other or cut off of the page. (1 point)</li>
+<li>Make sure the textual content is free of grammatical errors. (1 point)</li>
+<li>Share your draft map with your classmates in the Final Project Draft discussion on Canvas. (1 point)</li>
+<li>In a separate document, write four paragraphs for each of the prompts in the reflection, which will be uploaded to Canvas. (0.5 points each)</li>
+</ol>
+<h3 id="submitting-the-draft-and-reflection">Submitting the draft and reflection</h3>
+<p>Upload your draft JPG file to the Final Project Draft assignment on Canvas by the published due date. You will also submit your reflection to the same assignment.</p>
+<p>Finally, share just your draft map with your classmates in the Final Project Draft discussion on Canvas. Upload the JPG file to the discussion forum.</p>
+<h2 id="example-final-project">Example final project</h2>
+<p>The instructor has created two examples of a final project on the theme of urban observation towers in downtown Lexington, Kentucky. The first version shows the towers colored by height in stories. The second version shows towers symbolized by their ownership type and height.</p>
+<p><img src="../../images/final-project/final-project-yodasmaps.jpg" alt="Example of a final project, version 1"><br>
+<em>Urban observation towers symbolized by height</em></p>
+<p><img src="../../images/final-project/final-project-alt-yodasmaps.jpg" alt="Example of a final project, version 1"><br>
+<em>Urban observation towers symbolized by height and ownership type</em></p>
+<h3 id="video-demonstrations">Video demonstrations</h3>
+<p>These five videos show how the final project was made at crucial steps in the process. While they may not apply to your project, they may give you ideas on how to complete your project.</p>
+<h4 id="adding-attributes-to-vector-layers-for-symbology-4-min">Adding attributes to vector layers for symbology (4 min)</h4>
+<p>The urban observation tower locations were observed in the field and mapped with Avenza Maps. However, the attributes desired for mapping were not collected in the field. This video shows how to add attributes to a vector layer in QGIS. The attributes are then used to symbolize the towers by type of ownership.</p>
+<iframe title='Embedded Media titled: final-project-editing-data' width="100%"  height="400"  src="https://uky.yuja.com/V/Video?v=9178641&node=39302187&a=94712267&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h4 id="building-a-custom-base-map-4-min">Building a custom base map (4 min)</h4>
+<p>This video shows how to style and label a highway layer extracted from QuickOSM. It is then layered over an XYZ tile with no labels to create a simple, but unique, base map.</p>
+<iframe title='Embedded Media titled: final-project-custom-base-map' width="100%"  height="400"  src="https://uky.yuja.com/V/Video?v=9178621&node=39302154&a=112397900&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h4 id="select-building-footprints-for-use-as-map-layer-5-min">Select building footprints for use as map layer (5 min)</h4>
+<p>Instead of using points to represent parking towers, building footprints were used. This video shows how to select building footprints from a layer and save them as a new layer. Then, the new layer is symbolized by height in stories.</p>
+<iframe title='Embedded Media titled: final-project-select-building-footprints' width="100%"  height="400"   src="https://uky.yuja.com/V/Video?v=9178607&node=39302109&a=182531260&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h4 id="layout-tips-and-tricks-7-min">Layout tips and tricks (7 min)</h4>
+<p>Iterating over your layout design can be time-consuming. This video shows useful tips, tricks, and hacks for making the layout process more efficient.</p>
+<iframe title='Embedded Media titled: final-project-layout-tips-and-tricks' width="100%"  height="400"   src="https://uky.yuja.com/V/Video?v=9178566&node=39302039&a=8260286&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h4 id="experiment-with-different-symbology-4-min">Experiment with different symbology (4 min)</h4>
+<p>After creating a building footprint layer with an attribute for height in stories, can we symbolize the layer in a different way? This video shows how to symbolize the layer by height with extruded polygons giving the map a 3D look.</p>
+<iframe title='Embedded Media titled: final-project-near-3d' width="100%"  height="400"   src="https://uky.yuja.com/V/Video?v=9178538&node=39301966&a=120096510&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h2 id="final-map-submission">Final map submission</h2>
+<p>After creating a draft map and reflecting on the process of making it, take a break from the project for moment. If possible, take a walk in the area your map portrays. Think about the impact that you want your map and design to have – is it there now? Likely not, so you&rsquo;ll want to make some changes. This is your opportunity to make the design better.</p>
+<h3 id="the-three-levels-of-engagement">The three levels of engagement</h3>
+<p>Consider that you can give a reader three levels of engagement with a map. The first level is the immediate impression the reader gets from the design. Does it excite them to investigate deeper? This is done through good graphic design. Is the page layout visually balanced, are the colors and typeface appropriate, and is the page easy to read and free of typos and errors?</p>
+<p>The second level engagement is the map itself. With good cartographic design, the reader can quickly understand the theme of the map, the features shown, and the area represented. This is done through the proper use of visual variables, labeling, and placement of map elements. Does the map have a strong visual hierarchy? Can you quickly distinguish the topic from the base map? Often, the base map dominates, so consider reducing its visual weight. Finally, can the reader quickly relate your features&rsquo; symbology to the legend and understand what they represent? If not, consider refining the symbology.</p>
+<p>The third level of engagement is the useability of the map. Because maps portray places one can visit, readers can act on the information you present. If you show hiking trails or restaurants, the reader can visit these places. Will they get lost using your map? If you show demographic information about counties in Kentucky, the reader can form opinions about places that they have never visited. Are your observations accurate?</p>
+<p>No other single-page document has this power. Emerging from these levels of engagement is your design&rsquo;s story. Will your audience want to reread your story? Hopefully, yes. A good story lingers in the reader&rsquo;s imagination. Revisit each of these levels to make your story more compelling.</p>
+<p>There isn&rsquo;t a single solution that can guide you. Iterate over your design and experiment with different approaches to sharpen the informational hierarchy. From the first impression to the usability of the map, consider the reader&rsquo;s experience. You have an audience in mind, so ask yourself: Does my map persuasively speak to them? This is the art of map making – and storytelling.</p>
+<h3 id="final-project-deliverables">Final project deliverables</h3>
+<p>We have discussed, in broad brush strokes, the theory of map making. Now, you need to apply it to your final submission. If you need a review of the methods used in QGIS over the semester, this <a href="https://uk.instructure.com/courses/2065404/external_tools/232267">repository</a> has all of the video demonstrations shown in class and labs.</p>
+<p>After you complete the <a href="#draft-map-and-reflection">requirements for the draft map</a>, build upon or revise your draft in QGIS (or the app of your choice). Ensure the following deliverables are met:</p>
+<ol>
+<li>An 11 x 17 layout with all of the required map elements. (1 point)</li>
+<li>The map has an appropriate base map. (1 point)</li>
+<li>The theme of your map is represented by a layer(s) with at least two symbol classes shown and has good visual hierarchy, with the theme features easily readable. (1 point)</li>
+<li>The projection used by the map is not EPSG code 4326. If in doubt, use EPSG code 3857.  (1 point)</li>
+<li>The layout is visually balanced and easily readable. (1 point)</li>
+<li>The textual content is free of grammatical errors, and the legend has understandable names for layers and symbols. (1 point)</li>
+<li>The textual content does not touch the edge of the page, e.g., the title is not too close to the top of the page. (1 point)</li>
+</ol>
+<p>When you are finished revising your draft, export the layout as a JPG file and name it <code>final-project-linkblue.jpg</code> (replacing &ldquo;linkblue&rdquo; with your linkblue name).</p>
+<h3 id="submitting-the-final-design">Submitting the final design</h3>
+<p>Upload your final JPG file to the Final Project submission on Canvas by the published due date.</p>
+<p>Have fun and 💖</p>
+<p>.</p>
+</section>
+</main>
+ <footer class="footer fixed-bottom uk-liter-bg" id="footer">
+  <div class="row footer-text">
+    <div class="col-12 col-md text-center text-md-left nav-link text-dark">
+      © UKy Geography | 1944–2024
+    </div>
+  </div>
+
+  
+
+  
+  
+
+  <script src="../../js/bundle.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+    charset="utf-8"></script>
+  <script src="../../js/utilities.js"></script>
+</footer></body>
+</html>

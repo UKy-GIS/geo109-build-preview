@@ -55,6 +55,26 @@
                       <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
                     </li>
                   
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/midterm/">  Midterm</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/04-cartography/">  04 Cartography</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/05-design/">  05 Design</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/06-3d/">  06 3D</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/final-project/">  Final Project</a>
+                    </li>
+                  
                 </ul> 
               </li>
           
@@ -70,6 +90,10 @@
                 </a>
              
                  <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/lab-01/">  Meaningful places</a>
+                    </li>
                   
                     <li>
                       <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
@@ -110,22 +134,47 @@
 <main>
 <section class="py-3 container col-lg-8 col-xxl-6" id="documentation">
 <div class="d-flex justify-content-between  align-items-end">
-<h3>Presentation</h3>   
+<h3>Presentation</h3>  
 <a href='../../slides/03' target='_blank'>Open in new tab</a>
 </div>
-<iframe src='../../slides/03' width='100%' class='slide-presentation'></iframe>
-<h2>Week</h2>
+<a href='../../slides/03' target='_blank'>
+<img src="../../images/03/intro.jpg" alt="Cover slide for Module 3" class="w-100 mt-1 mb-4">
+</a>
+<!-- <iframe src='../../slides/03' width='100%' class='slide-presentation'></iframe> -->
+<h2>Presentation Topics</h2>
 <ul>
-<li><a href="../../slides/03">06: Introduction to GIS</a></li>
+<li><a href="../../slides/03">Introduction</a></li>
+  <li><a href="../../slides/03/#6">GIS</a></li>
+  <li><a href="../../slides/03/#10">Essential question</a></li>
+  <li><a href="../../slides/03/#10">Using GIS to analyze Lab 2</a></li>
+  <ul>
+    <li><a target='_blank' href="https://uky.yuja.com/V/Video?v=8765491&node=37868693&a=112349685&preload=false">Video: Part 1 (10 min)</a></li>
+    <li><a target='_blank' href="https://uky.yuja.com/V/Video?v=8765497&node=37868706&a=125026828&preload=false">Video: Part 2 (5 min)</a></li>
+  </ul>
+  <li><a href="../../slides/03/#47">Geoprocessing</a></li>
+  <ul>
+    <li><a target='_blank' href="https://uky.yuja.com/V/Video?v=8799049&node=38042880&a=45335449&preload=false">Video: Buffer & Clip (7 min)</a></li>
+    <li><a target='_blank' href="https://uky.yuja.com/V/Video?v=8799020&node=38042778&a=14271397&preload=false">Video: Project a vector layer (4 min)</a></li>
+    <li><a target='_blank' href="https://uky.yuja.com/V/Video?v=8799036&node=38042845&a=212653329&preload=false">Video: Merge & Hillshade (7 min)</a></li>
+    <li><a target='_blank' href="https://uky.yuja.com/V/Video?v=8799012&node=38042755&a=64595603&preload=false">Video: Intro to Remote Sensing (2 min)</a></li>
+    <li><a target='_blank' href="https://uky.yuja.com/V/Video?v=8799060&node=38042920&a=116925401&preload=false">Video: Attribute Joins (6 min)</a></li>
+  </ul>
+  <li><a href="../../slides/03/#130">Using GIS to analyze Lab 2</a></li>
+  <li><a href="#lab-content">Tasks</a></li>
+  <li><a href="#lab">Lab</a>
+  <ul>
+    <li><a target='_blank' href="https://uky.yuja.com/V/Video?v=8754256&node=37821295&a=103554230&preload=false">Video: Lab 3 (20 min)</a></li>
+  </ul>
+  </li>
 </ul>
 <div id='lab-content'>
 <h2>Task</h2>
-<p>Maps are literally everywhere. From outdoor wayfinding to decoration, they are so common that we often don&rsquo;t even notice them. In your first task for credit, you will explore the ubiquity of maps in our built environment and describe one. This is a popular past time amoung map nerds – just do a search on your favorite social media for the hashtag <strong>#mapsinthewild</strong>.</p>
-<p>You&rsquo;ll need to explore your favorite places to find these maps. They <em>are not</em> maps on computer screens or those printed ones that you buy for traveling (they still make those?) or pick up from tourism hosts. These maps are found on signs, walls, floors, etc.</p>
+<p>Maps are literally everywhere. From outdoor wayfinding to decoration, they are so common that we often don&rsquo;t even notice them. In your first task for credit, you will explore the ubiquity of maps in our built environment and describe one. This is a popular past time among map nerds – just do a search on your favorite social media for the hashtag <strong>#mapsinthewild</strong>.</p>
+<p>You&rsquo;ll need to explore your favorite places to find these maps. They <em>are not</em> printed maps that you buy for traveling (they still make those?) or pick up from tourism hosts. These maps are found in <strong>public places</strong> on signs, walls, floors, computer screens, etc.</p>
 <div class="doc-instructions">
 <ol>
 <li>Find a map in the wild and photograph it. Make sure to include the entire map and that the photo is well-lit and clear.</li>
-<li>Write one paragraph for each of the following prompts:</li>
+<li>Write a brief paragraph for each of the following prompts:</li>
 </ol>
 <div style="padding-left: 2em;padding-right: 2em;">
 <ul>
@@ -133,7 +182,7 @@
 <p>Describe the map and it&rsquo;s context. What is its purpose and audience? Why is it there?</p>
 </li>
 <li>
-<p>How would you characterize it&rsquo;s style?</p>
+<p>How would you characterize it&rsquo;s style? For example, what colors, fonts, and symbols are used? Is it a 2D or 3D map? Is it interactive?</p>
 </li>
 <li>
 <p>Is the map effective in its context? What works and doesn&rsquo;t work well?</p>
@@ -142,7 +191,8 @@
 </li>
 </ul>
 <h3>Submitting the task</h3>
-<p>Upload your photo and text to the Module 3 <a href="#">discussion board</a> on Canvas by the published due date. (2 points for the photograph and 1 point for each response.)</p>
+<p>Upload your photo and text to the Module 3 <a href="https://uk.instructure.com/courses/2065404/discussion_topics/13292267">discussion board</a> on Canvas by the published due date. (2 points for the photograph and 1 point for each response.)</p>
+<div id='lab'></div>
 <h2>Lab</h2>
 <p>This lab introduces GIS, geographic information systems. Our goals are to get familiar with organizing and visualizing various spatial layers in QGIS, and begin formulating questions about our surroundings. You will not be making a finished map in this lab, but you will be creating a map that you can use in the field similar to our last module.</p>
 <h3>Table of Contents</h3>
@@ -155,6 +205,7 @@
 <li><a href="#exporting-a-map">Exporting a map</a></li>
 </ul>
 </li>
+<li><a href="#video-tutorial-20-min">Video tutorial (20 min)</a></li>
 <li><a href="#assignment">Assignment</a>
 <ul>
 <li><a href="#deliverables">Deliverables</a></li>
@@ -297,6 +348,8 @@
 <p><img src="../../images/03/l-13.jpg" alt="Enable GeoPDF option in export menu"><br>
 <em>Enable GeoPDF option in export menu</em></p>
 <p>Ok, you now have a PDF file that you can share with others. You can also open the PDF in Avenza Maps on your mobile device.</p>
+<h2 id="video-tutorial-20-min">Video tutorial (20 min)</h2>
+<iframe title='Embedded Media titled: Lab 3: GIS' width="100%"  height="400px"  src="https://uky.yuja.com/V/Video?v=8754256&node=37821295&a=103554230&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
 <h2 id="assignment">Assignment</h2>
 <p>Kentucky&rsquo;s <em>Creative GIS Club</em> has a yearly competition where they invite mappers to ask interesting questions about the spatial relationship of two overlapping map layers. They have asked you to create a PDF that shows a map with two layers and one question. The question can be anything you want, but it must be answerable by the two layers you choose.</p>
 <p>Note: You can use the map layers from this lab or find your own. If you use this lab&rsquo;s layers, you should ask a different question than the one we asked in this lab.</p>
@@ -305,11 +358,11 @@
 <p>Please follow these requirements for the assignment:</p>
 <ol>
 <li>Add two layers to the map, making sure that both are visible. (4 points)</li>
-<li>Experiment with styling of each layer to create enough contrast between the layers. (2 points)</li>
-<li>Add a text box to the layout and write a question that could be answered by the two layers. (1 point)</li>
-<li>Export the layout as a GeoPDF file. (1 point)</li>
+<li>Experiment with styling of each layer to create enough contrast between the layers. For example, make one layer a cool color like blue and the other layer a warm color like yellow. (2 points)</li>
+<li>Add a text box to the layout and write a question that could be answered by the two layers. (2 point)</li>
+<li>Export the layout as a GeoPDF file.</li>
 <li>Name the file <code>cgc-{linkblue}.pdf</code> and replace <code>{linkblue}</code> with your linkblue name. For example, <code>cgc-elmus0X.pdf</code>. (1 point)</li>
-<li>Your lab TA will add one additional requirement. (1 point)</li>
+<li>Your TA will add one additional challenge.</li>
 </ol>
 <h3 id="submitting-the-assignment">Submitting the assignment</h3>
 <p>Upload your PDF file to the Module 3 assignment on Canvas by the published due date. After the submission deadline, we&rsquo;ll try to answer some of the questions y&rsquo;all ask during lecture.</p>
@@ -321,7 +374,7 @@
  <footer class="footer fixed-bottom uk-liter-bg" id="footer">
   <div class="row footer-text">
     <div class="col-12 col-md text-center text-md-left nav-link text-dark">
-      © UKy Geography | 1944–2023
+      © UKy Geography | 1944–2024
     </div>
   </div>
 

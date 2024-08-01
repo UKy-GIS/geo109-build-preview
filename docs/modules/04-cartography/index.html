@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html><head>
+  <title>GEO 109: 04 Cartography</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Website meta description for google search results go here" />
+  <meta name="dc.relation" content="https://uky-gis.github.io/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#1A94D2" />
+  
+
+   
+  <link rel="stylesheet" href="../../css/main.min.css" media="screen" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head><body><nav class="navbar navbar-light uk-liter-bg" id='nav'>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../../">
+      <img src="https://uky-gis.github.io/graphics/logo-75th-01.svg" alt="" height="45px"
+        class="d-inline-block ">
+     <h5 class="d-inline-block font-weight-700">GEO 109</h5> 
+    </a>
+
+    <ul class="nav justify-content-start">
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Modules
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/00-intro/">  Introduction</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/01-data/">  01 Data</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/02-locate/">  02 GPS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/midterm/">  Midterm</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/04-cartography/">  04 Cartography</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/05-design/">  05 Design</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/06-3d/">  06 3D</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/final-project/">  Final Project</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+      
+      
+      
+              <li class="nav-item dropdown ">
+                <a class='nav-link dropdown-toggle ' href="#"
+                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Maps
+                </a>
+             
+                 <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/lab-01/">  Meaningful places</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/hill/">  Kentucky</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/additional/">  Additional Maps</a>
+                    </li>
+                  
+                </ul> 
+              </li>
+          
+            
+    
+    <li class="nav-item">
+      <a class='nav-link' href="../../syllabus">
+         Syllabus</a>
+      </a>
+    </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid uk-lite-bg py-2" id="singleTitle">
+  <row>
+    <h3 class="font-weight-700 align-middle text-dark mt-1">
+      04 Cartography 
+    </h3>
+  </row>
+</div>
+
+<main>
+<section class="py-3 container col-lg-8 col-xxl-6" id="documentation">
+<div class="d-flex justify-content-between  align-items-end">
+<h3>Presentation</h3>  
+<a href='../../slides/04' target='_blank'>Open in new tab</a>
+</div>
+<a href='../../slides/04' target='_blank'>
+<img src="../../images/04/intro.jpg" alt="Cover slide for Module 4" class="w-100 mt-1 mb-4">
+</a>
+<!-- <iframe src='../../slides/03' width='100%' class='slide-presentation'></iframe> -->
+<h2>Presentation Topics</h2>
+<ul>
+<li><a href="../../slides/04">Introduction</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/04/#/3">Have you started thinking about a final project?</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/04/#/23">What you learned in previous modules</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/04/#/24">Cartography and cartographic design</a>
+  <ul><li>
+  <a target='_blank' href='https://uky.yuja.com/V/Video?v=8904166&node=38473618&a=178446326&autoplay=1'>Video: Filtering data for symbology (11 min)</a>
+  </li>
+  </ul>
+  </li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/04/#/79">Map elements</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/04/#/85">Map layout</a>
+  <ul><li>
+  <a target='_blank' href='https://uky.yuja.com/V/Video?v=8904142&node=38473541&a=180437228&autoplay=1'>Video: Basics of map layout in QGIS (15 min)</a>
+  </li>
+  <li>
+  <a target='_blank' href='https://uky.yuja.com/V/Video?v=8904107&node=38473432&a=5967737&autoplay=1'>Video: Thematic map layout in QGIS (11 min)</a>
+  </li>
+  </ul>
+  </li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/04/#/92">Lab discussion</a></li>
+  <li><a href="#lab-content">Tasks</a></li>
+  <li><a href="#lab">Lab</a>
+</ul>
+<div id='lab-content'>
+<h2>Task</h2>
+<p>In this task, you will visit <a href="https://libguides.uky.edu/maps">UKy&rsquo;s Gwen Curtis Map Collection</a> and find a map that you think is appealing. You will take a photo of the map, write a few paragraphs using our provided prompts, and post the photograph and response to Canvas.</p>
+<p>You must book a time to visit the Map Collection <a href="https://libcal.uky.edu/calendar/geo109">here</a>. There are over 200 slots available in 19 different times, so you should be able to find a convenient time to visit the collection. Sarah Watson, the Map Collection Manager, will guide you through a curated selection of maps and answer questions you might have about one that you find appealing.</p>
+<p>When you peruse the collection, look for a map that speaks to you. It could be one that you think is beautiful, effective, or addresses a topic you like. It could be all of these. Then ask: What about the map do you find appealing? Investigate the map&rsquo;s design. Is it in the use of color, symbols, and fonts? Is it in the illustrations and information around the map and the story they tell? Think about the presentation as a whole: Is it persuasive? Does it make you want to visit the place? Does it make you want to take action?</p>
+<p><img src="../../slides/04/images/map-library/i2.jpg" alt="Map Collection"><br>
+<em>Sarah Watson, Map Collection Manager, showing a map from the collection.</em></p>
+<p>This task is similar to our previous <strong>Maps in the Wild</strong> task, but this time, you will be looking at printed maps with a greater variety of purposes and intended audiences.</p>
+<div class="doc-instructions">
+<ol>
+<li>Find a map in the Map Collection and photograph it. Make sure to include the entire map and that the photo is well-lit and clear.</li>
+<li>Write a paragraph for each of the following prompts:</li>
+</ol>
+<div style="padding-left: 2em;padding-right: 2em;">
+<ul>
+<li>
+<p>Describe the map&rsquo;s purpose and intended audience. For example, is it a tourist map, a political map, or a map for a specific event? Is it a reference map or a thematic map? Is it for a general audience or a particular group of people?</p>
+</li>
+<li>
+<p>Describe what you find appealing about the map. Identify and discuss specific design elements in your response.</p>
+</li>
+<li>
+<p>Is the map effective or persuasive? What works and doesn&rsquo;t work well?</p>
+</div>
+  </div>
+</li>
+</ul>
+<h3>Did you miss the library visit or want extra credit?</h3>
+<p>Find a map on <a target='_blank' href="https://www.davidrumsey.com/">David Rumsey Map Collection</a>, export an Extra Large JPEG (it will be in a zip file), download it, and extract the file on your computer. Then, follow the instructions above to write a response to the map.</p>
+<h3>Submitting the task</h3>
+<p>Upload your photo and text to the Module 4 <a href="https://uk.instructure.com/courses/2065404/assignments/11551939?module_item_id=26769256">task</a> on Canvas by the published due date. (2 points for the photograph and 1 point for each response.) If you do the extra credit, you will receive up to +2 points.</p>
+<div id='lab'></div>
+<h2>Lab</h2>
+<p>Cartography is often characterized as the art and science of map making. In previous labs, we&rsquo;ve addressed the scientific side by making and manipulating data. In this lab, we&rsquo;ll focus on the artistic side of map making. You will use QGIS to create an effective map with data that you provide or that is found in this lab. In the next module, we&rsquo;ll dive deeper into the art of map making to make maps that are also persuasive.</p>
+<h3>Table of Contents</h3>
+<!-- TOC -->
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#cartographic-style--visual-variables">Cartographic style &amp; visual variables</a></li>
+<li><a href="#map-elements">Map elements</a></li>
+<li><a href="#map-layout">Map layout</a></li>
+</ul>
+</li>
+<li><a href="#reference-map-example">Reference map example</a>
+<ul>
+<li><a href="#filtering-the-points">Filtering the points</a></li>
+<li><a href="#video-filtering-data-for-mapping-11-min">Video: Filtering data for mapping (11 min)</a></li>
+<li><a href="#map-layout-1">Map layout</a></li>
+<li><a href="#video-creating-a-map-layout-in-qgis-14-min">Video: Creating a map layout in QGIS (14 min)</a></li>
+</ul>
+</li>
+<li><a href="#thematic-map-example">Thematic map example</a>
+<ul>
+<li><a href="#normalizing-the-data">Normalizing the data</a></li>
+<li><a href="#classification-methods">Classification methods</a></li>
+<li><a href="#video-practice-classification-methods-in-qgis-11-min">Video: Practice classification methods in QGIS (11 min)</a></li>
+<li><a href="#map-layout-2">Map layout</a></li>
+</ul>
+</li>
+<li><a href="#assignment">Assignment</a>
+<ul>
+<li><a href="#deliverables">Deliverables</a></li>
+<li><a href="#submitting-the-assignment">Submitting the assignment</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="introduction">Introduction</h2>
+<p>Making an effective map depends on understanding its purpose. Maps generally fall into two categories: reference maps and thematic maps. <strong>Reference maps</strong> are designed to show the location of features and are often used for navigation. <strong>Thematic maps</strong> are designed to show the spatial distribution of a particular theme or topic. For example, a reference map might show the location of roads, rivers, and trails, while a thematic map might show the population density of a region.</p>
+<p><img src="https://live.staticflickr.com/7404/27333636335_793aa7ba3a_o.jpg" alt="Norris Watershed Trail Map">
+<em>Reference map example: Norris Watershed Trail Map, Norris, Tennessee</em></p>
+<p><img src="https://live.staticflickr.com/65535/52082564570_32a42208cd_k.jpg" alt="Kentucky Population density, 2020 Census">
+<em>Thematic map example: Kentucky population density, 2020 Census</em></p>
+<p>After understanding the purpose of your map, you can begin to think about its design. The design of a map is often referred to as its <strong>cartographic style</strong>, which includes the map&rsquo;s colors, symbols, and fonts. The goal of cartographic style is to make the map easy to read and understand. Next, we consider the supporting <strong>map elements</strong> that provide additional context and information about the map. These elements might include the title, legend, scale bar, north arrow, and source attribution. Finally, we consider the <strong>map layout</strong>, which is the arrangement of the map elements on the page.</p>
+<p>We&rsquo;ll explore these concepts for both reference and thematic maps in the following sections. For a short, friendly guide to the basic principles of map design, check out the <a href="https://www.axismaps.com/guide">Axis Cartography Guide</a>.</p>
+<h3 id="cartographic-style--visual-variables">Cartographic style &amp; visual variables</h3>
+<p>When we first start designing maps, we often enjoy fiddling with the map layers&rsquo; colors, symbols, and fonts. The key to effective map design is understanding how to use these elements to communicate information. This is where <em>visual variables</em> come in. Visual variables are the visual characteristics of a map layer that can be used to represent different features, themes, or data categories. They primary variables we&rsquo;ll use in this lab include color, size, and shape.</p>
+<p><img src="../../images/04/viz-var.jpg" alt="Visual variables"><br>
+<em>Primary visual variables: color, size, and shape</em></p>
+<h4 id="color">Color</h4>
+<p>For reference maps, we use color to distinguish different types of features. There are established conventions for color schemes. For example, we use blue to show water and green to show land. The exact blue and green colors you use can be highly debated, but the general idea is to use colors that are easy to distinguish and that don&rsquo;t clash with each other. Another concern is not picking colors for different features that are too similar. What if you used blue for both water and roads? This would make a confusing map for the viewer.</p>
+<p>For thematic maps, we often are mapping attributes in a spatial layer and using color show the distribution of values. For example, in a population map we use color to show areas with high and low population counts – light colors mean less and dark colors mean more. This type of mapping is called <em>choropleth mapping</em>.</p>
+<p><img src="../../images/04/color-schemes.jpg" alt="Picking the right color scheme for your data"><br>
+<em>Picking the right color scheme for your data</em></p>
+<p>When you pick a color scheme, you should consider the type of data you are mapping. If you are mapping a continuous variable like population, you should use a <em>sequential</em> color scheme. If you are mapping a categorical variable like land cover type, you should use a <em>qualitative/categorical</em> color scheme that uses different colors for each category. You should also be mindful of color vision challenges that people can have and use resources to help you pick colors that are accessible to everyone.</p>
+<p><img src="../../images/04/color-brewer.jpg" alt="ColorBrewer color schemes"><br>
+<em><a href="https://colorbrewer2.org">ColorBrewer2</a>: color advice for cartography</em></p>
+<p>The <a href="https://colorbrewer2.org">ColorBrewer2</a> website is a great resource for picking color schemes for your maps. It provides color schemes that are colorblind safe, print friendly, and are preinstalled in QGIS.</p>
+<h4 id="size--shape">Size &amp; shape</h4>
+<p>We use size and shape to show the relative importance of features. For example, we might use a larger circle to show a larger city or thicker line to show the relative importance of a road in a network. These are called <em>graduated symbols</em> in QGIS. We might select different shapes to show a different type of feature. For example, we might use a circle to show a city and a square to show a town. These are called <em>marker symbols</em> in QGIS.</p>
+<p>When we combine these visual variables, we create a symbol set that can show a wide variety of features. Strive to a make a unique and unified visual palette – this will take a lot (indeed, a lifetime) of experimentation, but it&rsquo;s the key for effective map design. You can save these symbol sets in QGIS and reuse them in other maps.</p>
+<p><img src="../../images/04/symbols.jpg" alt="Map symbols"><br>
+<em>Palette of map symbols</em></p>
+<h3 id="map-elements">Map elements</h3>
+<p>Often, we think of map design as the cartographic style and composition of our map layers. However, the map&rsquo;s design also includes the supporting map elements that help a viewer interpret the map. What if the map didn&rsquo;t have a title or a legend describing the cartographic style used on the map?</p>
+<p>Elements needed on all maps:</p>
+<ul>
+<li>
+<p>Title: A title provides the map&rsquo;s main subject or theme. It&rsquo;s usually placed at the top of the map and gives the map a clear purpose. A subtitle is sometimes used to elaborate on the map subject. Within these titles, a viewer should have an understanding of the <em>what</em> and <em>where</em> of the map.</p>
+</li>
+<li>
+<p>Legend: The legend explains the symbols, colors, and patterns used on the map to represent different features or categories. Not all layers need to be in the legend. For example, a base map layer like a shaded relief or aerial imagery doesn&rsquo;t need to be in the legend – it&rsquo;s usually self-explanatory.</p>
+</li>
+<li>
+<p>Source attribution &amp; date: This element provides information about the sources of the data used to create the map, information about the author, and dates for the map creation and when the data was collected. It ensures transparency and credibility. Some sources of data require exact attribution. For example, the <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> data used in this lab requires the following attribution: <code>© OpenStreetMap contributors</code> or <code>© OpenStreetMap openstreetmap.org/copyright</code>.</p>
+</li>
+</ul>
+<p>Elements needed on some maps, but especially all reference maps:</p>
+<ul>
+<li>
+<p>Scale bar: A scale bar shows the relationship between distances on the map and actual distances on the Earth&rsquo;s surface. It helps users understand the map&rsquo;s scale.</p>
+</li>
+<li>
+<p>North arrow: A north arrow indicates the orientation of the map, showing which direction is north. This helps users understand the map&rsquo;s alignment with the real-world compass directions.</p>
+</li>
+</ul>
+<p>Maps that might not need these elements include small-scale (zoomed out) continental and world maps. Depending on the map&rsquo;s projection, distance and direction north might be different in different parts of the map. In this case, a scale bar and north arrow would be misleading.</p>
+<p>Maps tell stories and often you need to provide additional information to help the viewer understand the story. These elements can be almost anything, from photographs and illustrations to even more maps. The goal with these additions to provide an immersive experience for the viewer.</p>
+<p>Optional elements:</p>
+<ul>
+<li>
+<p>Narrative text: Long-form text can be used to provide context and background information about the map&rsquo;s subject. It can be used to develop the map&rsquo;s story or provide a call to action.</p>
+</li>
+<li>
+<p>Labels: Labels are used to identify and describe geographic features, including place names, cities, rivers, roads, and landmarks.</p>
+</li>
+<li>
+<p>Insets: Insets are small maps, diagrams, illustrations, etc. that provide detailed views of specific areas or features within the main map.</p>
+</li>
+<li>
+<p>Locator map: A locator map is a small map that shows the position of the main map within a larger geographic context.</p>
+</li>
+</ul>
+<h3 id="map-layout">Map layout</h3>
+<p>The map layout is the arrangement of the map elements on the page. It should be balanced and uncluttered, with a clear <em>visual hierarchy</em>: the graphical implementation of a ranked order of map elements and cartographic style such that the most important elements have the greatest visual prominence. You could do this simply by using color as shown in this example cautioning boaters about dams on the Kentucky River.</p>
+<p><img src="../../images/04/map-example.jpg" alt="Visual hierarchy"><br>
+<em>Historical map example: Kentucky River, 1952</em></p>
+<p>The layout should also match the map&rsquo;s <em>intellectual hierarchy</em>. This is the order in which the viewer should read the presentation. For example, the viewer should first read the title, then the map, and then the legend. In the above example, the legend is a bit hard to locate because it&rsquo;s not labeled, but the use of the color red helps the viewer find it.</p>
+<p>To help with map layout, we can use a <em>grid system</em>. This is a set of guidelines that help us align and arrange the map elements. We compartmentalize the map elements into a grid of rows and columns.</p>
+<p><img src="../../images/04/layout-2.png" alt="grid system"><br>
+<em>Using a grid system to place map elements</em></p>
+<p>A more dynamic approach to layout is to use a <em>fluid system</em> where the map elements are placed in relation to each other. This technique uses empty space on the page (white or negative space) as a design element. It&rsquo;s challenging to implement, but it can be more effective for creating a visual hierarchy.</p>
+<p><img src="../../images/04/layout-3.jpg" alt="fluid system"><br>
+<em>Using a fluid system to place map elements</em></p>
+<p>Ultimately, your choice of cartographic style, supporting map elements, and page layout should help the viewer understand the map&rsquo;s story. This is the art of map making.</p>
+<h2 id="reference-map-example">Reference map example</h2>
+<p>Reference maps are designed to help people locate things. During a long week of exams, you might want to find a coffee shop. In this example, we&rsquo;ll make a reference map of the University of Kentucky campus showing the nearest coffee shops with data from <a href="https://www.openstreetmap.org">OpenStreetMap</a>.</p>
+<p>We have compiled QGIS projects for this lab with data and example layouts. Your task is to replicate the provided example in a new map layout. First, we need to download and extract the project files.</p>
+<div class="doc-instructions">
+<ol>
+<li>Visit <a href="https://uk.instructure.com/courses/2065404/files/folder/Lab%204%20maps%20and%20data">Canvas Files</a> and download the file <code>two-types-of-maps.zip</code>.</li>
+<li>Extract the zip file to the class workspace on your computer.</li>
+<li>Open the folder and find the two mapping projects and data.</li>
+<li>Double-click on the <strong>reference-map.qgz</strong> to open the project in QGIS.</li>
+</ol>
+</div>
+<p><img src="../../images/04/r-01.jpg" alt="Finding the project files"><br>
+<em>Finding the project files</em></p>
+<p>After you open the file, you should see a map of the University of Kentucky campus with a few layers. The <em>amenities</em> layer is a point layer with attributes for the type of amenity (e.g., coffee shop, restaurant, etc.) which stored in the field called <code>amenity</code>. We want to style this layer to show the coffee shops and restaurants (which could also have coffee).</p>
+<p><img src="../../images/04/r-02.jpg" alt="Categorizing the points based on the attribute amenity"><br>
+<em>Categorizing the points based on the attribute <code>amenity</code></em></p>
+<p>After the points are categorized, we can style them using marker symbols. Select <strong>SVG Marker</strong> and choose a coffee cup icon for cafe. You can change the size of the icon and the color of the fill and outline. The same approach has been done for the restaurant symbol.</p>
+<p><img src="../../images/04/r-03.jpg" alt="Using SVG markers to symbolize points"><br>
+<em>Using SVG markers to symbolize points</em></p>
+<p>Experiment with the colors and sizes of the symbols to make them more distinct. You can also add additional layers to the map. For example, you could add a layer of buildings to the map.</p>
+<p>Tip: Before you do a deep dive into a layer&rsquo;s styling, try making a duplicate of the layer. This way, you can always return to the original layer&rsquo;s style. To duplicate a layer, right-click on the layer in the <strong>Layers</strong> panel and select <strong>Duplicate</strong>. This will create a new layer with the same style as the original and is not enabled by default.</p>
+<p>Note: If you mess up and can&rsquo;t return to the original styles, you can always download the original project file again.</p>
+<h3 id="filtering-the-points">Filtering the points</h3>
+<p>Did these points come to us with just cafes and restaurants? No, they came with all sorts of amenities. We can filter the points to show only the cafes and restaurants. To do this, we right-click the layer and select <strong>Filter</strong>.</p>
+<p><img src="../../images/04/r-04.jpg" alt="Filtering points by type of amenity"><br>
+<em>Filtering points by type of amenity</em></p>
+<p>In the <em>Query Builder</em> window, we can write a query to filter the points. We want to show only the cafes and restaurants, so we can write a query that says: show the points where the amenity is cafe or restaurant.</p>
+<p><img src="../../images/04/r-05.jpg" alt="Query Builder window to filter points"><br>
+<em>Query Builder window to filter points</em></p>
+<p>You can use the <em>Operator</em> buttons to help you write the query. You can also type the query directly into the <em>Expression</em> box. The query we want is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#e6db74">&#34;amenity&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cafe&#39;</span> <span style="color:#66d9ef">or</span> <span style="color:#e6db74">&#34;amenity&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;restaurant&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- the same query can be written as
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#e6db74">&#34;amenity&#34;</span> <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;cafe&#39;</span>, <span style="color:#e6db74">&#39;restaurant&#39;</span>)
+</span></span></code></pre></div><p>Try duplicating the layer and using the query to filter the points. In the <strong>Query Builder</strong> window click the <strong>Clear</strong> to remove the query and show all the points. Then, click <strong>amenity</strong> in the <em>Fields</em> list to add it to the <em>Expression</em> box. Then, click <strong>=</strong> in the <em>Operators</em> list to add it. Finally, double-click <strong>cafe</strong>, or whatever value you want, in the <em>Values</em> box and click <strong>OK</strong>. This will show only the cafes.</p>
+<h3 id="video-filtering-data-for-mapping-11-min">Video: Filtering data for mapping (11 min)</h3>
+<p>What if you wanted to map something other than cafes and restaurants? You could use the same approach to filter the points. In this video, we&rsquo;ll show you how to filter the points to show other amenities. The last three minutes explores how to use QGIS plugins to harvest data from OpenStreetMap.</p>
+<iframe width="100%" height="500" src="https://uky.yuja.com/V/Video?v=8904166&node=38473618&a=178446326&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h3 id="map-layout-1">Map layout</h3>
+<p>After you have styled your layers, we need to create a new layout and add the map and map elements. First, let&rsquo;s inspect the example layout. In the QGIS menus, click <strong>Project &gt; Layouts &gt; campus</strong>. This will open the the layout in a new window.</p>
+<div class="doc-instructions">
+<ol start="5">
+<li>Open the <em>campus</em> layout.</li>
+<li>Right-click the page and select <strong>Page Properties</strong>.</li>
+<li>Note in the Item Properties tab that page is 11 x 17 inches. This is the finished size of the map. It can be changed here, too.</li>
+</ol>
+</div>
+<p><img src="../../images/04/r-06.jpg" alt="Inspecting the Page Properties"><br>
+<em>Inspecting the Page Properties</em></p>
+<p>Ok, let&rsquo;s create a new layout and change its default page size.</p>
+<div class="doc-instructions">
+<ol start="8">
+<li>In the QGIS menus, click <strong>Layout &gt; New Layout</strong> or select the menu button that does the same and give the layout an appropriate name. This will open the the layout in a new window.</li>
+<li>Click the empty page and change the Page Size properties to <strong>11 x 17 inches</strong> in the <em>Item Properties</em> tab.</li>
+</ol>
+</div>
+<p><img src="../../images/04/r-07.jpg" alt="Creating a new layout"><br>
+<em>Creating a new layout</em></p>
+<p><img src="../../images/04/r-08.jpg" alt="Changing the page size"><br>
+<em>Changing the page size</em></p>
+<p>Now use the <em>Elements Toolbox</em> to add the individual elements to the map.</p>
+<div class="doc-instructions">
+<ol start="10">
+<li>Add a map, legend, title &amp; subtitle, attribution, scale bar, and north arrow to the layout.</li>
+</ol>
+</div>
+<p><img src="../../images/04/r-09.jpg" alt="Adding the map elements"><br>
+<em>Adding the map elements</em></p>
+<h3 id="video-creating-a-map-layout-in-qgis-14-min">Video: Creating a map layout in QGIS (14 min)</h3>
+<p>Because the manual layout process is a visual task, we&rsquo;ve created a video that walks through the steps. You will need to practice these tools to discover your preferred design approach.</p>
+<p>Tip: Use a mouse with a scroll wheel and left- &amp; right-click buttons to best position the map elements. You can also use the arrow keys to nudge the elements. Go pro and use a dual-monitor setup to see the map and layout at the same time.</p>
+<div class="doc-instructions">
+<ol start="11">
+<li>Watch the below video.</li>
+</ol>
+</div>
+<iframe width="100%" height="500" src="https://uky.yuja.com/V/Video?v=8904142&node=38473541&a=180437228&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h2 id="thematic-map-example">Thematic map example</h2>
+<p>Thematic maps are designed to help people compare and contrast the spatial distribution of a particular theme or topic. In this example, we&rsquo;ll make a thematic map of the population density of US counties using data from the <a href="https://www.census.gov">U.S. Census Bureau</a>.</p>
+<div class="doc-instructions">
+<ol start="12">
+<li>Save your reference map example.</li>
+<li>Find the <strong>thematic-map.qgz</strong> project file in the <strong>two-types-of-maps</strong> folder and double-click to open it in QGIS.</li>
+</ol>
+</div>
+<p><img src="../../images/04/t-01.jpg" alt="Thematic map showing population density by county"><br>
+<em>Thematic map showing population density by county</em></p>
+<p>Note in the <em>Layer Styling</em> panel we use a <em>graduated color</em> style to show the population density of each county. The color scheme, a.k.a. color ramp, is a sequential color scheme that goes from light to dark representing low to high population density.</p>
+<h3 id="normalizing-the-data">Normalizing the data</h3>
+<p>One the problems of mapping the quantity of something by a polygon is that the polygons have different sizes. For example, a large county can simply contain more people than smaller counties. To account for this, we can <em>normalize</em> the population by dividing the raw count of population by the area of the county. This will give us the population density of each county.</p>
+<p>Since the attribute table has both raw population count and the area for each county, we can use the below expression for the <strong>Value</strong> field in the <em>Graduated</em> style.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>pop_count <span style="color:#f92672">/</span> square_miles
+</span></span></code></pre></div><p>You can paste this directly into the <strong>Value</strong> field or use the <em>Expression Builder</em> (button on the right) to create the expression.</p>
+<p><img src="../../images/04/t-02.jpg" alt="Using a math expression in the Value field to calculate people per square mile"><br>
+<em>Using a math expression in the <strong>Value</strong> field to calculate people per square mile</em></p>
+<p>Normalizing the data is a common technique in choropleth mapping. It allows us to compare the distribution of a theme across different sized areas. For example, we can compare the population density of the relatively smaller counties in Kentucky to counties in Arizona.</p>
+<p>Tip: If you have a raw count of something by polygon, normalize the data by dividing the raw count by the area of the polygon. This will give you the count per unit area.</p>
+<h3 id="classification-methods">Classification methods</h3>
+<p>A standard approach to visualizing quantities in choropleth mapping is to use a <em>classification method</em>. This method divides the range of values into 4-7 classes or categories, which makes it easier to interpret the map. If you use to many classes, the individual classes will be hard to read. If you use too few classes, the map will be too simple and not show a meaningful distribution of values.</p>
+<p>We have three primary classification methods to choose from in QGIS: <em>Equal Count (Quantile)</em>, <em>Equal Interval</em>, and <em>Natural Breaks (Jenks)</em>. Each method has its own strengths and weaknesses.</p>
+<p><img src="../../images/04/t-03.jpg" alt="Three classification methods"><br>
+<em>Three classification methods</em></p>
+<ul>
+<li>
+<p>Equal Count (Quantile): This method puts the same number of features in each class. For example, there will be the same number of counties in the lowest class as the highest class. This method ensures that all classes are represented on the map. This is the default method in QGIS.</p>
+</li>
+<li>
+<p>Equal Interval: This method divides the range of values into equal intervals. For example, if the range of values is 1 to 100, the values will be divided into 5 intervals of 20. If the data clusters around a few values, this method will not show the distribution of values across the range.</p>
+</li>
+<li>
+<p>Natural Breaks (Jenks): This method uses a statistical algorithm to find natural breaks in the data. This method is useful for data that clusters around a few values. It can also be used to find outliers in the data.</p>
+</li>
+</ul>
+<p>Now let&rsquo;s experiment with the classification methods. In the <em>Layer Styling</em> panel, change the number of classes and the classification method to see how it affects the map.</p>
+<div class="doc-instructions">
+<ol start="14">
+<li>Right-click the <strong>Population per square mile</strong> layer and select <strong>Duplicate</strong> as a backup.</li>
+<li>Select the original layer in the <strong>Layers</strong> panel. In the <strong>Layer Styling</strong> panel&rsquo;s classification <em>Mode</em> drop-down, select the each of the three methods discussed earlier.</li>
+<li>Experiment with the number of classes.</li>
+</ol>
+</div>
+<p>Which method gives the best interpretation of population density? Because most counties have a low population density, with a few very high density counties, the <em>Equal Count</em> method does a good job of showing the distribution of values. However, the the method and number of classes you choose depends on the data and the story you want to tell.</p>
+<p>Finally, we can create a custom classification or tweak the class values to make them more readable. For example, we can change the class values to round numbers.</p>
+<div class="doc-instructions">
+<ol start="17">
+<li>Double-click each class value and change it to a round number that is close to the original value.</li>
+</ol>
+</div>
+<p><img src="../../images/04/t-04.jpg" alt="Tweaking the class range of values"><br>
+<em>Tweaking the class range of values</em></p>
+<h3 id="video-practice-classification-methods-in-qgis-11-min">Video: Practice classification methods in QGIS (11 min)</h3>
+<p>This short video explores different classification methods and how to tweak the class values.</p>
+<iframe width="100%" height="500" src="https://uky.yuja.com/V/Video?v=8904107&node=38473432&a=5967737&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h3 id="map-layout-2">Map layout</h3>
+<p>Let&rsquo;s finish up the lab by practicing making a map layout. We&rsquo;ll use the same approach as the reference map example, but we&rsquo;ll use a fluid design to place the map elements.</p>
+<p><img src="../../images/04/t-05.jpg" alt="Practice making a thematic map layout"><br>
+<em>Practice making a thematic map layout</em></p>
+<div class="doc-instructions">
+<ol start="18">
+<li>Create a new map layout and add the map, title &amp; subtitle, legend, and source of data.</li>
+</ol>
+</div>
+<h2 id="assignment">Assignment</h2>
+<p>The <em>Bluegrass Cartography Guild</em> has commissioned you to make a map for their upcoming conference in Lexington. It can be a reference map showing the locations of things to do around campus or a thematic map showing the distribution of population in a state of your choice. You can use data from this lab or find your own. The map should be 11 x 17 inches and include a title, legend, and attribution. You should add additional map elements as needed.</p>
+<p>They also announced another option: you can surprise them with a map of your own design. If you choose this option, you should still follow the requirements below.</p>
+<p>Save your QGIS project often via the menu item <strong>Project &gt; Save</strong>.</p>
+<h3 id="deliverables">Deliverables</h3>
+<p>Please follow these requirements for the assignment:</p>
+<ol>
+<li>Add at least two layers to the map. It you make a reference map, symbolize at least one layer to show different categories. If you are making a thematic map, a.k.a. choropleth map, classify the data appropriately with 5-7 classes and a sequential color scheme. (3 points)</li>
+<li>Add a title &amp; subtitle, a legend, and text describing the source of the data and the author. Make sure the legend uses descriptive labels. (3 points)</li>
+<li>If the map is a reference map, include a scale bar and north arrow. (1 point)</li>
+<li>Design an 11 x 17 inch map layout using a grid or fluid system. Make sure the layout is balanced, has a visual hierarchy, and the page elements are not overlapping. Ensure that the text free of typos and grammatical errors. (2 point)</li>
+<li>Export the layout as a GeoPDF file.</li>
+<li>Name the file <code>bcg-linkblue.pdf</code> and replace <code>linkblue</code> with your linkblue name. For example, <code>bcg-bileil01.pdf</code>.</li>
+<li>Your TA will add one additional challenge. (1 point)</li>
+</ol>
+<h3 id="submitting-the-assignment">Submitting the assignment</h3>
+<p>Upload your PDF file to the Module 4 assignment on Canvas by the published due date.</p>
+<p>Happy cartography!</p>
+<p>.</p>
+</div>
+</section>
+</main>
+ <footer class="footer fixed-bottom uk-liter-bg" id="footer">
+  <div class="row footer-text">
+    <div class="col-12 col-md text-center text-md-left nav-link text-dark">
+      © UKy Geography | 1944–2024
+    </div>
+  </div>
+
+  
+
+  
+  
+
+  <script src="../../js/bundle.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+    charset="utf-8"></script>
+  <script src="../../js/utilities.js"></script>
+</footer></body>
+</html>

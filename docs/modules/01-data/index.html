@@ -55,6 +55,26 @@
                       <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
                     </li>
                   
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/midterm/">  Midterm</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/04-cartography/">  04 Cartography</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/05-design/">  05 Design</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/06-3d/">  06 3D</a>
+                    </li>
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/final-project/">  Final Project</a>
+                    </li>
+                  
                 </ul> 
               </li>
           
@@ -70,6 +90,10 @@
                 </a>
              
                  <ul class="dropdown-menu .dropdown-menu-end ">
+                  
+                    <li>
+                      <a class='dropdown-item ' href="../../maps/lab-01/">  Meaningful places</a>
+                    </li>
                   
                     <li>
                       <a class='dropdown-item ' href="../../maps/dsm/">  Lexington environs</a>
@@ -113,17 +137,38 @@
 <h3>Presentation</h3>   
 <a href='../../slides/01' target='_blank'>Open in new tab</a>
 </div>
-<iframe src='../../slides/01' width='100%' class='slide-presentation'></iframe>
-<h2>Week</h2>
+<a href='../../slides/01' target='_blank'>
+<img src="../../images/01/intro.jpg" alt="Cover slide for Module 1" class="w-100 mt-1 mb-4">
+</a>
+<!-- <iframe src='../../slides/01' width='100%' class='slide-presentation'></iframe> -->
+<h2>Presentation Topics</h2>
 <ul>
-<li><a href="../../slides/01">02: Data</a></li>
-<li><a href="../../slides/01/#/35">03: Creating your own</a></li>
+<li><a href="../../slides/01">Introduction</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/23">Finding your x, y</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/39">Data models</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/102">Sources of data</a>
+  <ul>
+  <li><a href="https://uky.yuja.com/V/Video?v=8545003&node=37029686&a=190930736&preload=false">Video downloading and using data (14 min)</a></li>
+  </ul>
+  </li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/106">Types of numbers</a>
+  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/111">Summary</a>
+  <li><a href="#lab-content">Tasks</a></li>
+  <li><a href="#lab">Lab</a>
+  <ul>
+    <li><a target='_blank' href="#video-tutorial-19-min">Video: Lab 1 (19 min)</a></li>
+  </ul>
+  </li>
 </ul>
 <div id='lab-content'>
-<h2>Task</h2>
+<h2>Tasks</h2>
+<h3>Reading</h3>
+<p>Read the first chapter (4 pages) in Mark Monmonier&rsquo;s book, <em>How to Lie with Maps</em>. <a style='text-decoration: none;' target="_blank"
+href="https://uk.instructure.com/courses/2065404/files?preview=106893033">🔗</a> (link goes to Canvas)</p>
+<h3>Find four locations</h3>
 <p>Maps are unique among visual media formats in that they attempt to show the location of things on the planet in relationship to each other. Because maps can be so useful, we often accept them as truthful representations. But, we&rsquo;ll discover that all maps lie in some way, and they have to, otherwise maps become unusable.</p>
 <p>One of the ways that maps lie is by <em>omission</em>. Whether by author or algorithm, a map shows a only small, curated selection of what actually exists. This selection begs the questions, &ldquo;Why show me this but not that? What is the intention of this map?&rdquo;</p>
-<h3>Deliverables</h3>
+<h4>Deliverables</h4>
 <p>To complete this task, use your favorite map(s) and explore Lexington and the UK campus. Do not go outside of New Circle Road (look on a map 😊 if you&rsquo;re not familiar with Lexington).</p>
 <p>Please follow these requirements for this task:</p>
 <ol>
@@ -137,8 +182,9 @@
 </li>
 </ol>
 <p>This task is worth 2 pts (4 locations @ 0.5 pts each).</p>
-<h3>Submitting the task</h3>
+<h4>Submitting the task</h4>
 <p>Provide a text submission to the Module 1 Task on Canvas by the published due date.</p>
+<div id="lab"> </div>
 <h2>Lab</h2>
 <p>In this lab we will explore how to take observations of places we find important and encode them into a data format that can be stored, shared, and mapped. We will discover that we can locate any place on the planet with two numbers – an elegant and powerful concept. We will then visualize this data in our primary mapping application, QGIS.</p>
 <h3>Table of Contents</h3>
@@ -156,18 +202,19 @@
 <li><a href="#creating-new-features">Creating new features</a></li>
 </ul>
 </li>
-<li><a href="#making-a-quick-visualization-in-qgis">Making a quick visualization in QGIS</a>
-<ul>
-<li><a href="#adding-a-csv-layer-in-qgis">Adding a CSV layer in QGIS</a></li>
-</ul>
-</li>
-<li><a href="#video-tutorial-19-min">Video tutorial (19 min)</a></li>
+<li><a href="#visualizing-the-data">Visualizing the data</a></li>
 <li><a href="#assignment">Assignment</a>
 <ul>
 <li><a href="#deliverables">Deliverables</a></li>
 <li><a href="#submitting-the-assignment">Submitting the assignment</a></li>
 </ul>
 </li>
+<li><a href="#addendum-making-a-quick-visualization-in-qgis">Addendum: Making a quick visualization in QGIS</a>
+<ul>
+<li><a href="#adding-a-csv-layer-in-qgis">Adding a CSV layer in QGIS</a></li>
+</ul>
+</li>
+<li><a href="#video-tutorial-19-min">Video tutorial (19 min)</a></li>
 </ul>
 <!-- /TOC -->
 <h2 id="introduction">Introduction</h2>
@@ -178,7 +225,7 @@
 <p><img src="../../images/01/mm-02.jpg" alt="mental map"><br>
 <em>The Arboretum in Lexington, Kentucky</em></p>
 <p>Both images show the hallmarks of a classic map; a depiction of where things (the observations) are related to one another, a title that describes the theme, a legend that explains the symbols, and a scale that shows the relationship between the map and the real world.</p>
-<p>However, we see notable differents in how the mapmakers see their world. Jessica shows a dangerous area to northwest and the scale is applied only to driving distances, her primary mode of transportation. The Arboretum map uses a grid to more precisely locate and measure things – indeed, a goal of many maps – and the color shading attempts to show relative elevations.</p>
+<p>However, we see notable differences in how the mapmakers see their world. Jessica shows a dangerous area to northwest and the scale is applied only to driving distances, her primary mode of transportation. The Arboretum map uses a grid to more precisely locate and measure things – indeed, a goal of many maps – and the color shading attempts to show relative elevations.</p>
 <p>Let&rsquo;s examine Angelique&rsquo;s &lsquo;map&rsquo; of campus. First, can we accept this as a map without a scale or legend?</p>
 <p><img src="../../slides/01/images/mm/03.jpg" alt="mental map"><br>
 <em>Angelique&rsquo;s Daily Route</em></p>
@@ -226,7 +273,7 @@
 <div class="doc-instructions">
 <ol start="5">
 <li>
-<p>Open your favorite browser and <a download href="https://newmaps.xyz/data/01/hello-world.csv">follow this link</a> to download the file. The file will likely download to your <strong>Downloads</strong> directory.</p>
+<p>Open your favorite browser and <a download href="https://uky-gis.github.io/geo109/data/01/hello-world.csv">follow this link</a> to download the file. The file will likely download to your <strong>Downloads</strong> directory.</p>
 </li>
 <li>
 <p>Move the file to your <code>lab-01</code> directory.</p>
@@ -250,7 +297,7 @@
 <em>Viewing a CSV file</em></p>
 <p>CSV files are one of the most common data formats to store spatial data. They are simple text files that can be read by almost any application. The file is a table with rows and columns. The first row is called the <em>header</em> and contains the names of the columns. The remaining rows are the <em>records</em> and contain the data. In this case, we have three columns and one record. When records represent geographical points, we often refer to them as <em>features</em>. This is a simple example of a <em>tabular</em> data type.</p>
 <p>Let&rsquo;s now examine the CSV format in some detail. Commas are special characters that separate columns, though other characters could be used instead, e.g., the <code>tab</code> or pipe <code>|</code> characters. The CSV can encode two types of values, <em>numbers</em> (quantities) and <em>strings</em> (sequences of characters).</p>
-<p>How you type them in the CSV, defines their values. Numbers are wrapped in any quotes: <code>123.456</code>. Strings are always wrapped in double quotes: <code>&quot;This is literally just a string of characters with a beginning and an end.&quot;</code>.</p>
+<p>How you type them in the CSV, defines their values. Numbers are not wrapped in quotes: <code>123.456</code>. Strings are always wrapped in double quotes: <code>&quot;This is literally just a string of characters with a beginning and an end.&quot;</code></p>
 <p>The first two columns are numbers representing the latitude and longitude of the point. Latitude measures the distance from the equator (0 degrees) and ranges from -90 to 90 degrees. Longitude measures the distance from the prime meridian in London, England (0 degrees) and ranges from -180 to 180 degrees. The third column is a string representing the name of the point.</p>
 <p>So, where is this location? We see that the latitude is positive (northern hemisphere) and the longitude is negative (western hemisphere) – might we be in North America? Let&rsquo;s use <a href="https://www.google.com/maps">Google Maps</a> to find out.</p>
 <div class="doc-instructions">
@@ -288,7 +335,7 @@
 </span></span><span style="display:flex;"><span>38.041704,-84.504288,&#34;One pinball machine @ The Cornerstone&#34;
 </span></span><span style="display:flex;"><span>38.053765,-84.486388,&#34;Arcadium has Galaga!&#34;
 </span></span><span style="display:flex;"><span>38.057173,-84.518648,&#34;The Burl Arcade has multiple pinballs. Let&#39;s tilt 🤪&#34;
-</span></span></code></pre></div><p>We now have a file that we can share our favorite gaming locations with friends as simply as texting the content of the file. However, you might be saying, &ldquo;I can just tell my friends to Google these locations.&rdquo; That&rsquo;s true, but what if we had locations that were not indexed by a search engine? For example, what if we wanted to share a favorite pinic spot or the best place to watch a sunset? Latitude and longitude is the most concise way to share a location anywhere on the planet. 🤯</p>
+</span></span></code></pre></div><p>We now have a file that we can share our favorite gaming locations with friends as simply as texting the content of the file. However, you might be saying, &ldquo;I can just tell my friends to Google these locations.&rdquo; That&rsquo;s true, but what if we had locations that were not indexed by a search engine? For example, what if we wanted to share a favorite picnic spot or the best place to watch a sunset? Latitude and longitude is the most concise way to share a location anywhere on the planet. 🤯</p>
 <p>Let&rsquo;s now make a quick visualization of these locations in QGIS to verify that we have selected accurate locations.</p>
 <div class="doc-instructions">
 <ol start="11">
@@ -296,7 +343,23 @@
 </ol>
 </div>
 <p>After making some edits to the CSV file, save the file in Visual Studio Code, e.g., in the application menu, find <strong>File &gt; Save</strong>.</p>
-<h2 id="making-a-quick-visualization-in-qgis">Making a quick visualization in QGIS</h2>
+<h2 id="visualizing-the-data">Visualizing the data</h2>
+<p>GeoJSON.io is a simple web application that allows us to visualize spatial data. We can copy and paste the contents of the CSV file into the application and see the locations on a map. Let&rsquo;s use this tool to verify that our locations are correct.</p>
+<h2 id="assignment">Assignment</h2>
+<p>A local organization called <em>LexRex</em> wants to create a map of the coolest places to visit and recreate in downtown Lexington. They are particularly interested in little-known, ecclectic hidden gems. They don&rsquo;t have any data and have asked you to help them locate four places.</p>
+<p>In this assignment, you will create a CSV file containing the latitude, longitude, and a message describing the feature for the required four locations. Make sure you have worked through the lab documentation above before you start the assignment.</p>
+<h3 id="deliverables">Deliverables</h3>
+<p>Please follow these requirements for the assignment:</p>
+<ol>
+<li>Create a CSV file containing the latitude, longitude, and a message describing the feature for the required four locations. The locations and message you want to show are completely up to you – but try to have fun. No location should exist outside of New Circle Road. (6 points @ 1.5 points each)</li>
+<li>For the feature&rsquo;s message field value, make sure there is only one pair of double quotes around the message. For example, <code>&quot;This is a message&quot;</code>. If you have extra double quotes, the CSV file will not load correctly in QGIS. That means, you&rsquo;ll need to figure out how to make a message for the feature that does not contain double quotes. (2 point)</li>
+<li>Name the file <code>lexrex-{linkblue}.csv</code> and replace <code>{linkblue}</code> with your linkblue name. For example, <code>lexrex-TaySwi01.csv</code>. (1 point)</li>
+<li>You can use the <code>hello-world.csv</code> file as a template. But, make sure to delete the example data and replace it with your own data. (1 point)</li>
+</ol>
+<h3 id="submitting-the-assignment">Submitting the assignment</h3>
+<p>Upload your CSV file to the Module 1 assignment on Canvas by the published due date. After the submission deadline, we will have a friendly competition in lecture to see who and what is the center of cool in Lexington.</p>
+<p>Good luck!</p>
+<h2 id="addendum-making-a-quick-visualization-in-qgis">Addendum: Making a quick visualization in QGIS</h2>
 <p>Mapmaking is a rather complex endeavor and requires specialized software. We&rsquo;ll use free and open source software (FOSS) applications to create our maps, which means that we can share our data with others and they can use the same software to view and edit it.</p>
 <p>In this section of the lab, we&rsquo;ll tiptoe into the world of <a href="https://qgis.org/en/site/">QGIS</a>, our main, open source mapping application. You&rsquo;ll likely want to try this part in the lab, but you can also try it at home. QGIS is available for Windows, macOS, and Linux.</p>
 <p>Find QGIS in the Start Menu on Windows or in the Applications folder on macOS. (Note: On macOS, the first time you launch QGIS, you need to right-click open.)</p>
@@ -344,27 +407,13 @@
 <p>You now should have enough experience to move on the the assignment.</p>
 <h2 id="video-tutorial-19-min">Video tutorial (19 min)</h2>
 <iframe title='Embedded Media titled: L-01' width="100%"  height="400px"  src="https://uky.yuja.com/V/Video?v=8389499&node=35576132&a=160117916&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
-<h2 id="assignment">Assignment</h2>
-<p>A local organization called <em>LexRex</em> wants to create a map of the coolest places to visit and recreate in downtown Lexington. They are particularly interested in little-known, ecclectic hidden gems. They don&rsquo;t have any data and have asked you to help them locate four places.</p>
-<p>In this assignment, you will create a CSV file containing the latitude, longitude, and a message describing the feature for the required four locations. Make sure you have worked through the lab documentation above before you start the assignment.</p>
-<h3 id="deliverables">Deliverables</h3>
-<p>Please follow these requirements for the assignment:</p>
-<ol>
-<li>Create a CSV file containing the latitude, longitude, and a message describing the feature for the required four locations. The locations and message you want to show are completely up to you – but try to have fun. No location should exist outside of New Circle Road. (6 points @ 1.5 points each)</li>
-<li>For the feature&rsquo;s message field value, make sure there is only one pair of double quotes around the message. For example, <code>&quot;This is a message&quot;</code>. If you have extra double quotes, the CSV file will not load correctly in QGIS. That means, you&rsquo;ll need to figure out how to make a message for the feature that does not contain double quotes. (2 point)</li>
-<li>Name the file <code>lexrex-{linkblue}.csv</code> and replace <code>{linkblue}</code> with your linkblue name. For example, <code>lexrex-TaySwi01.csv</code>. (1 point)</li>
-<li>You can use the <code>hello-world.csv</code> file as a template. But, make sure to delete the example data and replace it with your own data. (1 point)</li>
-</ol>
-<h3 id="submitting-the-assignment">Submitting the assignment</h3>
-<p>Upload your CSV file to the Module 1 assignment on Canvas by the published due date. After the submission deadline, we will have a friendly competition in lecture to see who and what is the center of cool in Lexington.</p>
-<p>Good luck!</p>
 </div>
 </section>
 </main>
  <footer class="footer fixed-bottom uk-liter-bg" id="footer">
   <div class="row footer-text">
     <div class="col-12 col-md text-center text-md-left nav-link text-dark">
-      © UKy Geography | 1944–2023
+      © UKy Geography | 1944–2024
     </div>
   </div>
 

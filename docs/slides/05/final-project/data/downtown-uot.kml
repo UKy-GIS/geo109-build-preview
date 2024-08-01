@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <Schema id="schema0" name="schema0">
+      <SimpleField name="Description" type="string"/>
+      <SimpleField name="pdfmaps_photos" type="string">
+        <displayName>Photos</displayName>
+      </SimpleField>
+      <SimpleField name="Photo Name" type="string"/>
+      <SimpleField name="Photo Date" type="string"/>
+      <SimpleField name="Photo Timestamp" type="string"/>
+      <SimpleField name="Photo Location" type="string"/>
+      <SimpleField name="Photo Altitude" type="string"/>
+      <SimpleField name="Photo Orientation" type="string"/>
+      <SimpleField name="Device Type" type="string"/>
+    </Schema>
+    <Folder>
+      <styleUrl>#style0</styleUrl>
+      <name>Layer</name>
+      <ExtendedData>
+        <SchemaData schemaUrl="#schema0"/>
+      </ExtendedData>
+      <Placemark>
+        <name>Chase 5 P</name>
+        <TimeStamp>
+          <when>2023-10-21T11:38:07-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.4944028929663,38.045190610027,292
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cyanide Cove 6 P</name>
+        <TimeStamp>
+          <when>2023-10-21T12:57:14-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.5035446156603,38.0473528476786,297
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Flat Top 0</name>
+        <TimeStamp>
+          <when>2023-10-21T13:08:24-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.4999352068824,38.0464183999991,294.321009559455
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Helix 6</name>
+        <TimeStamp>
+          <when>2023-10-21T11:57:51-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.4964966923785,38.0447524041292,289.654075582311
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hyatt 6 P</name>
+        <TimeStamp>
+          <when>2023-10-21T12:26:05-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.4994213898522,38.0486394698156,289
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Library 7 P</name>
+        <TimeStamp>
+          <when>2023-10-21T12:07:59-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.4970943220747,38.0456154048799,289.460440531227
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Monopoly Bay 6 P</name>
+        <TimeStamp>
+          <when>2023-10-21T12:16:09-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.4980967577476,38.0473702882316,289.453973285384
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pam V 8</name>
+        <TimeStamp>
+          <when>2023-10-21T11:27:36-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.4950500597102,38.0464534694685,294.284765216467
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pmc 3 P</name>
+        <TimeStamp>
+          <when>2023-10-21T11:47:10-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.4921283797216,38.043430577999,296
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rose Swirl 6</name>
+        <TimeStamp>
+          <when>2023-10-21T12:35:25-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.4991183840525,38.0489815771934,289.449496279147
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Town Branch 4 P</name>
+        <TimeStamp>
+          <when>2023-10-21T12:48:06-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.5040155947995,38.0509514501673,285.231259933115
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Town Branch Commons 0.5</name>
+        <TimeStamp>
+          <when>2023-10-21T13:16:01-04:00</when>
+        </TimeStamp>
+        <styleUrl>#style1</styleUrl>
+        <Point>
+          <coordinates>
+            -84.497488063216,38.0448668301244,289
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Style id="style0">
+      <IconStyle>
+        <color>7f2e80ff</color>
+        <Icon>
+          <href>http://download.avenza.com/images/pdfmaps_icons/red_pin.png</href>
+        </Icon>
+        <hotSpot x="0.5" xunits="fraction" y="0.5" yunits="fraction"/>
+      </IconStyle>
+      <LineStyle>
+        <color>ff2e80ff</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f2e80ff</color>
+      </PolyStyle>
+    </Style>
+    <Style id="style1">
+      <IconStyle>
+        <Icon>
+          <href>http://download.avenza.com/images/pdfmaps_icons/red_pin.png</href>
+        </Icon>
+        <hotSpot x="0.5" xunits="fraction" y="0.5" yunits="fraction"/>
+      </IconStyle>
+    </Style>
+  </Document>
+</kml>
