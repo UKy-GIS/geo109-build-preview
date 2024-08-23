@@ -47,30 +47,6 @@
                       <a class='dropdown-item ' href="../../modules/01-data/">  01 Data</a>
                     </li>
                   
-                    <li>
-                      <a class='dropdown-item ' href="../../modules/02-locate/">  02 GPS</a>
-                    </li>
-                  
-                    <li>
-                      <a class='dropdown-item ' href="../../modules/03-analysis/">  03 GIS</a>
-                    </li>
-                  
-                    <li>
-                      <a class='dropdown-item ' href="../../modules/midterm/">  Midterm</a>
-                    </li>
-                  
-                    <li>
-                      <a class='dropdown-item ' href="../../modules/04-cartography/">  04 Cartography</a>
-                    </li>
-                  
-                    <li>
-                      <a class='dropdown-item ' href="../../modules/05-design/">  05 Design</a>
-                    </li>
-                  
-                    <li>
-                      <a class='dropdown-item ' href="../../modules/final-project/">  Final Project</a>
-                    </li>
-                  
                 </ul> 
               </li>
           
@@ -139,29 +115,29 @@
 <!-- <iframe src='../../slides/01' width='100%' class='slide-presentation'></iframe> -->
 <h2>Presentation Topics</h2>
 <ul>
-<li><a href="../../slides/01">Introduction</a></li>
+<li><a href="../../slides/01">01: Introduction</a></li>
+<ul>
   <li><a href="https://uky-gis.github.io/geo109/slides/01/#/23">Finding your x, y</a></li>
   <li><a href="https://uky-gis.github.io/geo109/slides/01/#/39">Data models</a></li>
-  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/102">Sources of data</a>
-  <ul>
-  <li><a href="https://uky.yuja.com/V/Video?v=8545003&node=37029686&a=190930736&preload=false">Video downloading and using data (14 min)</a></li>
-  </ul>
+  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/102">Sources of data</a></li>
   </li>
-  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/106">Types of numbers</a>
-  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/111">Summary</a>
-  <li><a href="#lab-content">Tasks</a></li>
-  <li><a href="#lab">Lab</a>
-  <ul>
-    <li><a target='_blank' href="#video-tutorial-19-min">Video: Lab 1 (19 min)</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/106">Types of numbers</a></li>
+  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/111">Summary</a></li>
+  </li>
   </ul>
+</ul>
+<h2>Module requirements</h2>
+<ul>
+<li><a href="#lab-content">Tasks</a></li>
+  <li><a href="#lab">Lab</a>
   </li>
 </ul>
 <div id='lab-content'>
 <h2>Tasks</h2>
 <h3>Reading</h3>
-<p>Read the first chapter (4 pages) in Mark Monmonier&rsquo;s book, <em>How to Lie with Maps</em>. <a style='text-decoration: none;' target="_blank"
-href="https://uk.instructure.com/courses/2065404/files?preview=106893033">🔗</a> (link goes to Canvas)</p>
-<h3>Find four locations</h3>
+<p>Read the first chapter (4 pages) in Mark Monmonier&rsquo;s book, <a style='text-decoration: none;' target="_blank"
+href="https://uk.instructure.com/files/110614727/download?download_frd=1"><em>How to Lie with Maps</em></a>.</p>
+<h4>Find four locations</h4>
 <p>Maps are unique among visual media formats in that they attempt to show the location of things on the planet in relationship to each other. Because maps can be so useful, we often accept them as truthful representations. But, we&rsquo;ll discover that all maps lie in some way, and they have to, otherwise maps become unusable.</p>
 <p>One of the ways that maps lie is by <em>omission</em>. Whether by author or algorithm, a map shows a only small, curated selection of what actually exists. This selection begs the questions, &ldquo;Why show me this but not that? What is the intention of this map?&rdquo;</p>
 <h4>Deliverables</h4>
@@ -201,6 +177,7 @@ href="https://uk.instructure.com/courses/2065404/files?preview=106893033">🔗</
 <li><a href="#visualizing-the-data">Visualizing the data</a></li>
 <li><a href="#assignment">Assignment</a>
 <ul>
+<li><a href="#video-tutorial-12-min">Video tutorial (12 min)</a></li>
 <li><a href="#deliverables">Deliverables</a></li>
 <li><a href="#submitting-the-assignment">Submitting the assignment</a></li>
 </ul>
@@ -208,9 +185,9 @@ href="https://uk.instructure.com/courses/2065404/files?preview=106893033">🔗</
 <li><a href="#addendum-making-a-quick-visualization-in-qgis">Addendum: Making a quick visualization in QGIS</a>
 <ul>
 <li><a href="#adding-a-csv-layer-in-qgis">Adding a CSV layer in QGIS</a></li>
+<li><a href="#addendum-video-tutorial-8-min">Addendum video tutorial (8 min)</a></li>
 </ul>
 </li>
-<li><a href="#video-tutorial-19-min">Video tutorial (19 min)</a></li>
 </ul>
 <!-- /TOC -->
 <h2 id="introduction">Introduction</h2>
@@ -340,16 +317,34 @@ href="https://uk.instructure.com/courses/2065404/files?preview=106893033">🔗</
 </div>
 <p>After making some edits to the CSV file, save the file in Visual Studio Code, e.g., in the application menu, find <strong>File &gt; Save</strong>.</p>
 <h2 id="visualizing-the-data">Visualizing the data</h2>
-<p>GeoJSON.io is a simple web application that allows us to visualize spatial data. We can copy and paste the contents of the CSV file into the application and see the locations on a map. Let&rsquo;s use this tool to verify that our locations are correct.</p>
+<p><a href="https://geojson.io">GeoJSON.io</a> is a simple web application that allows us to visualize our spatial data – and make changes in our CSV if needed. Let&rsquo;s use this website to verify that our locations are correct.</p>
+<div class="doc-instructions">
+<ol start="12">
+<li>Open <a href="https://geojson.io">GeoJSON.io</a> in your browser.</li>
+<li>Drag and drop the CSV file into the GeoJSON.io window.</li>
+</ol>
+</div>
+<p><img src="../../images/01/viz-01.jpg" alt="Drag and drop the CSV file into the GeoJSON.io window"><br>
+<em>Drag and drop the CSV file into the GeoJSON.io window</em></p>
+<div class="doc-instructions">
+<ol start="14">
+<li>Verify that the locations represent the places you intended.</li>
+</ol>
+</div>
+<p><img src="../../images/01/viz-02.jpg" alt="Do the points fall on your locations?"><br>
+<em>Do the points fall on your locations?</em></p>
+<p>If the points are correctly located and attributed, you are ready to submit the assignment. Make sure to follow the lab deliverables below. If not, then make the necessary changes in VS Code (or another text editor) and re-check the CSV file to GeoJSON.io.</p>
 <h2 id="assignment">Assignment</h2>
-<p>A local organization called <em>LexRex</em> wants to create a map of the coolest places to visit and recreate in downtown Lexington. They are particularly interested in little-known, ecclectic hidden gems. They don&rsquo;t have any data and have asked you to help them locate four places.</p>
+<p>A local organization called <em>LexRex</em> wants to create a map of the coolest places to visit and recreate in downtown Lexington. They are particularly interested in little-known, eclectic hidden gems. They don&rsquo;t have any data and have asked you to help them locate four places.</p>
 <p>In this assignment, you will create a CSV file containing the latitude, longitude, and a message describing the feature for the required four locations. Make sure you have worked through the lab documentation above before you start the assignment.</p>
+<h3 id="video-tutorial-12-min">Video tutorial (12 min)</h3>
+<iframe title='Lab-01: Data' width="100%" height="450"  src="https://uky.yuja.com/V/Video?v=10951937&node=47903300&a=145858892&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
 <h3 id="deliverables">Deliverables</h3>
 <p>Please follow these requirements for the assignment:</p>
 <ol>
-<li>Create a CSV file containing the latitude, longitude, and a message describing the feature for the required four locations. The locations and message you want to show are completely up to you – but try to have fun. No location should exist outside of New Circle Road. (6 points @ 1.5 points each)</li>
-<li>For the feature&rsquo;s message field value, make sure there is only one pair of double quotes around the message. For example, <code>&quot;This is a message&quot;</code>. If you have extra double quotes, the CSV file will not load correctly in QGIS. That means, you&rsquo;ll need to figure out how to make a message for the feature that does not contain double quotes. (2 point)</li>
-<li>Name the file <code>lexrex-{linkblue}.csv</code> and replace <code>{linkblue}</code> with your linkblue name. For example, <code>lexrex-TaySwi01.csv</code>. (1 point)</li>
+<li>Create a CSV file containing the latitude, longitude, and a message describing the feature for the required four locations. The locations and message you want to show are completely up to you – but try to have fun. No location should exist outside of New Circle Road. (4 points @ 1 point each)</li>
+<li>Make sure the CSV is properly formatted. The field order and field names must be: <code>lat,lon,message</code>. For the feature&rsquo;s message field value, make sure there is only one pair of double quotes around the message. For example, <code>&quot;This is a message&quot;</code>. If you have extra double quotes, the CSV file will not load correctly. That means, you&rsquo;ll need to figure out how to make a message for the feature that does not contain double quotes. (4 points @ 2 points each)</li>
+<li>Name the file using <code>lexrex</code> and your linkblue name in the following format: <code>lexrex-{linkblue}.csv</code> and replace <code>{linkblue}</code> with your linkblue name. For example, if Taylor Swift made a submission, it might be: <code>lexrex-TaySwi01.csv</code>. (1 point)</li>
 <li>You can use the <code>hello-world.csv</code> file as a template. But, make sure to delete the example data and replace it with your own data. (1 point)</li>
 </ol>
 <h3 id="submitting-the-assignment">Submitting the assignment</h3>
@@ -357,10 +352,10 @@ href="https://uk.instructure.com/courses/2065404/files?preview=106893033">🔗</
 <p>Good luck!</p>
 <h2 id="addendum-making-a-quick-visualization-in-qgis">Addendum: Making a quick visualization in QGIS</h2>
 <p>Mapmaking is a rather complex endeavor and requires specialized software. We&rsquo;ll use free and open source software (FOSS) applications to create our maps, which means that we can share our data with others and they can use the same software to view and edit it.</p>
-<p>In this section of the lab, we&rsquo;ll tiptoe into the world of <a href="https://qgis.org/en/site/">QGIS</a>, our main, open source mapping application. You&rsquo;ll likely want to try this part in the lab, but you can also try it at home. QGIS is available for Windows, macOS, and Linux.</p>
+<p>In this addendum to the lab, we&rsquo;ll tiptoe into the world of <a href="https://qgis.org/en/site/">QGIS</a>, our main, open source mapping application. You&rsquo;ll likely want to try this part in the lab, but you can also try it at home. QGIS is available for Windows, macOS, and Linux.</p>
 <p>Find QGIS in the Start Menu on Windows or in the Applications folder on macOS. (Note: On macOS, the first time you launch QGIS, you need to right-click open.)</p>
 <div class="doc-instructions">
-<ol start="12">
+<ol>
 <li>Open QGIS</li>
 </ol>
 </div>
@@ -369,7 +364,7 @@ href="https://uk.instructure.com/courses/2065404/files?preview=106893033">🔗</
 <em>First view of QGIS</em></p>
 <p>QGIS is a powerful application with many features, but we&rsquo;ll only use a few of them in this lab. For now, let&rsquo;s just get a feel for the application.</p>
 <div class="doc-instructions">
-<ol start="13">
+<ol start="2">
 <li>Create a new project in QGIS</li>
 <li>Add a basemap to the project</li>
 </ol>
@@ -390,7 +385,7 @@ href="https://uk.instructure.com/courses/2065404/files?preview=106893033">🔗</
 <h3 id="adding-a-csv-layer-in-qgis">Adding a CSV layer in QGIS</h3>
 <p>When we add a text file that contains locations, we need to tell QGIS how to interpret the file. In our case, we need to tell QGIS that the file contains latitude and longitude values.</p>
 <div class="doc-instructions">
-<ol start="15">
+<ol start="4">
 <li>View your CSV file in QGIS as a spatial layer.</li>
 </ol>
 </div>
@@ -401,8 +396,10 @@ href="https://uk.instructure.com/courses/2065404/files?preview=106893033">🔗</
 <p><img src="../../images/01/lab-13.jpg" alt="Viewing CSV point layer on the map"><br>
 <em>Viewing CSV point layer on the map</em></p>
 <p>You now should have enough experience to move on the the assignment.</p>
-<h2 id="video-tutorial-19-min">Video tutorial (19 min)</h2>
-<iframe title='Embedded Media titled: L-01' width="100%"  height="400px"  src="https://uky.yuja.com/V/Video?v=8389499&node=35576132&a=160117916&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<h3 id="addendum-video-tutorial-8-min">Addendum video tutorial (8 min)</h3>
+<iframe title='Lab-01 Addendum, using QGIS to plot CSV points' width="100%"  height="450"  src="https://uky.yuja.com/V/Video?v=10951916&node=47902902&a=65822878&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+.   
+<p>.</p>
 </div>
 </section>
 </main>

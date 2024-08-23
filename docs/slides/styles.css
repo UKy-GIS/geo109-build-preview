@@ -1,0 +1,21 @@
+.dark-background {
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.light-background {
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.pink-text {
+    color: deeppink;
+}
+
+.reveal blockquote {
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: 2rem auto;
+}
