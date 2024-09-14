@@ -47,6 +47,10 @@
                       <a class='dropdown-item ' href="../../modules/01-data/">  01 Data</a>
                     </li>
                   
+                    <li>
+                      <a class='dropdown-item ' href="../../modules/02-locate/">  02 GPS</a>
+                    </li>
+                  
                 </ul> 
               </li>
           
@@ -117,14 +121,19 @@
 <ul>
 <li><a href="../../slides/01">01: Introduction</a></li>
 <ul>
-  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/23">Finding your x, y</a></li>
-  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/39">Data models</a></li>
-  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/102">Sources of data</a></li>
+  <li><a href="../../slides/01/#/25">What is data?</a></li>
+  <li><a href="../../slides/01/#/38">Finding locations on Earth</a></li>
+  <li><a href="../../slides/01/#/55">Data models</a></li>
+  <li><a href="../../slides/01/#/74">Practice making points, lines, and polygons</a></li>
+  <li><a href="../../slides/01/#/122">Sources of data</a></li>
   </li>
-  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/106">Types of numbers</a></li>
-  <li><a href="https://uky-gis.github.io/geo109/slides/01/#/111">Summary</a></li>
+  <li><a href="../../slides/01/#/127">Types of numbers</a></li>
+  <li><a href="../../slides/01/#/132">Summary</a></li>
   </li>
-  </ul>
+  <li><a href="../../slides/01/#/138">Appendix: data formats we commonly use</a></li>
+  <li><a href="../../slides/01/geo109-01.pdf">Slide notes</a></li>
+  </li>
+</ul>
 </ul>
 <h2>Module requirements</h2>
 <ul>
@@ -137,7 +146,7 @@
 <h3>Reading</h3>
 <p>Read the first chapter (4 pages) in Mark Monmonier&rsquo;s book, <a style='text-decoration: none;' target="_blank"
 href="https://uk.instructure.com/files/110614727/download?download_frd=1"><em>How to Lie with Maps</em></a>.</p>
-<h4>Find four locations</h4>
+<h3>Task 1: Find four locations</h3>
 <p>Maps are unique among visual media formats in that they attempt to show the location of things on the planet in relationship to each other. Because maps can be so useful, we often accept them as truthful representations. But, we&rsquo;ll discover that all maps lie in some way, and they have to, otherwise maps become unusable.</p>
 <p>One of the ways that maps lie is by <em>omission</em>. Whether by author or algorithm, a map shows a only small, curated selection of what actually exists. This selection begs the questions, &ldquo;Why show me this but not that? What is the intention of this map?&rdquo;</p>
 <h4>Deliverables</h4>
@@ -158,7 +167,7 @@ href="https://uk.instructure.com/files/110614727/download?download_frd=1"><em>Ho
 <p>Provide a text submission to the Module 1 Task on Canvas by the published due date.</p>
 <div id="lab"> </div>
 <h2>Lab</h2>
-<p>In this lab we will explore how to take observations of places we find important and encode them into a data format that can be stored, shared, and mapped. We will discover that we can locate any place on the planet with two numbers – an elegant and powerful concept. We will then visualize this data in our primary mapping application, QGIS.</p>
+<p>In this lab we will explore how to take observations of places we find important and encode them into a data format that can be stored, shared, and mapped. We will discover that we can locate any place on the planet with two numbers – an elegant and powerful concept. We will then visualize this data and explore our primary mapping application, QGIS.</p>
 <h3>Table of Contents</h3>
 <!-- TOC -->
 <ul>
@@ -379,9 +388,8 @@ href="https://uk.instructure.com/files/110614727/download?download_frd=1"><em>Ho
 <p>After you verify that you have entered the URL correctly, click <strong>OK</strong>. You should now see the new layer in the <strong>Browser &gt; XYZ Tiles</strong> panel. Double-click the layer to add it to the map. You should now see something like this:</p>
 <p><img src="../../images/01/lab-11.jpg" alt="Adding new layer to the map"><br>
 <em>Adding new layer to the map</em></p>
-<p>As we can see in this screen capture, we can add many base maps. A favorite is Stamen Watercolor, which is a painterly-styled map. Its URL is:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg
-</span></span></code></pre></div><p>We&rsquo;ll find other sources to add over the semester. Now, we need to add our CSV layer.</p>
+<p>As we can see in this screen capture, we can add many base maps. We&rsquo;ll find other sources to add over the semester.</p>
+<p>Now, we need to add our CSV layer.</p>
 <h3 id="adding-a-csv-layer-in-qgis">Adding a CSV layer in QGIS</h3>
 <p>When we add a text file that contains locations, we need to tell QGIS how to interpret the file. In our case, we need to tell QGIS that the file contains latitude and longitude values.</p>
 <div class="doc-instructions">

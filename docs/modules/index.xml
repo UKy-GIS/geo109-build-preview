@@ -13,52 +13,7 @@
       <pubDate>Fri, 28 May 2021 12:24:39 -0400</pubDate>
       
       <guid>https://uky-gis.github.io/modules/02-locate/</guid>
-      <description>Presentation Topics Open in new tab Presentation Topics Introduction Reference mapping GPS mapping Your Love Letter to Campus Projections Summary Tasks Lab Discuss the precision of points and geometric primitives. Are you really where the GPS says you are? If you could only use two decimal places, how far off could you be? What about three decimal places? How does the precision of the GPS affect the precision of the map?</description>
-    </item>
-    
-    <item>
-      <title>03 GIS</title>
-      <link>https://uky-gis.github.io/modules/03-analysis/</link>
-      <pubDate>Fri, 28 May 2021 12:24:39 -0400</pubDate>
-      
-      <guid>https://uky-gis.github.io/modules/03-analysis/</guid>
-      <description>Presentation Open in new tab Presentation Topics Introduction GIS Essential question Using GIS to analyze Lab 2 Video: Part 1 (10 min) Video: Part 2 (5 min) Geoprocessing Video: Buffer &amp; Clip (7 min) Video: Project a vector layer (4 min) Video: Merge &amp; Hillshade (7 min) Video: Intro to Remote Sensing (2 min) Video: Attribute Joins (6 min) Using GIS to analyze Lab 2 Tasks Lab Video: Lab 3 (20 min) Task Maps are literally everywhere.</description>
-    </item>
-    
-    <item>
-      <title>05 Design</title>
-      <link>https://uky-gis.github.io/modules/05-design/</link>
-      <pubDate>Fri, 28 May 2021 12:24:39 -0400</pubDate>
-      
-      <guid>https://uky-gis.github.io/modules/05-design/</guid>
-      <description>Presentation Open in new tab Presentation Topics Introduction &amp; announcements Persuasive maps Examples from lab 4 Font Labeling &amp; figure/ground Tasks Lab Video: Lab practice demonstration (25 min) Video: Lab option 2, fantasy map (8 min) Task In our last task, you will use an unorthodox method to find &amp;ldquo;twin&amp;rdquo; neighborhoods in Lexington and compare them to areas on campus that you frequent. The method is straightforward: We&amp;rsquo;ll fold a map of Lexington in half, punch a hole through the map where we live or work on campus, and then find the reflected location on the other side of the map.</description>
-    </item>
-    
-    <item>
-      <title>Final Project</title>
-      <link>https://uky-gis.github.io/modules/final-project/</link>
-      <pubDate>Fri, 28 May 2021 12:24:39 -0400</pubDate>
-      
-      <guid>https://uky-gis.github.io/modules/final-project/</guid>
-      <description>Presentation Open in new tab Presentation Topics Introduction &amp; announcements Examples from lab 5 Thinking of a map topic Proposal Introduction Video: Completing the project proposal (6 min) Technical demonstrations Getting detailed data from OpenStreetMap Video: Downloading data inside QGIS (16 min) Other sources of data Video: Downloading data from websites (14 min) Video: Creating points, lines, and polygons inside QGIS (6 min) Base maps Video: Adding base maps in QGIS (6 min) Draft Introduction Turning proposals into drafts (with inline videos) Final submission Introduction Tips Final Project Your journey in this course has followed the typical path a map maker takes when creating a map.</description>
-    </item>
-    
-    <item>
-      <title>Midterm</title>
-      <link>https://uky-gis.github.io/modules/midterm/</link>
-      <pubDate>Fri, 28 May 2021 12:24:39 -0400</pubDate>
-      
-      <guid>https://uky-gis.github.io/modules/midterm/</guid>
-      <description>Presentation Open in new tab Table of Contents Format of the midterm Review Office hours and help Time of quiz Format of the midterm The midterm exam is a 20-question, multiple-choice Canvas quiz that is based on the lectures and labs from the first half of the course. It is worth 10 points and each question is worth 0.5 points. The exam is open book and open notes, but you must complete it on your own and on a device that can access Canvas.</description>
-    </item>
-    
-    <item>
-      <title>04 Cartography</title>
-      <link>https://uky-gis.github.io/modules/04-cartography/</link>
-      <pubDate>Wed, 28 Apr 2021 12:24:39 -0400</pubDate>
-      
-      <guid>https://uky-gis.github.io/modules/04-cartography/</guid>
-      <description>Presentation Open in new tab Presentation Topics Introduction Have you started thinking about a final project? What you learned in previous modules Cartography and cartographic design Video: Filtering data for symbology (11 min) Map elements Map layout Video: Basics of map layout in QGIS (15 min) Video: Thematic map layout in QGIS (11 min) Lab discussion Tasks Lab Task In this task, you will visit UKy&amp;rsquo;s Gwen Curtis Map Collection and find a map that you think is appealing.</description>
+      <description>Presentation Topics Open in new tab Presentation Topics Introduction Reference mapping GPS mapping Your Love Letter to Campus Projections Summary Module requirements Tasks Lab Tasks Task 2: Maps at the Gwen Curtis Map Collection In this task, you will visit UKy&amp;rsquo;s Gwen Curtis Map Collection and find a map that you think is appealing. You will take a photo of the map, write a few paragraphs using our provided prompts, and post the photograph and response to Canvas.</description>
     </item>
     
     <item>
@@ -67,8 +22,8 @@
       <pubDate>Wed, 28 Apr 2021 08:24:39 -0400</pubDate>
       
       <guid>https://uky-gis.github.io/modules/01-data/</guid>
-      <description>Presentation Open in new tab Presentation Topics Introduction Finding your x, y Data models Sources of data Video downloading and using data (14 min) Types of numbers Summary Tasks Lab Video: Lab 1 (19 min) Tasks Reading Read the first chapter (4 pages) in Mark Monmonier&amp;rsquo;s book, How to Lie with Maps. 🔗 (link goes to Canvas)
-Find four locations Maps are unique among visual media formats in that they attempt to show the location of things on the planet in relationship to each other.</description>
+      <description>Presentation Open in new tab Presentation Topics 01: Introduction What is data? Finding locations on Earth Data models Practice making points, lines, and polygons Sources of data Types of numbers Summary Appendix: data formats we commonly use Slide notes Module requirements Tasks Lab Tasks Reading Read the first chapter (4 pages) in Mark Monmonier&amp;rsquo;s book, How to Lie with Maps.
+Task 1: Find four locations Maps are unique among visual media formats in that they attempt to show the location of things on the planet in relationship to each other.</description>
     </item>
     
     <item>
@@ -77,8 +32,8 @@ Find four locations Maps are unique among visual media formats in that they atte
       <pubDate>Fri, 23 Apr 2021 12:00:41 -0400</pubDate>
       
       <guid>https://uky-gis.github.io/modules/00-intro/</guid>
-      <description>Presentation Open in new tab Presentation topics 01: Introductions Tasks Welcome to GEO109! This week we will be getting to know each other, the course, and campus. Please complete the following tasks:
-Read the syllabus. Tell us a little about yourself in this private form. Only the instructors will see your responses. Push a pin for your hometown in this interactive map. (Note: the link goes to a different website – one of our online mapping program&amp;rsquo;s collaboration servers.</description>
+      <description>Presentation Open in new tab Presentation topics Introductions Our tools Teaching map making How this course is taught &amp;amp; syllabus What is a map? Slide notes Tasks Welcome to GEO109! This week we will be getting to know each other, the course, and campus. Please complete the following tasks:
+Read the syllabus. Tell us a little about yourself in this private form. Only the instructors will see your responses. Push a pin for your hometown in this interactive map.</description>
     </item>
     
   </channel>
